@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    font-family: "Helvetica", sans-serif;
+    text-align: center;
+}
+nav {
+    background-color: #234467;
+    padding: 15px;
+    
+}
+nav li {
+    padding: 0 20px;
+    display: inline-block;
+   
+}
+nav li a {
+    color: white;
+    text-decoration: none;
+}
