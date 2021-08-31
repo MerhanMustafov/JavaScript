@@ -9,5 +9,5 @@ function circleArea(input){
     }
 }
 
-// circleArea(5);
-// circleArea("Name");
+circleArea(5);
+circleArea("Name");
