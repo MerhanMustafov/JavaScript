@@ -1,34 +1,27 @@
 function solve(matrix){
     let count = 0
     for (let i = 0; i <= matrix.length - 1; i++){
-        for (let a = 0; a < matrix[i].length; a++){
+        for (let a = 0; a <= matrix[i].length-2; a++){
             let current = matrix[i][a]
-            if (i == 0){
+            if (i < matrix.length - 1){
                 if (matrix[i][a] == matrix[i+1][a]){
                     count += 1
-                }else if (matrix[i][a] == matrix[i][a+1]){
+                }if (matrix[i][a] == matrix[i][a+1]){
                     count += 1
+                }if (a == matrix[i].length - 2){
+                    if (matrix[i][a + 1] == matrix[i+1][a+1]){
+                        count += 1
+                    }
                 }
-                
-            }else if(i > 0 && i < matrix.length-1){
-                if (matrix[i][a] == matrix[i+1][a]){
-                    count += 1
-                }else if (matrix[i][a] == matrix[i][a+1]){
-                    count += 1
-                // }else if (matrix[i][a] == matrix[i-1][a]){
-                //     count += 1
-                // }
-                }
-            } else if (i == matrix.length-1){
-                // if (matrix[i][a] == matrix[i-1][a]){
-                //     count += 1
+        
+            }else{
                 if (matrix[i][a] == matrix[i][a+1]){
                     count += 1
                 }
-            }
+            }   
+        
             
-            
-        }
+        } 
     }
     return count
 }
