@@ -18,10 +18,11 @@ function solve(matrix){
         }
 
     }
+    magicSum = 0
     for (let col = 0; col < matrix[0].length; col++){
         let sum = 0
         for (let row = 0; row < matrix.length; row++){
-            sumCol += matrix[row][col]
+            sum += matrix[row][col]
             
         }
         if (col === 0){
