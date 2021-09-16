@@ -1,6 +1,5 @@
 function extractText() {
-    // let collection = document.getElementById('items')
-    console.log('collection')
+    const liElements= [...document.getElementsByTagName('li')];
+    const elText = liElements.map(e => e.textContent);
+    document.getElementById('result').value = elText.join('\n')
 }
-
-extractText()
