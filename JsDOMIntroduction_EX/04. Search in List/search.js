@@ -8,6 +8,8 @@ function search() {
       if (currentTown.includes(input)){
          towns[i].style = "font-weight: bold; text-decoration: underline;"
          count += 1
+      }else{
+         towns[i].style = "font-weight: ; text-decoration: ;"
       }
       // style="font-weight: bold;"
       // style="text-decoration: underline;"
