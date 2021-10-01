@@ -1,3 +1,4 @@
 function solve() {
-    // TODO
+    let inputs = document.getElementsByTagName('input').value;
+    console.log(inputs)
 }
