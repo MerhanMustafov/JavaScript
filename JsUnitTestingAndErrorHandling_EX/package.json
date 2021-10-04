@@ -1,0 +1,16 @@
+{
+  "name": "jsunittestinganderrorhandling_ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mocha",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2"
+  }
+}
+
