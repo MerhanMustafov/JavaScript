@@ -15,4 +15,4 @@ function creatCard(face, suit){
 
 console.log(creatCard("A", "S"))
 console.log(creatCard('10', 'H'))
-console.log(creatCard('1', 'C'))
+// console.log(creatCard('1', 'C'))
