@@ -1,4 +1,4 @@
-function solve(arrayOfStr, str){
+function solve(arrayOfStr, type){
     let arrayOfClasses = []
     for (let el of arrayOfStr){
         [destination, price, stat] = el.split('|')
@@ -12,10 +12,10 @@ function solve(arrayOfStr, str){
         let ticket = new Ticket(destination, price, stat)
         arrayOfClasses.push(ticket)
     }
-    if (str !== 'price'){
-        arrayOfClasses.sort((a, b) => a[str].localeCompare(b[str]))
+    if (type !== 'price'){
+        arrayOfClasses.sort((a, b) => a[type].localeCompare(b[type]))
     }else{
-        arrayOfClasses.sort((a, b) => a.str - b.str)
+        arrayOfClasses.sort((a, b) => a.type - b.type)
     }
     
     return arrayOfClasses
