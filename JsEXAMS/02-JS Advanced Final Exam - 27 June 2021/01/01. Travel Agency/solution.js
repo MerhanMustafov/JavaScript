@@ -1,62 +1,219 @@
 window.addEventListener('load', solution);
 
+
 function solution() {
-  document.querySelector('#block').addEventListener('click', onClick)
-  
-  let preview = document.querySelector('#infoPreview')
-  let buttonEdit = document.querySelector('#editBTN')
-  let buttonContinue = document.querySelector('#continueBTN')
-  let buttonSubmit = document.querySelector('#submitBTN')
+  let name = document.getElementById("fname");
+  let email = document.getElementById("email");
+  let phone = document.getElementById("phone");
+  let address = document.getElementById("address");
+  let code = document.getElementById("code");
 
-  function onClick(e){
-    if (e.target.id == 'submitBTN'){
-      let inputs = Array.from(document.querySelector('#form').children).slice(0, -1).map(el => el.lastElementChild.value)
-      let lables = Array.from(document.querySelector('#form').children).slice(0, -1).map(el => el.firstElementChild.textContent)
+  submitBtn = document.querySelector("#submitBTN");
+  infoPreview = document.getElementById("infoPreview");
+  editBtn = document.querySelector("#editBTN");
+  continueBTN = document.querySelector("#continueBTN");
 
-      if (inputs[0] && inputs[1]){
-        for (let i = 0; i < lables.length; i++){
-          let tag = cElement('li', lables[i], inputs[i])
-          preview.appendChild(tag)
-  
-        }
-        Array.from(document.querySelector('#form').children).slice(0, -1).forEach(el => el.lastElementChild.value = '')
- 
-        buttonSubmit.disabled = true, buttonContinue.disabled = false, buttonEdit.disabled = false
+  submitBtn.addEventListener("click", submit);
 
-      }
-      
-    }else if(e.target.id == 'editBTN'){
-      let liElements = Array.from(preview.children)
-      liElements.forEach(el => el.remove())
-      let divs =Array.from(document.querySelector('#form').children)
-
-      for (let i = 0; i < divs.length-1; i++){
-        divs[i].lastElementChild.value  = liElements[i].textContent.split(': ')[1].trim()
-      }
-
-      buttonContinue.disabled = true, buttonEdit.disabled = true, buttonSubmit.disabled = false
-      
-    }else if(e.target.id == 'continueBTN'){
-      let block = document.querySelector('#block')
-      block.innerHTML = ''
-      let h3 = cElement('h3', '', 'Thank you for your reservation!')
-      block.appendChild(h3)
+  function submit(e) {
+    if (name.value == "" || email.value == "") {
+      return;
     }
 
-    function cElement(tag, caption, content, atr, atrContent){
-      let elemnt = document.createElement(tag)
-      if (caption){
-        elemnt.textContent = `${caption} `
-      }if (content){
-        elemnt.textContent += `${content}`
+    // на първото ли беше добавил един спейс повече
+    let construction = `<li>Full Name: ${name.value}</li>
+      <li>Email: ${email.value}</li>
+      <li>Phone Number: ${phone.value}</li>
+      <li>Address: ${address.value}</li>
+      <li>Postal Code: ${code.value}</li>`;
+
+    infoPreview.innerHTML = construction;
+
+    let saveN = name.value;
+    let saveE = email.value;
+    let saveP = phone.value;
+    let saveA = address.value;
+    let saveC = code.value;
+
+    name.value = "";
+    email.value = "";
+    phone.value = "";
+    address.value = "";
+    code.value = "";
+
+    submitBtn.disabled = true;
+    editBtn.disabled = false;
+    continueBTN.disabled = false;
+
+    continueBTN.addEventListener("click", deleteAll);
+    editBtn.addEventListener("click", editField);
+
+    function editField(e) {
+      name.value = saveN;
+      email.value = saveE;
+      phone.value = saveP;
+      address.value = saveA;
+      code.value = saveC;
+
+      submitBtn.disabled = false;
+      editBtn.disabled = true;
+      continueBTN.disabled = true;
+
+      // Заради джъдж тук трябва да е Array.from(...)
+      let allLi = Array.from(document.querySelectorAll("#infoPreview li"));
+      allLi.forEach((element) => {
+        element.remove();
+      });
+    }
+
+    function deleteAll(e) {
+      hElement = document.createElement("h3");
+      hElement.textContent = 'Thank you for your reservation!'
+      divElement = document.getElementById("block");
+      while (divElement.firstChild) {
+        divElement.removeChild(divElement.firstChild);
       }
-      if (atr){
-        elemnt.setAttribute(atr, atrContent)
-      }
-      return elemnt
-    }    
+
+      divElement.appendChild(hElement)
+    }
   }
 }
+
+// function solution() {
+//   let name = document.getElementById("fname");
+//   let email = document.getElementById("email");
+//   let phone = document.getElementById("phone");
+//   let address = document.getElementById("address");
+//   let code = document.getElementById("code");
+
+//   let submitBtn = document.querySelector("#submitBTN");
+//   let infoPreview = document.getElementById("infoPreview");
+//   let editBtn = document.querySelector("#editBTN");
+//   let continueBTN = document.querySelector("#continueBTN");
+
+//   submitBtn.addEventListener("click", submit);
+
+//   function submit(e) {
+//     if (name.value == "" || email.value == "") {
+//       return;
+//     }
+
+
+//     let construction = `<li>Full Name: ${name.value}</li>
+//       <li>Email: ${email.value}</li>
+//       <li>Phone Number: ${phone.value}</li>
+//       <li>Address: ${address.value}</li>
+//       <li>Postal Code: ${code.value}</li>`;
+
+//     infoPreview.innerHTML = construction;
+
+//     let saveN = name.value;
+//     let saveE = email.value;
+//     let saveP = phone.value;
+//     let saveA = address.value;
+//     let saveC = code.value;
+
+//     name.value = "";
+//     email.value = "";
+//     phone.value = "";
+//     address.value = "";
+//     code.value = "";
+
+//     submitBtn.disabled = true;
+//     editBtn.disabled = false;
+//     continueBTN.disabled = false;
+
+//     continueBTN.addEventListener("click", deleteAll);
+//     editBtn.addEventListener("click", editField);
+
+//     function editField(e) {
+//       name.value = saveN;
+//       email.value = saveE;
+//       phone.value = saveP;
+//       address.value = saveA;
+//       code.value = saveC;
+
+//       submitBtn.disabled = false;
+//       editBtn.disabled = true;
+//       continueBTN.disabled = true;
+
+//       let allLi = Array.from(document.querySelectorAll("#infoPreview li"));
+//       allLi.forEach((element) => {
+//         element.remove();
+//       });
+//     }
+
+//     function deleteAll(e) {
+//       let hElement = document.createElement("h3");
+//       hElement.textContent = 'Thank you for your reservation!'
+//       let divElement = document.getElementById("block");
+//       // while (divElement.firstChild) {
+//       //   divElement.removeChild(divElement.firstChild);
+//       // }
+//       divElement.innerHTML = ''
+
+//       divElement.appendChild(hElement)
+//     }
+//   }
+// }
+
+// function solution() {
+//   document.querySelector('#block').addEventListener('click', onClick)
+  
+//   let preview = document.querySelector('#infoPreview')
+//   let buttonEdit = document.querySelector('#editBTN')
+//   let buttonContinue = document.querySelector('#continueBTN')
+//   let buttonSubmit = document.querySelector('#submitBTN')
+
+//   function onClick(e){
+//     if (e.target.id == 'submitBTN'){
+//       let inputs = Array.from(document.querySelector('#form').children).slice(0, -1).map(el => el.lastElementChild.value)
+//       let lables = Array.from(document.querySelector('#form').children).slice(0, -1).map(el => el.firstElementChild.textContent)
+
+//       if (inputs[0] && inputs[1]){
+//         for (let i = 0; i < lables.length; i++){
+//           let tag = cElement('li', lables[i], inputs[i])
+//           preview.appendChild(tag)
+  
+//         }
+//         Array.from(document.querySelector('#form').children).slice(0, -1).forEach(el => el.lastElementChild.value = '')
+ 
+//         buttonSubmit.disabled = true, buttonContinue.disabled = false, buttonEdit.disabled = false
+
+//       }
+      
+//     }else if(e.target.id == 'editBTN'){
+//       let liElements = Array.from(preview.children)
+//       liElements.forEach(el => el.remove())
+//       let divs =Array.from(document.querySelector('#form').children)
+
+//       for (let i = 0; i < divs.length-1; i++){
+//         divs[i].lastElementChild.value  = liElements[i].textContent.split(': ')[1].trim()
+//       }
+
+//       buttonContinue.disabled = true, buttonEdit.disabled = true, buttonSubmit.disabled = false
+      
+//     }else if(e.target.id == 'continueBTN'){
+//       let block = document.querySelector('#block')
+//       block.innerHTML = ''
+//       let h3 = cElement('h3', '', 'Thank you for your reservation!')
+//       block.appendChild(h3)
+//     }
+
+//     function cElement(tag, caption, content, atr, atrContent){
+//       let elemnt = document.createElement(tag)
+//       if (caption){
+//         elemnt.textContent = `${caption} `
+//       }if (content){
+//         elemnt.textContent += `${content}`
+//       }
+//       if (atr){
+//         elemnt.setAttribute(atr, atrContent)
+//       }
+//       return elemnt
+//     }    
+//   }
+// }
 
 
 
