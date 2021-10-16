@@ -18,61 +18,61 @@ function solve() {
             
             if (model.value && year.value && description.value && price.value && year.value >= 0 && price.value >= 0){
                 let furniture = createFurniture()
-                // furniture.forEach(f => tbody.appendChild(f)) 
-                tbody.innerHTML += furniture
+                furniture.forEach(f => tbody.appendChild(f)) 
+                // tbody.innerHTML += furniture
                 model.value = ""
                 year.value = ""
                 description.value = ""
                 price.value = ""    
                 function createFurniture() {
 
-                    let furniture = `<tr class="info">
-                    <td>${model.value}</td>
-                    <td>${Number(price.value).toFixed(2)}</td>
-                    <td>
-                    <button class="moreBtn">More Info</button>
-                    <button class="buyBtn">Buy it</button>
-                    </td>
-                    </tr>
-                    <tr class="hide">
-                    <td>Year: ${year.value}</td>
-                    <td colspan="3">Description: ${description.value}</td>
-                    </tr>`
+                    // let furniture = `<tr class="info">
+                    // <td>${model.value}</td>
+                    // <td>${Number(price.value).toFixed(2)}</td>
+                    // <td>
+                    // <button class="moreBtn">More Info</button>
+                    // <button class="buyBtn">Buy it</button>
+                    // </td>
+                    // </tr>
+                    // <tr class="hide">
+                    // <td>Year: ${year.value}</td>
+                    // <td colspan="3">Description: ${description.value}</td>
+                    // </tr>`
                     
-                    return furniture
+                    // return furniture
 
-                    // let tr = document.createElement('tr')
-                    // let tdModel = document.createElement('td')
-                    // let tdPrice = document.createElement('td')
-                    // let tdButtons = document.createElement('td')
-                    // let buttonMore = document.createElement('button')
-                    // let buttonBuy = document.createElement('button')
-                    // let tr2 = document.createElement('tr')
-                    // let tdYear = document.createElement('td')
-                    // let tdDesc = document.createElement('td')
+                    let tr = document.createElement('tr')
+                    let tdModel = document.createElement('td')
+                    let tdPrice = document.createElement('td')
+                    let tdButtons = document.createElement('td')
+                    let buttonMore = document.createElement('button')
+                    let buttonBuy = document.createElement('button')
+                    let tr2 = document.createElement('tr')
+                    let tdYear = document.createElement('td')
+                    let tdDesc = document.createElement('td')
 
-                    // tdModel.innerHTML = model.value
-                    // tdPrice.innerHTML = price.value
-                    // buttonMore.innerHTML = 'More Info'
-                    // buttonBuy.innerHTML = 'Buy it'
-                    // tdYear.innerHTML = `Year: ${year.value}`
-                    // tdDesc.innerHTML = `Description: ${description.value}`
+                    tdModel.innerHTML = model.value
+                    tdPrice.innerHTML = price.value
+                    buttonMore.innerHTML = 'More Info'
+                    buttonBuy.innerHTML = 'Buy it'
+                    tdYear.innerHTML = `Year: ${year.value}`
+                    tdDesc.innerHTML = `Description: ${description.value}`
 
-                    // buttonMore.setAttribute('class', 'moreBtn')
-                    // buttonBuy.setAttribute('class', 'buyBtn')
-                    // tr2.setAttribute('class', 'hide')
-                    // tdDesc.setAttribute('colspan', "3")
+                    buttonMore.setAttribute('class', 'moreBtn')
+                    buttonBuy.setAttribute('class', 'buyBtn')
+                    tr2.setAttribute('class', 'hide')
+                    tdDesc.setAttribute('colspan', '3')
 
-                    // tdButtons.appendChild(buttonMore)
-                    // tdButtons.appendChild(buttonBuy)
-                    // tr.appendChild(tdModel)
-                    // tr.appendChild(tdPrice)
-                    // tr.appendChild(tdButtons)
+                    tdButtons.appendChild(buttonMore)
+                    tdButtons.appendChild(buttonBuy)
+                    tr.appendChild(tdModel)
+                    tr.appendChild(tdPrice)
+                    tr.appendChild(tdButtons)
 
-                    // tr2.appendChild(tdYear)
-                    // tr2.appendChild(tdDesc)
+                    tr2.appendChild(tdYear)
+                    tr2.appendChild(tdDesc)
 
-                    // return [tr, tr2]
+                    return [tr, tr2]
                 }
 
             }
