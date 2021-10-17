@@ -16,7 +16,7 @@ function solve() {
         e.preventDefault()
         if (e.target.tagName === "BUTTON" && e.target.id === 'add'){
             
-            if (model.value && year.value && description.value && price.value && year.value >= 0 && price.value >= 0){
+            if (model.value && year.value && description.value && price.value && year.value > 0 && price.value > 0){
                 let furniture = createFurniture()
                 furniture.forEach(f => tbody.appendChild(f)) 
                 // tbody.innerHTML += furniture
@@ -52,12 +52,14 @@ function solve() {
                     let tdDesc = document.createElement('td')
 
                     tdModel.innerHTML = model.value
-                    tdPrice.innerHTML = price.value
+                    tdPrice.innerHTML = Number(price.value).toFixed(2)
+                    // tdPrice.innerHTML = price.value ---> the mistake was here - when setting the price it should be fixed to 2
                     buttonMore.innerHTML = 'More Info'
                     buttonBuy.innerHTML = 'Buy it'
                     tdYear.innerHTML = `Year: ${year.value}`
                     tdDesc.innerHTML = `Description: ${description.value}`
 
+                    tr.setAttribute('class', 'info') //and the second mistake was that i had forgotten to set this atribute to that element
                     buttonMore.setAttribute('class', 'moreBtn')
                     buttonBuy.setAttribute('class', 'buyBtn')
                     tr2.setAttribute('class', 'hide')
@@ -72,6 +74,9 @@ function solve() {
                     tr2.appendChild(tdYear)
                     tr2.appendChild(tdDesc)
 
+                    console.log(tr)
+                    console.log(tr2)
+
                     return [tr, tr2]
                 }
 
@@ -85,10 +90,10 @@ function solve() {
                 hide.style.display = 'contents'
                 e.target.textContent = 'Less Info'
 
-            }else if (hide.style.display  == 'none'){
+            }else if (e.target.textContent === 'More Info' && hide.style.display  == 'none'){
                 hide.style.display = 'contents'
                 e.target.textContent = 'Less Info'
-            }else if ( hide.style.display  == 'contents'){
+            }else if (e.target.textContent === 'Less Info' && hide.style.display  == 'contents'){
                 hide.style.display = 'none'
                 e.target.textContent = 'More Info'
             }
