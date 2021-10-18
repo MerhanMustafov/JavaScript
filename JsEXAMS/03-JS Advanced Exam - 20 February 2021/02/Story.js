@@ -9,7 +9,7 @@ class Story {
         if (this._likes.length == 0){
             return `${this.title} has 0 likes`
         }else if(this._likes.length == 1){
-            return `${this._likes[0]} likes this story!`
+            return `${this._likes[this._likes.length-1]} likes this story!`
         }else {
             return `${this._likes[0]} and ${this._likes.length - 1} others like this story!`
         }
@@ -40,8 +40,8 @@ class Story {
         if (id == undefined || cIndex == -1){
             let comment = {
                 "id": this._comments.length + 1,
-                "username": username,
-                "content": content,
+                username,
+                content,
                 "replies": [],
             }
             this._comments.push(comment)
@@ -49,8 +49,8 @@ class Story {
         }else if(cIndex > -1){
             let reply = {
                 'id': Number(`${this._comments[cIndex].id}.${this._comments[cIndex].replies.length+1}`),
-                'username': username,
-                'content': content,
+                username,
+                content,
             }
             this._comments[cIndex].replies.push(reply)
             return `You replied successfully`
@@ -58,16 +58,16 @@ class Story {
     }
     toString(sortingType){
         if (sortingType == 'asc'){
-            this._comments.sort((a, b) => a.id - b.id).forEach(el => {
-                el.replies.sort((a, b) => a.id - b.id)
+            this._comments.sort((a, b) => a.id - b.id).forEach(comment => {
+                comment.replies.sort((a, b) => a.id - b.id)
             });
         }else if (sortingType == 'desc'){
-            this._comments.sort((a, b) => b.id - a.id).forEach(el => {
-                el.replies.sort((a, b) => b.id - a.id)
+            this._comments.sort((a, b) => b.id - a.id).forEach(comment => {
+                comment.replies.sort((a, b) => b.id - a.id)
             });
         }else if (sortingType == 'username'){
-            this._comments.sort((a, b) => a.username.localeCompare(b.username)).forEach(el => {
-                el.replies.sort((a, b) => a.username.localeCompare(b.username))
+            this._comments.sort((a, b) => a.username.localeCompare(b.username)).forEach(comment => {
+                comment.replies.sort((a, b) => a.username.localeCompare(b.username))
             });
         }
         let info = []
