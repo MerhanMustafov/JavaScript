@@ -28,24 +28,33 @@ function solve() {
             let isModuleExists = Array.from(trainings.children).filter(l => l.children[0].textContent == `${inputs[2].value.toUpperCase()}-MODULE`)
             if (isModuleExists.length == 1){
                 let ul = isModuleExists[0].children[1]
-                // lecture.h3.remove()
                 ul.appendChild(lecture.li)
                 Array.from(ul.children).sort((a, b) => a.firstElementChild.textContent.split(' - ')[1].localeCompare(b.firstElementChild.textContent.split(' - ')[1])).forEach(li => ul.appendChild(li))
-                // console.log(isModuleExists)
             }else{
-                // console.log(isModuleExists)
                 trainings.appendChild(lecture.div)
-            
-            }
 
+            }
 
             lecture.button.addEventListener('click', del)
 
             function del(e){
-                lecture.li.remove()
-                if(Array.from(lecture.div.children[1].children).length == 0){
-                    lecture.div.remove()
+                console.log(Array.from(e.target.parentElement.parentElement.children).length)
+                let liLenght = Array.from(e.target.parentElement.parentElement.children).length
+                if (liLenght == 1){
+                    // lecture.div.remove()
+                    e.target.parentElement.parentElement.parentElement.remove()
+                }else{
+                    // lecture.li.remove()
+                    e.target.parentElement.remove()
                 }
+
+                
+                // // if(Array.from(lecture.div.children[1].children).length == 0){
+                // if (Array.from(e.target.parentElement.parentElement.children).length){
+                    
+
+                // }
+                
             }
 
             function creatEl(tag, classContent, content){
