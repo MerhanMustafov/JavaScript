@@ -59,6 +59,81 @@ function solution() {
     }
 }
 
+
+
+
+
+
+//colleague's solution
+// function solution() {
+//     let addBtn = document.querySelector(".card button");
+//     let inputAdd = document.querySelector(".card input");
+  
+//     let ulItems = document.querySelectorAll(".card ul");
+//     let ulListOfGifts = ulItems[0];
+//     let ulSendGifts = ulItems[1];
+//     let ulDiscarded = ulItems[2];
+  
+//     console.log(ulListOfGifts);
+  
+//     addBtn.addEventListener("click", onClick);
+  
+//     console.log(addBtn);
+//     console.log(inputAdd);
+  
+//     function onClick(ev) {
+//         // .forEach((node) => ulListOfGifts.appendChild(node));
+//       let listItem = document.createElement("li");
+//       listItem.textContent = inputAdd.value;
+//       listItem.classList.add("gift");
+//       let sendBtn = document.createElement("button");
+//       sendBtn.id = "sendButton";
+//       sendBtn.textContent = "Send";
+//       sendBtn.addEventListener("click", onSend);
+//       listItem.appendChild(sendBtn);
+//       let discardBtn = document.createElement("button");
+//       discardBtn.id = "discardButton";
+//       discardBtn.textContent = "Discard";
+//       discardBtn.addEventListener("click", onDiscard);
+//       listItem.appendChild(discardBtn);
+  
+//       ulListOfGifts.appendChild(listItem);
+//       Array.from(ulListOfGifts.children).sort((a,b)=>(a.innerText).localeCompare(b.innerText)).forEach(li => ulListOfGifts.appendChild(li))
+  
+//       //clear input
+//       inputAdd.value = "";
+//       function onSend(e) {
+//         console.log("send works");
+//         let currentLi = e.target.parentNode;
+//         let newItemText = currentLi.firstChild.textContent;
+//         console.log(newItemText);
+        
+  
+//         let liInSended = document.createElement("li");
+//         liInSended.classList.add("gift");
+//         liInSended.textContent = newItemText;
+//         ulSendGifts.appendChild(liInSended)
+//         currentLi.remove();
+//       }
+//       function onDiscard(event) {
+//         console.log("works");
+//         console.log("send works");
+//         let lastLi = event.target.parentNode;
+//         let lastLiTest = lastLi.firstChild.textContent;
+//         console.log(lastLiTest);
+       
+  
+//         let liInDiscarded = document.createElement("li");
+//         liInDiscarded.classList.add("gift");
+//         liInDiscarded.textContent = lastLiTest;
+//         ulDiscarded.appendChild(liInDiscarded)
+//         lastLi.remove();
+//       }
+//     }
+//   }
+  
+
+
 // function solution() {
 //     let addGiftButton = document.querySelector('.card button')
 //     addGiftButton.addEventListener('click', onClick)
