@@ -47,13 +47,6 @@ function solve() {
                     // lecture.li.remove()
                     e.target.parentElement.remove()
                 }
-
-                
-                // // if(Array.from(lecture.div.children[1].children).length == 0){
-                // if (Array.from(e.target.parentElement.parentElement.children).length){
-                    
-
-                // }
                 
             }
 
