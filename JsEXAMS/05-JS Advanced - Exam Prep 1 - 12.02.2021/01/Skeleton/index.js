@@ -10,7 +10,7 @@ function solve() {
             let trainings = document.querySelector('.modules')
             let [date, hour] = inputs[1].value.split('T')
             date = date.split('-').join('/')
-            
+
             let lecture = {
                 'div': creatEl('div', 'module', undefined),
                 'h3': creatEl('h3', undefined, `${inputs[2].value.toUpperCase()}-MODULE`),
@@ -47,7 +47,7 @@ function solve() {
                     // lecture.li.remove()
                     e.target.parentElement.remove()
                 }
-                
+
             }
 
             function creatEl(tag, classContent, content){
