@@ -1,91 +1,89 @@
 window.addEventListener('load', solve);
 
 function solve() {
-    let delegation = document.querySelector('#wrapper')
-    delegation.addEventListener('click', onClick)
+  let delegation = document.querySelector('#wrapper')
+  delegation.addEventListener('click', onClick)
 
 
-    function onClick(e){
-        e.preventDefault()
-        //inputs
-        let [genre, song, autor, date] = Array.from(document.querySelector('form').children).filter(c => c.tagName == 'INPUT')
+  function onClick(e) {
+    e.preventDefault()
+    //inputs
+    let [genre, song, autor, date] = Array.from(document.querySelector('form').children).filter(c => c.tagName == 'INPUT')
 
-        if (e.target.tagName == "BUTTON" && e.target.id =="add-btn"){
-            if (genre.value && song.value && autor.value && date.value){
+    if (e.target.tagName == "BUTTON" && e.target.id == "add-btn") {
+      if (genre.value && song.value && autor.value && date.value) {
 
-                let savedSection = document.querySelector(".all-hits-container");
+        let savedSection = document.querySelector(".all-hits-container");
 
-                //create
-                let div = document.createElement('div')
-                div.setAttribute('class', 'hits-info')
-                
-
-                let img = document.createElement('img')
-                img.src=`${"./static/img/img.png"}`
-                let h2Genre = document.createElement('h2')
-                h2Genre.textContent = `Gener: ${genre.value}`
-
-                let h2Name = document.createElement('h2')
-                h2Name.textContent = `Name: ${song.value}`
-                let h2AutHor = document.createElement('h2')
-                h2AutHor.textContent = `Author: ${autor.value}`
-                let h3Date = document.createElement('h3')
-                h3Date.textContent = `Date: ${date.value}`
-
-                let saveBtn = document.createElement('button')
-                saveBtn.setAttribute('class', 'save-btn')
-                saveBtn.textContent = 'Save song'
-
-                let likeBtn = document.createElement('button')
-                likeBtn.setAttribute('class', 'like-btn')
-                likeBtn.textContent = 'Like song'
-
-                let deleteBtn = document.createElement('button')
-                deleteBtn.setAttribute('class', 'delete-btn')
-                deleteBtn.textContent = 'Delete'
-
-                
-                div.appendChild(img)
-                div.appendChild(h2Genre)
-                div.appendChild(h2Name)
-                div.appendChild(h2AutHor)
-                div.appendChild(h2Date)
-
-                div.appendChild(saveBtn)
-                div.appendChild(likeBtn)
-                div.appendChild(deleteBtn)
-
-                savedSection.appendChild(div)
+        //create
+        let div = document.createElement('div')
+        div.setAttribute('class', 'hits-info')
 
 
-                
+        let img = document.createElement('img')
+        img.setAttribute('src', "./static/img/img.png")
+        let h2Genre = document.createElement('h2')
+        h2Genre.textContent = `Gener: ${genre.value}`
 
-                genre.value = ''
-                song.value = ''
-                autor.value = ''
-                date.value = ''
+        let h2Name = document.createElement('h2')
+        h2Name.textContent = `Name: ${song.value}`
+        let h2AutHor = document.createElement('h2')
+        h2AutHor.textContent = `Author: ${autor.value}`
+        let h3Date = document.createElement('h3')
+        h3Date.textContent = `Date: ${date.value}`
+
+        let saveBtn = document.createElement('button')
+        saveBtn.setAttribute('class', 'save-btn')
+        saveBtn.textContent = 'Save song'
+
+        let likeBtn = document.createElement('button')
+        likeBtn.setAttribute('class', 'like-btn')
+        likeBtn.textContent = 'Like song'
+
+        let deleteBtn = document.createElement('button')
+        deleteBtn.setAttribute('class', 'delete-btn')
+        deleteBtn.textContent = 'Delete'
 
 
-            }
-            
+        div.appendChild(img)
+        div.appendChild(h2Genre)
+        div.appendChild(h2Name)
+        div.appendChild(h2AutHor)
+        div.appendChild(h3Date)
 
-        }else if (e.target.tagName == "BUTTON" && e.target.className == 'like-btn'){
-            let sectionTotalLikes = document.querySelector('#total-likes')
-            let likes = sectionTotalLikes.children[0].children[0].textContent.split(': ')
-            likes[1] = Number(likes[1]) + 1
-            sectionTotalLikes.children[0].children[0].textContent = likes.join(': ')
-            e.target.disabled = true
-        }else if(e.target.tagName == "BUTTON" && e.target.className == 'save-btn'){
-            let saveSongs = document.querySelector('.saved-container')
-            
-            saveSongs.appendChild(e.target.parentElement)
-            e.target.nextElementSibling.remove()
-            e.target.remove()
-        }else  if(e.target.tagName == "BUTTON" && e.target.className == 'delete-btn'){
-            e.target.parentElement.remove()
-        }
+        div.appendChild(saveBtn)
+        div.appendChild(likeBtn)
+        div.appendChild(deleteBtn)
 
+        savedSection.appendChild(div)
+
+        
+        genre.value = ''
+        song.value = ''
+        autor.value = ''
+        date.value = ''
+
+
+      }
+
+
+    } else if (e.target.tagName == "BUTTON" && e.target.className == 'like-btn') {
+      let sectionTotalLikes = document.querySelector('#total-likes')
+      let likes = sectionTotalLikes.children[0].children[0].textContent.split(': ')
+      likes[1] = Number(likes[1]) + 1
+      sectionTotalLikes.children[0].children[0].textContent = likes.join(': ')
+      e.target.disabled = true
+    } else if (e.target.tagName == "BUTTON" && e.target.className == 'save-btn') {
+      let saveSongs = document.querySelector('.saved-container')
+
+      saveSongs.appendChild(e.target.parentElement)
+      e.target.nextElementSibling.remove()
+      e.target.remove()
+    } else if (e.target.tagName == "BUTTON" && e.target.className == 'delete-btn') {
+      e.target.parentElement.remove()
     }
+
+  }
 }
 
 
@@ -118,7 +116,7 @@ function deleteSong(e){
         let likeButton = e.target.nextElementSibling
         saveButton.remove();
         likeButton.remove();
-        saved.appendChild(divToMove)        
+        saved.appendChild(divToMove)
     }
 
     function gainLikes(e) {
@@ -256,7 +254,7 @@ function solve() {
 
     song.querySelector('.like-btn').addEventListener('click', likeSong)
 
-    // •	When the ["Save song"] button is clicked, you need to move the current song in the div with class "saved-container". 
+    // •	When the ["Save song"] button is clicked, you need to move the current song in the div with class "saved-container".
     song.querySelector('.save-btn').addEventListener('click', (e) => {
       e.preventDefault()
       const currentSong = e.target.parentNode;
