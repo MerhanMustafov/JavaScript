@@ -1,2 +1,2 @@
-# JavaScriptSoftUni
+# JavaScript
 Assignments
