@@ -1,24 +1,34 @@
-table thead{
-    background: rgb(241, 241, 241);
-    
+body{
+    padding: 100px;
 }
-td, th{
-    text-align: left;
-    height: 30px;
-    line-height: none;
-}
-tr {
-    border: 5px solid blue
-}
-
-.row.odd{
-    background: rgb(241, 241, 241);
-}
-
 table{
-    padding:100px ;
-    width: 80%;
+    width: 90%;
+    height: 300px;
     border-width: 1px;
-    border-color: rgb(221, 221, 221);
+    border-collapse: collapse;
     
 }
+table thead th{
+    background: rgb(204, 204, 204);
+    text-align: left;
+}
+table tr:nth-child(odd) td{
+    background:rgb(241, 241, 241);; 
+    
+}
+
+td, th{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(241, 241, 241);
+    
+
+}
+
+table tbody tr:hover{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+
