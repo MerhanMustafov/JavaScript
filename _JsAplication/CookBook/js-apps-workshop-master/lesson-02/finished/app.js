@@ -17,7 +17,6 @@ function createRecipePreview(recipe) {
         e('div', { className: 'title' }, e('h2', {}, recipe.name)),
         e('div', { className: 'small' }, e('img', { src: recipe.img })),
     );
-
     return result;
 
     async function toggleCard() {
@@ -42,7 +41,6 @@ function createRecipeCard(recipe) {
             recipe.steps.map(s => e('p', {}, s))
         ),
     );
-
     return result;
 }
 
