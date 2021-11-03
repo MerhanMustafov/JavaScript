@@ -110,20 +110,22 @@ function e(tagName, atr, isErr = false, ...content){
     if (atributes.length > 0){
         atributes.forEach(a => result[a] = atr[a])
     }
-
-    let isAllObj = content.every(el => typeof el == 'object')
-    if (isAllObj){
-        if (isErr == true){
-            result.textContent = content[0]
+    content.forEach(el => {
+        if (typeof el == 'object'){
+            if (isErr == true){
+                result.textContent = el
+            }else{
+                result.appendChild(el)
+            }
         }else{
-            content.forEach(el => result.appendChild(el))
+            result.textContent = content[0]
         }
-    }else{
-        result.textContent = content[0]
-    }
-
+    })
     return result
 }
+    
+        
+
 
 
 
