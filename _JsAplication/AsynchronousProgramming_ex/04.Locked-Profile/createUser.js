@@ -31,7 +31,7 @@ function createUser(users, k, count){
           type: "radio",
           name: `user${count}Locked`,
           value: "lock",
-          checked: false,
+          checked: true,
         }),
         e("lable", {}, "Unlock"),
         e("input", {
