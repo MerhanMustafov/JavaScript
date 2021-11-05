@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticarion demo</title>
+    <style>
+        input{
+            display: block
+        }
+    </style>
+</head>
+<body>
+    <!-- crate form -->
+    <form id="register-form">
+        <h2>Register</h2>
+        <label>Email:</label>
+        <input type="text" name="email" />
+        <label>Pass:</label>
+        <input type="password" name="password" />
+        <label>Repet:</label>
+        <input type="password" name="repeat" />
+        <input type="submit" value="Register"/>
+    </form>
+
+    <form id="login-form">
+        <h2>login</h2>
+        <label>Email:</label>
+        <input type="text" name="email" />
+        <label>Pass:</label>
+        <input type="password" name="password" />
+        <input type="submit" value="login"/>
+    </form>
+      
+    <script>
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // take form
+        let register = document.getElementById('register-form')
+        // addEventListener to form
+        register.addEventListener('submit', onRegister)
+
+        async function onRegister(e){
+            // preventDefault so that it won't reload the page every time when this event occurs
+            e.preventDefault();
+            // this takes all the data from the form and is better instead of taking 
+            // it manually one by one this makes it for you
+            let formData = new FormData(register)
+
+            let url = `http://localhost:3030/users/register`
+            // console.log the formData to check if it is working
+            // console.log([...formData.entries()])
+
+
+            // returns/prints this and the keys or the first values of the arrays
+            // comes form the name properties from the inputs tags within the form
+            // (3) [Array(2), Array(2), Array(2)]
+            //     0: (2) ['email', 'n27@mail.bg']
+            //     1: (2) ['password', '123']
+            //     2: (2) ['repeat', '123']
+
+
+            // it is better in this case to take the values one by one
+            // and using the trim() method is preferable to ensure...
+            let email = formData.get('email').trim();
+            let password = formData.get('password').trim();
+            let repeat = formData.get('repeat').trim();
+
+            let option = {
+                method: "post",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({email, password})
+            }
+
+            let res = await fetch(url, option)
+            let result = await res.json()
+            // console.log(result)
+
+            // and keepping the accessToken happens with local/sessionStorage
+            // .setItem(....) saves it
+            // .getItem(.....) reads it
+            // .clear() clears the whole storage
+
+            // console.log(result.accessToken)
+            // we choose the name
+            sessionStorage.setItem("authToken", result.accessToken )
+
+        }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+         // take form
+         let login = document.getElementById('login-form')
+        // addEventListener to form
+        login.addEventListener('submit', onLogin)
+
+        async function onLogin(e){
+            // preventDefault so that it won't reload the page every time when this event occurs
+            e.preventDefault();
+            // this takes all the data from the form and is better instead of taking 
+            // it manually one by one this makes it for you
+            let formData = new FormData(register)
+
+            let url = `http://localhost:3030/users/login`
+            // console.log the formData to check if it is working
+            //console.log([...formData.entries()])
+
+            // returns/prints this and the keys or the first values of the arrays
+            // comes form the name properties from the inputs tags within the form
+            // (3) [Array(2), Array(2), Array(2)]
+            //     0: (2) ['email', 'n27@mail.bg']
+            //     1: (2) ['password', '123']
+            //     2: (2) ['repeat', '123']
+
+
+            // it is better in this case to take the values one by one
+            // and using the trim() method is preferable to ensure...
+            let email = formData.get('email').trim();
+            let password = formData.get('password').trim();
+
+            let option = {
+                method: "post",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({email, password})
+            }
+
+            let res = await fetch(url, option)
+            let result = await res.json()
+            // console.log(result)
+
+            // and keepping the accessToken happens with local/sessionStorage
+            // .setItem(....) saves it
+            // .getItem(.....) reads it
+            // .clear() clears the whole storage
+
+            //console.log(result.accessToken)
+            // we choose the name
+            sessionStorage.setItem("authToken", result.accessToken )
+
+        }
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    </script>
+</body>
+</html>

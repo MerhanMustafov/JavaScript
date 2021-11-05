@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Crud Operations</title>
+    <style>
+        input{
+            display: block
+        }
+    </style>
+    
+</head>
+<body>
+
+    <form method="GET" action=`http://localhost:3030/jsonstore/phonebook`>
+        <label>NAME</label>
+        <input type="text" name="person" />
+        <label>PASS</label>
+        <input type="text" name="phone" />
+        
+        <input type="submit" value="submit" />
+    </form>
+      
+    
+    <script>
+        let form = document.querySelector('form')
+        console.log(form)
+        form.addEventListener('submit', onSubmit);
+        console.log(form)
+
+        async function onSubmit(e){
+            e.preventDefault();
+            console.log(form)
+            const data = new FormData(form);
+
+            // console.log([...data.entries()])
+            
+            // const person = document.querySelector('[name="name"]').value; 
+            // const phone = document.querySelector('[name="pass"]').value; 
+            let person = data.get('person').trim();
+            let phone = data.get('phone').trim();
+            
+            console.log(person)
+            console.log(phone)
+            const record = {person, phone};
+            console.log(record)
+
+            const result = await post(record)
+
+            form.reset()
+            alert("record CREATED")
+
+        }
+
+
+        async function get(){
+            const res = await fetch(`http://localhost:3030/jsonstore/phonebook`)
+            const data = await res.json()
+            
+            console.log(JSON.stringify(data))
+        }
+
+        async function post(data){
+
+            const url = `http://localhost:3030/jsonstore/phonebook`
+            //let data = {person: "Maya", phone: "+1-555-3333"}
+            const res = await fetch(url, {
+                method: "post",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(data)
+            })
+            
+        }
+
+        async function put(id, data){
+            //"5a48774e-f2b1-42b7-8f5d-16b66e83913e"
+            //const data = {person: "Kiko", phone: "+1-7659-3333"}
+            const url = `http://localhost:3030/jsonstore/phonebook/` + id
+            let option = {
+                method: "put",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(data)
+            }
+            const res = await fetch(url, option) 
+        }
+        async function del(id){
+            if (Array.isArray(id)){
+                for (let d of id){
+                    const url = `http://localhost:3030/jsonstore/phonebook/` + d
+                    const option = {method: "delete"}
+                    let res = await fetch(url, option)
+                }
+            }else{
+                const url = `http://localhost:3030/jsonstore/phonebook/` + id
+                const option = {
+                    method: "delete"
+                }
+                let res = await fetch(url, option)
+                //"b475134d-837a-40c2-8f28-16afc72359b4"
+            }
+        }   
+            
+                
+
+                    
+                
+
+
+
+
+
+    </script>
+</body>
+</html>
