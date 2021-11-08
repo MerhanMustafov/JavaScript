@@ -18,7 +18,7 @@ async function getInfo() {
         // console.log(info.buses)
         // console.log(Object.entries(info.buses))
         // console.log(info.name)
-        // stopName.textContent = info.name
+        stopName.textContent = info.name
         Object.entries(info.buses).forEach(b => {
             let li = document.createElement('li');
             li.textContent = `Bus ${b[0]} arrives in ${b[1]} minutes`
