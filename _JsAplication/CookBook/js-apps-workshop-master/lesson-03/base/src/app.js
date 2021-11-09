@@ -1,12 +1,12 @@
 async function getRecipes() {
-    const response = await fetch('http://localhost:3030/jsonstore/cookbook/recipes');
+    const response = await fetch('http://localhost:3030/data/recipes?select=_id%2Cname%2Cimg');
     const recipes = await response.json();
 
     return Object.values(recipes);
 }
 
 async function getRecipeById(id) {
-    const response = await fetch('http://localhost:3030/jsonstore/cookbook/details/' + id);
+    const response = await fetch('http://localhost:3030/data/recipes/' + id);
     const recipe = await response.json();
 
     return recipe;
@@ -45,8 +45,17 @@ function createRecipeCard(recipe) {
 
     return result;
 }
-
+// *****************************************************************************************************
 window.addEventListener('load', async () => {
+    // Authorized creation of a recipe Preview
+    const token = localStorage.getItem('token');
+    if (token == null){
+        document.getElementById('guest').style.display = 'inline-block';
+    }else{
+        document.getElementById('user').style.display = 'inline-block';
+
+    }
+
     const main = document.querySelector('main');
 
     const recipes = await getRecipes();
@@ -55,7 +64,7 @@ window.addEventListener('load', async () => {
     main.innerHTML = '';
     cards.forEach(c => main.appendChild(c));
 });
-
+// ***************************************************************************************************
 function e(type, attributes, ...content) {
     const result = document.createElement(type);
 
