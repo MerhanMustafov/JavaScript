@@ -54,11 +54,20 @@ window.addEventListener('load', (e) => {
 html.loadBtn.addEventListener('click', async () => {
     const res = await fetch(`http://localhost:3030/data/catches`)
     const result = await res.json();
-    console.log(result)
-    // result.forEach(x => console.log(x._ownerId))
-    let ids = result.map(x => {'_ownerId': x._ownerId, '_id': x._id})
+    
+    let ids = result.map(x => {
+        return {'_ownerId': x._ownerId, '_id': x._id}
+    })
     console.log(ids)
-
+    ids.forEach(id => {
+        if (id._ownerId == localStorage.getItem('_ID')){
+            const btns = document.querySelectorAll(`#${id._id}`)
+            const updateBtn = btns[0]; const deleteBtn = btns[1]
+            updateBtn.disabled = false; deleteBtn.disabled = false; 
+        }else{
+            
+        }
+    })
     html.fieldset.style.display = 'inline-table'
     html.divText.style.display = 'none';
     [...html.catches.children].forEach(catche => console.log(catche))
