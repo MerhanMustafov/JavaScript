@@ -52,24 +52,69 @@ window.addEventListener('load', (e) => {
 //     html.divText.style.display = 'none';
 // })
 html.loadBtn.addEventListener('click', async () => {
-    const res = await fetch(`http://localhost:3030/data/catches`)
+    const id = '35c62d76-8152-4626-8712-eeb96381bea8'
+    const res = await fetch(`http://localhost:3030/data/catches/`)
     const result = await res.json();
     
-    let ids = result.map(x => {
-        return {'_ownerId': x._ownerId, '_id': x._id}
-    })
-    console.log(ids)
-    ids.forEach(id => {
-        if (id._ownerId == localStorage.getItem('_ID')){
-            const btns = document.querySelectorAll(`#${id._id}`)
-            const updateBtn = btns[0]; const deleteBtn = btns[1]
-            updateBtn.disabled = false; deleteBtn.disabled = false; 
+    let info = result.filter(x => {
+        if (x._ownerId == localStorage.getItem('_ID')){
+            return x
+        }
+    })[0]
+    console.log(info)
+    if (info == undefined){
+        const updateBtn = document.querySelectorAll('.update')
+        const deleteBtn = document.querySelectorAll('.delete')
+        console.log(updateBtn)
+        console.log(deleteBtn)
+
+        Array.from(updateBtn).forEach(btn => btn.disabled = true)
+        Array.from(deleteBtn).forEach(btn => btn.disabled = true)
+        html.fieldset.style.display = 'inline-table'
+        html.divText.style.display = 'none';
+        return
+    }
+
+    Array.from(html.catches.children).forEach(catche => {
+        const updateBtn = catche.querySelector('button.update')
+        const deleteBtn = catche.querySelector('button.delete')
+        // console.log(updateBtn.dataset.id)
+        // console.log(deleteBtn.dataset.id)
+
+        if (deleteBtn.dataset.id == info._id){
+            updateBtn.disabled = false;
+            deleteBtn.disabled = false;
         }else{
-            
+            updateBtn.disabled = true;
+            deleteBtn.disabled = true;
         }
     })
     html.fieldset.style.display = 'inline-table'
     html.divText.style.display = 'none';
-    [...html.catches.children].forEach(catche => console.log(catche))
+
+   
 
 })
+
+
+document.querySelector('button.add').disabled = false
+const form = document.querySelector('#addForm')
+form.addEventListener('submit', onAdd);
+
+async function onAdd(e){
+    e.preventDefault()
+    console.log(e.target)
+    const formData = new FormData(e.target)
+    console.log([...formData.entries()])
+    const isAllFillled = [...formData.entries()].every(el => el[1].length > 0)
+    if(isAllFillled){
+        //TODO
+    }
+    
+}
+
+// const formData = new FormData(form)
+// console.log(formData)
+// console.log(isAllFillled)
+// console.log(form)
+
