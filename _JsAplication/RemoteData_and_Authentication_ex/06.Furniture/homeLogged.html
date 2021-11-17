@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="static/style.css">
     <title>FURNITURE</title>
+    <script type ="module" src="logged.js"></script>
 </head>
 
 <body>
@@ -33,7 +34,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h2>Create Product</h2>
-                                <form action="" method="post">
+                                <form id="create">
                                     <label>Name: <input type="text" name="name"></label>
                                     <label>Price: <input type="text" name="price"></label>
                                     <label>Factor: <input type="text" name="factor"></label>
@@ -90,12 +91,12 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <button>Buy</button>
+                                <button id="buyBtn">Buy</button>
                                 <hr>
                                 <div class="orders">
                                     <p>Bought furniture: <span>Office chair, Sofa</span></p>
                                     <p>Total price: <span>419 $</span></p>
-                                    <button>All orders</button>
+                                    <button >All orders</button>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +107,7 @@
             </div>
         </div>
     </main>
-    <script src="solution.js"></script>
+    
 </body>
 
 </html>
