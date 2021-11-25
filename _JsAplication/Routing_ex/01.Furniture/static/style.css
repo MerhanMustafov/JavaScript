@@ -221,3 +221,8 @@ img {
     color:red;
     font-size: 125%;
 }
+
+.disable{
+    pointer-events: none;
+    cursor: default;
+}

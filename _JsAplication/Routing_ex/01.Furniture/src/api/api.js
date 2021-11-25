@@ -1,4 +1,4 @@
-import {getUserData, setUserData, clearUserData} from '../ulils.js';
+import {getUserData, setUserData, clearUserData} from './utils.js';
 
 
 const host = `http://localhost:3030`
@@ -6,7 +6,7 @@ const host = `http://localhost:3030`
 async function request(url, options){
     try{
         // console.log(host);
-        console.log(url);
+        // console.log(url);
         // console.log(options);
         const res = await fetch(host + url, options);
         if (res.ok !== true){
@@ -19,12 +19,11 @@ async function request(url, options){
         if (res.status == 204){
             return res
         }else{
-            // console.log(res.json())
             return res.json()
         }
 
     }catch (err) {
-        // alert(err.message);
+        alert(err.message);
         throw err
     }
 }
@@ -49,26 +48,32 @@ function createOptions(method = 'get', data){
 }
 
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// REQUESTS >>> GET/POST/PUT/DELETE
+
 export async function get(url){
-    // console.log(url);
     return request(url, createOptions())
 }
 
 export async function post(url, data){
-    // console.log(url);
     return request(url, createOptions('post', data))
 }
 
 export async function put(url, data){
-    // console.log(url);
     return request(url, createOptions('put', data))
 }
 
 export async function del(url){
-    // console.log(url);
     return request(url, createOptions('delete'))
 }
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// LOGIN/REGISTER/LOGOUT
 
 export async function login(email, password){
     const result = await post ('/users/login', {email, password})
@@ -99,3 +104,5 @@ export async function logout() {
     await get('/users/logout');
     clearUserData()
 }
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
