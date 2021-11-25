@@ -20,6 +20,8 @@ function search(e) {
          if (town.textContent.toLowerCase().indexOf(inputBox.value.toLowerCase()) != -1){
             town.style['font-weight'] = 'bold'
             // console.log('AFTER IF:',town.textContent.toLowerCase().indexOf(inputBox.value.toLowerCase()))
+         }else{
+            town.style['font-weight'] = ''
          }
       })
    }
