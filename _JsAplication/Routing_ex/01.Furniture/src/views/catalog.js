@@ -39,10 +39,12 @@ const itemTemplate = (item, isLoged) => html`
 `;
 
 export function catalogPage(ctx){
+    console.log(ctx)
+
     const userpage = ctx.pathname == '/my-furniture';
     const isLoged = getUserData() != null
     // console.log(typeof null)
-    ctx.render(catalogTemplate(loadItems(userpage, isLoged), userpage, isLoged)) //----> ctx.render = (context) => render(context, root);
+    ctx.render(catalogTemplate(loadItems(userpage), userpage)) //----> ctx.render = (context) => render(context, root);
 
 } 
 
@@ -50,10 +52,15 @@ async function loadItems(userpage, isLoged){
     let items = []
     if (userpage){
         const userId = getUserData().id
+        console.log('Before getMy:', items)
         items = await getMyItems(userId)
+        console.log('After getMy:', items)
+
         
     }else{
+        console.log('Before getAll:', items)
         items = await getAll()
+        console.log('After getAll:', items)
         
     }
     return items.map(item => itemTemplate(item, isLoged))

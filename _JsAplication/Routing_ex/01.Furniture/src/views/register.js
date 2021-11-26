@@ -32,6 +32,7 @@ const registerTemplate = (onSubmit, errMessage, errors) => html`
 `;
 
 export function registerPage(ctx){
+    console.log(ctx)
     // update(null, {})
     update()
 

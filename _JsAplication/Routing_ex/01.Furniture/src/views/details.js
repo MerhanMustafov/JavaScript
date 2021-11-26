@@ -40,6 +40,8 @@ const itemTemplate = (item, isOwner, onDelete) => html`
 </div>
 `;
 export function detailsPage(ctx){
+    console.log(ctx)
+
     ctx.render(detailsTemplate(loadItem(ctx.params.id, onDelete)))
 
     async function onDelete(){

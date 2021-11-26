@@ -5,19 +5,18 @@ const host = `http://localhost:3030`
 
 async function request(url, options){
     try{
-        // console.log(host);
-        // console.log(url);
-        console.log(options);
         const res = await fetch(host + url, options)
+
         if (res.ok !== true){
             if(res.status == 403){
                 clearUserData()
             }
             const error = await res.json()
             throw new Error(error.message)
+
+            
         }
-        console.log(res)
-        if (res.status == 204){
+        if (res.status == 204){//204 no Content should be
             return res
         }else{
             return res.json()
@@ -101,9 +100,20 @@ export async function register(email, password){
 
 }
 
-export async function logout() {
-    await get('/users/logout');
-    clearUserData()
-}
+// export async function logout() {
+//     await get('/users/logout')
+//     clearUserData()
+// }
 
+export async function logout() {
+    const response = await fetch('http://localhost:3030/users/logout', {
+        method: 'get',
+        headers: {
+            'X-Authorization': getUserData().token
+        },
+    });
+    if (response.status == 200) {
+        return response;
+    }
+}
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

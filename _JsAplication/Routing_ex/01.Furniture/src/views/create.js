@@ -50,6 +50,8 @@ const createTemplate = (onSubmit,  errMessage, errors) => html`
 `;
 
 export function createPage(ctx){
+    console.log(ctx)
+
     update(null, {})
     function update (errMessage, errors){
         ctx.render(createTemplate(onSubmit, errMessage, errors))

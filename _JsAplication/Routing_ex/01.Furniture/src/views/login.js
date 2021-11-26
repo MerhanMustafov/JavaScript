@@ -28,6 +28,7 @@ const loginTemplate = (onSubmit, errMessage) => html`
 `;
 
 export function loginPage(ctx){
+    console.log(ctx)
     //----> ctx.render = (context) => render(context, root);
     // ctx.render is a function which takes the teplate in this case the context
     // and renders it ---> 
