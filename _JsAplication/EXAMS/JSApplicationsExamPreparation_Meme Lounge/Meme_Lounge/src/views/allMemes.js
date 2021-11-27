@@ -1,5 +1,5 @@
 import { getAll } from '../api/data.js';
-import {html, render, until} from '../lib.js';
+import {html, until} from '../lib.js';
 
 
 const allMemeTemplate = (cardsPromise) => html`
@@ -27,16 +27,22 @@ const memeCardTemplate = (meme) => html`
     </div>
 </div>
 `;
-const main = document.querySelector('main');
-export function allMemes(ctx){
-    ctx.render(allMemeTemplate(loadMemes()), main)
-    // loadMemes()
+
+let ctx;
+
+export function allMemes(context){
+    ctx = context
+    ctx.render(allMemeTemplate(loadMemes()))
 }
 
 async function loadMemes(){
-    const allMemes = await getAll()
-    console.log(await allMemes)
-    console.log(allMemes.map(meme => memeCardTemplate(meme)))
-    return allMemes.map(meme => memeCardTemplate(meme))
+    try{
+        const allMemes = await getAll()
+        return allMemes.map(meme => memeCardTemplate(meme))
+
+    }catch (err) {
+        alert(err.message);
+    }
+    
 }
 

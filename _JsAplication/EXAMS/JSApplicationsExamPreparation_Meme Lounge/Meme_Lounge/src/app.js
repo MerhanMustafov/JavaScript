@@ -21,8 +21,10 @@ page('/login', loginPage)//x
 page('/register', registerPage)//x
 page('/create', createPage)//x
 page('/details/:id', detailsPage)//x
-page('/edit', editPage)
+page('/edit/:id', editPage)//x
+
 page('/userProfile', userProfilePage)
+
 page('/allMemes', allMemes)//x
 
 

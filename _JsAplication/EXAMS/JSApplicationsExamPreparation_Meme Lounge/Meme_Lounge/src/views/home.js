@@ -1,4 +1,4 @@
-import {html, render} from '../lib.js';
+import {html} from '../lib.js';
 
 
 const homePageTemplate = () => html`
@@ -15,8 +15,10 @@ const homePageTemplate = () => html`
 </section>
 `;
 
-const main = document.querySelector('main');
-export function homePage(ctx){
-    ctx.render(homePageTemplate(), main)
+let ctx;
+
+export function homePage(context){
+    ctx = context
+    ctx.render(homePageTemplate())
 
 }

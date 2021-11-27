@@ -39,22 +39,16 @@ const itemTemplate = (item, isLoged) => html`
 `;
 
 export function catalogPage(ctx){
-    console.log(ctx)
-
     const userpage = ctx.pathname == '/my-furniture';
-    const isLoged = getUserData() != null
-    // console.log(typeof null)
-    ctx.render(catalogTemplate(loadItems(userpage), userpage)) //----> ctx.render = (context) => render(context, root);
+    ctx.render(catalogTemplate(loadItems(userpage), userpage))
 
 } 
 
-async function loadItems(userpage, isLoged){
+async function loadItems(userpage){
     let items = []
     if (userpage){
         const userId = getUserData().id
-        console.log('Before getMy:', items)
         items = await getMyItems(userId)
-        console.log('After getMy:', items)
 
         
     }else{
@@ -65,5 +59,3 @@ async function loadItems(userpage, isLoged){
     }
     return items.map(item => itemTemplate(item, isLoged))
 }
-
-// ${!isLoged ? ' disable' : ''}

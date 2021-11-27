@@ -1,5 +1,5 @@
 import { login } from '../api/api.js';
-import {html, render} from '../lib.js';
+import {html} from '../lib.js';
 
 const loginTemplate = (onSubmit) => html`
 <section id="login">
@@ -18,32 +18,32 @@ const loginTemplate = (onSubmit) => html`
     </form>
 </section>
 `;
-const main = document.querySelector('main');
-export function loginPage(ctx){
+
+let ctx;
+
+export function loginPage(context){
+    ctx = context
+
     ctx.render(loginTemplate(onSubmit), main)
+}
 
-    async function onSubmit(e){
-        e.preventDefault()
-        const form = e.target;
-        const formData = new FormData(form)
-        const email = formData.get('email')
-        const password = formData.get('password')
+async function onSubmit(e){
+    e.preventDefault()
+    const form = e.target;
+    const formData = new FormData(form)
+    const email = formData.get('email').trim();
+    const password = formData.get('password').trim();
 
-        try{
-            if(!email || !password){
-                throw new Error('Fill in all boxes')
-            }
-            await login(email, password)
-            ctx.updateUserNav()
-            ctx.page.redirect('/allMemes')
-
-        }catch (err) {
-            alert(err.message);
+    try{
+        if(!email || !password){
+            throw new Error('Fill in all boxes')
         }
-        
-        // const email = form.querySelector('[name="email"]').value;
-        // const password = form.querySelector('[name="password"]').value;
+        await login(email, password)
+        ctx.updateUserNav()
+        ctx.page.redirect('/allMemes')
 
-
+    }catch (err) {
+        alert(err.message);
     }
+
 }

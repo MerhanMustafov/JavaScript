@@ -54,10 +54,9 @@ const formTemplate = (item, onSubmit, errMessage, errors) => html`
         </form>
 `;
 export function editPage(ctx){
-    console.log(ctx)
     let itemPromis = getById(ctx.params.id)
     update( itemPromis,null, {})
-    function update (itemPromis,errMessage, errors){
+    function update (itemPromis, errMessage, errors){
         ctx.render(editTemplate(loadItem(itemPromis, errMessage, errors)))
 
     }

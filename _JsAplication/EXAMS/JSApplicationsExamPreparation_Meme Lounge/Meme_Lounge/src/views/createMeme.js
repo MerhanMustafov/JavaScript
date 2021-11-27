@@ -1,5 +1,5 @@
 import { createItem } from '../api/data.js';
-import {html, render} from '../lib.js';
+import {html} from '../lib.js';
 
 const createTemplate = (onSubmit) => html`
 <section id="create-meme">
@@ -18,30 +18,33 @@ const createTemplate = (onSubmit) => html`
 </section>
 `;
 
-const main = document.querySelector('main');
-export function createPage(ctx){
-    ctx.render(createTemplate(onSubmit), main)
+let ctx;
 
-    async function onSubmit(e){
-        e.preventDefault()
+export function createPage(context){
+    ctx = context
 
-        const form = e.target
-        const formData = new FormData(form)
+    ctx.render(createTemplate(onSubmit))
+}
 
-        const title = formData.get('title');
-        const description = formData.get('description');
-        const imageUrl = formData.get('imageUrl');
 
-        try{
-            if(!title || !description || !imageUrl){
-                throw new Error('fill in all boxes')
-            }
-            await createItem({title, description, imageUrl})
-            ctx.page.redirect('/allMemes')
+async function onSubmit(e){
+    e.preventDefault()
 
-        }catch (err) {
-            alert(err.message);
+    const formData = new FormData(e.target)
+
+    const title = formData.get('title').trim();
+    const description = formData.get('description').trim();
+    const imageUrl = formData.get('imageUrl').trim();
+
+    try{
+        if(!title || !description || !imageUrl){
+            throw new Error('fill in all boxes')
         }
+        await createItem({title, description, imageUrl})
+        ctx.page.redirect('/allMemes')
 
+    }catch (err) {
+        alert(err.message);
     }
+
 }

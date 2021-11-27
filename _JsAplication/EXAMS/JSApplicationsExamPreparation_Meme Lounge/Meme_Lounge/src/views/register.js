@@ -1,5 +1,5 @@
 import { register } from '../api/api.js';
-import {html, render} from '../lib.js';
+import {html} from '../lib.js';
 
 
 const registerTemplate = (onSubmit) => html`
@@ -29,40 +29,40 @@ const registerTemplate = (onSubmit) => html`
 </form>
 </section>
 `;
-const main = document.querySelector('main');
-export function registerPage(ctx){
+
+let ctx;
+
+export function registerPage(context){
+    ctx = context
     update()
-    function update(error){
-        ctx.render(registerTemplate(onSubmit), main)
+    function update(){
+        ctx.render(registerTemplate(onSubmit))
 
     }
+}
 
-    async function onSubmit(e){
-        e.preventDefault()
-        const form = e.target;
-        const formData = new FormData(form)
-        const username = formData.get('username')
-        const email = formData.get('email')
-        const password = formData.get('password')
-        const repeatPass = formData.get('repeatPass')
+async function onSubmit(e){
+    e.preventDefault()
+    const form = e.target;
+    const formData = new FormData(form)
+    const username = formData.get('username').trim();
+    const email = formData.get('email').trim();
+    const password = formData.get('password').trim();
+    const repeatPass = formData.get('repeatPass').trim();
 
-        
-        try{
-            if(!username || !email || !password || !repeatPass){
-                throw new Error('Fill in all boxes')
-            }
-            if(password != repeatPass){
-                throw new Error('Passwords don\'t match')
-            }
-            await register(email, password)
-            ctx.updateUserNav()
-            ctx.page.redirect('/allMemes')
-
-        }catch (err) {
-            alert(err.message);
-        }
-
-            
     
-    }
+    try{
+        if(!username || !email || !password || !repeatPass){
+            throw new Error('Fill in all boxes')
+        }
+        if(password != repeatPass){
+            throw new Error('Passwords don\'t match')
+        }
+        await register(email, password)
+        ctx.updateUserNav()
+        ctx.page.redirect('/allMemes')
+
+    }catch (err) {
+        alert(err.message);
+    } 
 }
