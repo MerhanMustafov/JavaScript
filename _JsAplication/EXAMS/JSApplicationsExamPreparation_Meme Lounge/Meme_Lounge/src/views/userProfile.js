@@ -1,4 +1,11 @@
+import { getUserData } from '../api/utils.js';
 import {html, render} from '../lib.js';
+
+
+export const userGender = {
+    "35c62d76-8152-4626-8712-eeb96381bea8": "male",
+    
+}
 
 
 const userProfileTemplate = () => html`
@@ -31,7 +38,7 @@ const userProfileTemplate = () => html`
 </section>
 `;
 
-const main = document.querySelector('main');
 export function userProfilePage(ctx){
-    ctx.render(userProfileTemplate(), main)
+    console.log(userGender)
+    ctx.render(userProfileTemplate())
 }

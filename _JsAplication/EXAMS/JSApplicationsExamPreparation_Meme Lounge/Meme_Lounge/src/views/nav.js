@@ -8,7 +8,7 @@ const navTemplate = (email) => html`
     <a href="/create">Create Meme</a>
     <div class="profile">
         <span>Welcome, ${email}</span>
-        <a href="/myProfile">My Profile</a>
+        <a href="/userProfile">My Profile</a>
         <a id="logoutBtn" href="javascript:void(0)">Logout</a>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { login } from '../api/api.js';
 import {html} from '../lib.js';
+import {userGender} from './userProfile.js'
 
 const loginTemplate = (onSubmit) => html`
 <section id="login">
@@ -24,7 +25,7 @@ let ctx;
 export function loginPage(context){
     ctx = context
 
-    ctx.render(loginTemplate(onSubmit), main)
+    ctx.render(loginTemplate(onSubmit))
 }
 
 async function onSubmit(e){
