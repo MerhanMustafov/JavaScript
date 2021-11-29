@@ -1,5 +1,6 @@
 import { editItem, getById } from '../api/data.js';
 import {html, until} from '../lib.js';
+import { notificationMsg } from './notification.js';
 
 
 const editTemplate =  (meme) => html`
@@ -56,6 +57,6 @@ async function onSubmit(e){
         ctx.page.redirect(`/details/${editedMeme._id}`)
 
     }catch (err) {
-        alert(err.message);
+        notificationMsg(err.message)
     }
 }

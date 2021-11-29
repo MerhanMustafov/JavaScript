@@ -23,7 +23,7 @@ async function request(url, options){
         }
 
     }catch (err) {
-        alert(err.message);
+        // alert(err.message);
         throw err
     }
 }
@@ -77,8 +77,11 @@ export async function del(url){
 
 export async function login(email, password){
     const result = await post ('/users/login', {email, password})
+    console.log(result)
 
     const userData = {
+        username: result.username,
+        gender: result.gender,
         email: result.email,
         id: result._id,
         token: result.accessToken
@@ -88,10 +91,13 @@ export async function login(email, password){
 }
 
 
-export async function register(email, password){
-    const result = await post ('/users/register', {email, password})
+export async function register(email, password, username, gender){
+    const result = await post ('/users/register', {email, password, username, gender})
 
+    console.log(result)
     const userData = {
+        username: result.username,
+        gender: result.gender,
         email: result.email,
         id: result._id,
         token: result.accessToken

@@ -1,7 +1,6 @@
 import { register } from '../api/api.js';
-import { getUserData } from '../api/utils.js';
 import {html} from '../lib.js';
-import {userGender} from './userProfile.js'
+import { notificationMsg } from './notification.js';
 
 
 
@@ -55,7 +54,6 @@ async function onSubmit(e){
 
     const gender = formData.get('gender').trim();
 
-    console.log(gender)
     
     try{
         if(!username || !email || !password || !repeatPass){
@@ -64,13 +62,12 @@ async function onSubmit(e){
         if(password != repeatPass){
             throw new Error('Passwords don\'t match')
         }
-        await register(email, password)
-        userGender[getUserData().id] = gender
-        console.log(userGender)
+        await register(email, password, username, gender)
+        
         ctx.updateUserNav()
         ctx.page.redirect('/allMemes')
 
     }catch (err) {
-        alert(err.message);
+        notificationMsg(err.message)
     } 
 }

@@ -1,5 +1,6 @@
 import { createItem } from '../api/data.js';
 import {html} from '../lib.js';
+import { notificationMsg } from './notification.js';
 
 const createTemplate = (onSubmit) => html`
 <section id="create-meme">
@@ -44,7 +45,7 @@ async function onSubmit(e){
         ctx.page.redirect('/allMemes')
 
     }catch (err) {
-        alert(err.message);
+        notificationMsg(err.message)
     }
 
 }

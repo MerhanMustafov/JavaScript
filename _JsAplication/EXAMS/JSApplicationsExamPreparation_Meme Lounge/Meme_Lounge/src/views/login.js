@@ -1,6 +1,6 @@
 import { login } from '../api/api.js';
 import {html} from '../lib.js';
-import {userGender} from './userProfile.js'
+import { notificationMsg } from './notification.js';
 
 const loginTemplate = (onSubmit) => html`
 <section id="login">
@@ -40,11 +40,12 @@ async function onSubmit(e){
             throw new Error('Fill in all boxes')
         }
         await login(email, password)
+
         ctx.updateUserNav()
         ctx.page.redirect('/allMemes')
 
     }catch (err) {
-        alert(err.message);
+        notificationMsg(err.message)
     }
 
 }

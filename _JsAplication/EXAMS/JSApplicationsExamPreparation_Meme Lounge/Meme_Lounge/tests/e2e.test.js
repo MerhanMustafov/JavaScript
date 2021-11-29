@@ -192,7 +192,7 @@ describe('E2E tests', function () {
         });
     });
 
-    describe('Navigation bar [ 5 Points ]', () => {
+    describe.only('Navigation bar [ 5 Points ]', () => {
         const email = 'ivan@mail.bg';
         const password = '345321';
 
@@ -218,7 +218,7 @@ describe('E2E tests', function () {
                 page.click('[type="submit"]')
             ]);
             //Test for navigation
-            await page.waitForTimeout(300);
+            await page.waitForTimeout(5000);
 
             expect(await page.isVisible('nav >> text="All Memes"')).to.be.true;
             expect(await page.isVisible('nav >> text="Create Meme"')).to.be.true;
@@ -234,7 +234,7 @@ describe('E2E tests', function () {
         it('guest user should see correct navigation [ 2.5 Points ]', async () => {
             await page.goto(host);
 
-            await page.waitForTimeout(300);
+            await page.waitForTimeout(5000);
 
             expect(await page.isVisible('text="All Memes"')).to.be.true;
             expect(await page.isVisible('text="Create Meme"')).to.be.false;

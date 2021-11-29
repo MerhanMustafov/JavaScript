@@ -49,7 +49,8 @@ function updateUserNav(){
     }else{
         page.redirect('/allMemes')
         document.querySelector('.guest').style.display = 'none'
-        document.querySelector('.user').style.display = 'inline-block'
+        document.querySelector('.user').style.display = 'block'
+        document.querySelector('#email').textContent = "Welcome, " + getUserData().email
     }
 }
 
@@ -61,4 +62,3 @@ async function onLogout(){
     updateUserNav()
     
 }
-

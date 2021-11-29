@@ -1,44 +1,47 @@
+import { getMyItems } from '../api/data.js';
 import { getUserData } from '../api/utils.js';
-import {html, render} from '../lib.js';
+import {html, until} from '../lib.js';
 
 
-export const userGender = {
-    "35c62d76-8152-4626-8712-eeb96381bea8": "male",
-    
-}
-
-
-const userProfileTemplate = () => html`
+const userProfileTemplate = (count, userData, userMemes) => html`
 <section id="user-profile-page" class="user-profile">
 <article class="user-info">
-    <img id="user-avatar-url" alt="user-profile" src="/images/female.png">
+    <img id="user-avatar-url" alt="user-profile" src="/images/${userData.gender}.png">
     <div class="user-content">
-        <p>Username: Mary</p>
-        <p>Email: mary@abv.bg</p>
-        <p>My memes count: 2</p>
+        <p>Username: ${userData.username}</p>
+        <p>Email: ${userData.email}</p>
+        <p>My memes count: ${count}</p>
     </div>
 </article>
 <h1 id="user-listings-title">User Memes</h1>
 <div class="user-meme-listings">
     <!-- Display : All created memes by this user (If any) --> 
-    <div class="user-meme">
-        <p class="user-meme-title">Java Script joke</p>
-        <img class="userProfileImage" alt="meme-img" src="/images/1.png">
-        <a class="button" href="#">Details</a>
-    </div>
-    <div class="user-meme">
-        <p class="user-meme-title">Bad code can present some problems</p>
-        <img class="userProfileImage" alt="meme-img" src="/images/3.png">
-        <a class="button" href="#">Details</a>
-    </div>
+    
+    ${until(userMemes , html`<p>Loading &hellip;</p>`)}
 
     <!-- Display : If user doesn't have own memes  --> 
-    <p class="no-memes">No memes in database.</p>
+    ${count == 0 ? html`<p class="no-memes">No memes in database.</p>` : null}
+    
 </div>
 </section>
 `;
 
-export function userProfilePage(ctx){
-    console.log(userGender)
-    ctx.render(userProfileTemplate())
+const userMemesTemplate = (meme) => html`
+<div class="user-meme">
+    <p class="user-meme-title">${meme.title}</p>
+    <img class="userProfileImage" alt="meme-img" src="${meme.imageUrl}">
+    <a class="button" href="details/${meme._id}">Details</a>
+</div>
+`;
+
+export  async function userProfilePage(ctx){
+    const userData = getUserData()
+    const data = await getMyItems(userData.id)
+    const count = data.length
+    let userMemes;
+    if(count > 0){
+        userMemes = data.map(meme => userMemesTemplate(meme))
+    }
+    
+    ctx.render(userProfileTemplate(count, userData, userMemes))
 }
