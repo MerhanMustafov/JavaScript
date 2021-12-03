@@ -27,10 +27,8 @@ const logInTemplate = (onSubmit) => html`
 
 export function loginPage(ctx){
     ctx.render(logInTemplate(onSubmit))
-
     async function onSubmit(e){
         e.preventDefault()
-
         const formData = new FormData(e.target)
 
         const email = formData.get('email');

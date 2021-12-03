@@ -16,7 +16,7 @@ async function request(url, options){
 
             
         }
-        if (res.status == 204){//204 no Content should be
+        if (res.status == 204){
             return res
         }else{
             return res.json()
@@ -51,7 +51,7 @@ function createOptions(method = 'get', data){
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // REQUESTS >>> GET/POST/PUT/DELETE
 
-export function get(url){
+export async function get(url){
     return request(url, createOptions())
 }
 
@@ -75,12 +75,12 @@ export async function del(url){
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // LOGIN/REGISTER/LOGOUT
 
-export async function login(email, password){
-    const result = await post ('/users/login', {email, password})
+export async function login(username, password){
+    const result = await post ('/users/login', {username, password})
     // console.log(result)
 
     const userData = {
-        email: result.email,
+        username: result.username,
         id: result._id,
         token: result.accessToken
     }
@@ -89,12 +89,12 @@ export async function login(email, password){
 }
 
 
-export async function registerPage(email, password){
-    const result = await post ('/users/register', {email, password})
+export async function registerPage(username, password){
+    const result = await post ('/users/register', {username, password})
 
     console.log(result)
     const userData = {
-        email: result.email,
+        username: result.username,
         id: result._id,
         token: result.accessToken
     }
@@ -107,6 +107,9 @@ export async function logout() {
     clearUserData()
 }
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 // export async function logout() {
 //     const response = await fetch('http://localhost:3030/users/logout', {
 //         method: 'get',
@@ -118,4 +121,3 @@ export async function logout() {
 //         return response;
 //     }
 // }
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
