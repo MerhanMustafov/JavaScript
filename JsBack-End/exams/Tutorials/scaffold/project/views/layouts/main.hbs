@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        {{#if errors}}
+        <section class="notifications">
+            <p class="notification-message">Message...</p>
+        </section>
+        {{/if}}
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" href="#">Tutorials</a>
+
+            <ul class="navbar-nav ml-auto">
+                {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Welcome, {{user.username}}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/logout">Logout</a>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/login">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/register">Register</a>
+                </li>
+                {{/if}}
+
+            </ul>
+        </nav>
+
+        {{{body}}}
+
+        <footer class="page-footer font-small">
+            <div class="footer-copyright text-center py-3">© 2020
+                <a href="https://softuni.bg/trainings/3048/js-back-end-september-2020">JS Back-End</a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
