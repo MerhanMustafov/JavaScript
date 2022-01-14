@@ -1,0 +1,16 @@
+ <div class="searchBoxOut">
+        <div class="searchBoxIn">
+          <h1>Cat Shelter</h1>
+          <form action="/search">
+            <input type="text" />
+            <button type="button">Search</button>
+          </form>
+
+        </div>
+
+      </div>
+<ul class="ulCats">
+  {{#each cats}}
+    {{> cat}}
+  {{/each}}
+</ul>

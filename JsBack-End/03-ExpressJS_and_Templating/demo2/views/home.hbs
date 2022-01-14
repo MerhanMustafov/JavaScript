@@ -1,0 +1,36 @@
+<h1>It's Working...</h1>
+<h2>Name: {{{name}}}</h2>
+<h3>Age: {{{age}}}</h3>
+<h3>Model: {{{items.model}}}</h3>
+<ul>
+  {{! 1 }}
+  {{#each array}}
+    <li>{{@index}} ---> {{this}}</li>
+  {{/each}}
+
+  {{! 2 }}
+  {{#each arrayOfObjects}}
+    {{> items}}
+    {{else}}
+    <li>There is no data</li>
+  {{/each}}
+
+  {{! 3 }}
+  <br />
+  <br />
+  <br />
+  {{#each emptyArray}}
+    <li>{{this}} {{this}}</li>
+  {{else}}
+    <li>There is no data</li>
+
+  {{/each}}
+</ul>
+
+{{!-- 
+{{#each array}}
+  >>> #each is a helper in handlebars
+  <li>{{this}}</li>
+  >>> this is the current item in the array
+{{/each}}
+ --}}

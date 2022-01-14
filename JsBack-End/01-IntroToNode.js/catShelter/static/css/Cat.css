@@ -1,0 +1,50 @@
+.ulCats {
+  list-style-type: none;
+  display: inline-block;
+}
+.ulCats.catCard {
+  display: inline-block;
+}
+.catCard {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  border-radius: 9px;
+  margin-right: 15px;
+  border-width: 3px;
+  width: 150px;
+  height: 150px;
+}
+.buttons {
+  display: block;
+}
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 40%;
+}
+.name {
+  display: inline;
+  margin-left: 40%;
+  margin-right: 50%;
+  width: 50%;
+}
+.descr {
+  overflow: auto;
+}
+
+.button-edit {
+  display: inline;
+  position: absolute;
+  background-color: rgb(136, 136, 247);
+  border-radius: 5px;
+}
+
+.button-delete {
+  display: inline;
+  position: absolute;
+  margin-left: 50px;
+  background-color: red;
+  border-radius: 5px;
+}
