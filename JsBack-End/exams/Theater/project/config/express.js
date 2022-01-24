@@ -1,29 +1,28 @@
-const hbs = require('express-handlebars');
-const express = require('express');
-const cookieParser = require('cookie-parser');
+const hbs = require("express-handlebars");
+const express = require("express");
+const cookieParser = require("cookie-parser");
 
-const authMiddleware = require('../middlewares/auth')
+const authMiddleware = require("../middlewares/auth");
 
-module.exports = (app) =>{
-    app.engine('.hbs', hbs.engine({extname: '.hbs', defaultLayout: "main"}));
+module.exports = (app) => {
+  app.engine(".hbs", hbs.engine({ extname: ".hbs" })); //, defaultLayout: "main"
 
-    app.set('view engine', '.hbs');
+  app.set("view engine", ".hbs");
 
-    app.use('/static', express.static('static'))
-    app.use(express.urlencoded({extended: true}))
-    app.use(cookieParser())
-    app.use(authMiddleware())
+  app.use("/static", express.static("static"));
+  app.use(express.urlencoded({ extended: true }));
+  app.use(cookieParser());
+  app.use(authMiddleware());
 
-    //for debug
-    app.use((req, res, next) => {
-        if(!req.url.includes('favicon')){
-            console.log('>>>', req.method, req.url);
+  //for debug
+  app.use((req, res, next) => {
+    if (!req.url.includes("favicon")) {
+      console.log(">>>", req.method, req.url);
 
-            if(req.user){
-                console.log('Known user', req.user.username)
-            }
-        }
-        next()
-    })
-    
-}
+      if (req.user) {
+        console.log("Known user", req.user.username);
+      }
+    }
+    next();
+  });
+};

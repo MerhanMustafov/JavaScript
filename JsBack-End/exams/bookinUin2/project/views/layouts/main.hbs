@@ -1,0 +1,50 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>BookingUni</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+
+  <body>
+    {{#if user}}
+      <nav>
+        <div class="left-container">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/add">Add +</a></li>
+          </ul>
+        </div>
+        <div class="right-container">
+          <a href="/" class="log-out">{{name}}</a>
+          <a href="/logout" class="log-out">Logout</a>
+        </div>
+      </nav>
+    {{else}}
+      <nav>
+        <div class="left-container">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+      {{! <nav>
+        <div class="left-container">
+          <ul>
+            <li><a href="/">Home</a></li>
+          </ul>
+        </div>
+        <div class="right-container">
+          <a href="/login" class="log-out">Login</a>
+          <a href="/register" class="log-out">Register</a>
+        </div>
+      </nav> }}
+    {{/if}}
+
+    {{{body}}}
+
+  </body>
+
+</html>
