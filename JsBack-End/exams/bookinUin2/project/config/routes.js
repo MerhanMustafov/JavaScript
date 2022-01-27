@@ -1,9 +1,7 @@
-const homeController = require("../controllers/home");
-const loginController = require("../controllers/user/login");
-const registercontroller = require("../controllers/user/register");
+// const homeController = require("../controllers/home");
+const authController = require("../controllers/user/auth");
 
 module.exports = (app) => {
-  app.use("/", homeController);
-  app.use("/login", loginController);
-  app.use("/register", registercontroller);
+	//   app.use("/", homeController);
+	app.use("/auth", authController);
 };

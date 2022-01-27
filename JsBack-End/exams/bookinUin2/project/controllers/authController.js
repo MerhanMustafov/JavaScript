@@ -3,24 +3,28 @@ const { body, validationResult } = require("express-validator");
 const { isGuest } = require("../middlewares/guards");
 
 router.get("/register", isGuest(), (req, res) => {
-	console.log("authController req /register >>>>>", req.path);
-
-	res.render("user/register.hbs");
+	res.render("register.hbs");
 });
 
 router.post(
 	"/register",
 	isGuest(),
-	body("email", "Invalid Email").isEmail(),
-	// body('username')
-	//     .matches(/[a-zA-z0-9]/)
-	//     .withMessage('Username must be at least 3 characters long'),
+	body("email")
+		.isLength({ min: 5 })
+		.withMessage("Email must be at least 5 characters long")
+		.bail()
+		.isAlphanumeric()
+		.withMessage(
+			"Username should consist only from english letters and digits"
+		),
 	body("password")
 		.isLength({ min: 5 })
-		.withMessage("Password must be at least 5 characters")
+		.withMessage("Password must be at least 3 characters long")
 		.bail()
-		.matches(/[a-zA-z0-9]/)
-		.withMessage("Password must contain only english letters and numbers"),
+		.isAlphanumeric()
+		.withMessage(
+			"Password should consist only from english letters and digits"
+		),
 	body("rePass").custom((value, { req }) => {
 		if (value != req.body.password) {
 			throw new Error("Passwords don't match");
@@ -31,14 +35,13 @@ router.post(
 		const { errors } = validationResult(req);
 		try {
 			if (errors.length > 0) {
-				const message = errors.map((e) => e.msg).join("\n");
-				throw new Error(message);
+				throw new Error(
+					Object.values(errors)
+						.map((e) => e.msg)
+						.join("\n")
+				);
 			}
-			await req.auth.register(
-				req.body.username,
-				req.body.email,
-				req.body.password
-			);
+			await req.auth.register(req.body.username, req.body.password);
 
 			res.redirect("/");
 		} catch (err) {
@@ -49,13 +52,13 @@ router.post(
 					username: req.body.username,
 				},
 			};
-			res.render("user/register.hbs", ctx);
+			res.render("register", ctx);
 		}
 	}
 );
 
 router.get("/login", isGuest(), (req, res) => {
-	res.render("user/login.hbs");
+	res.render("login.hbs");
 });
 
 router.post("/login", isGuest(), async (req, res) => {
@@ -63,14 +66,14 @@ router.post("/login", isGuest(), async (req, res) => {
 		await req.auth.login(req.body.username, req.body.password);
 		res.redirect("/");
 	} catch (err) {
-		console.log(err.message);
+		console.log("authController >>>", err.message);
 		const ctx = {
 			errors: [err.message],
 			userData: {
 				username: req.body.username,
 			},
 		};
-		res.render("user/login.hbs", ctx);
+		res.render("login", ctx);
 	}
 });
 

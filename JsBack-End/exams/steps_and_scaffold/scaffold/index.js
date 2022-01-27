@@ -1,24 +1,33 @@
-const express = require("express");
-const { PORT } = require("./config");
-const databaseConfig = require("./config/database");
-const expressConfig = require("./config/express");
-const routesConfig = require("./config/routes");
+const express = require('express');
+const {PORT} = require('./config');
+const databaseConfig = require('./config/database');
+const expressConfig = require('./config/express')
+const routesConfig = require('./config/routes')
 
 // const userService = require('./services/user') //test login/register/
 // const authMiddlewares = require('./middlewares/auth')
 
-start();
-async function start() {
-	const app = express();
-	await databaseConfig(app);
-	expressConfig(app);
-	routesConfig(app);
+start()
+async function start(){
+    const app = express()
 
-	app.listen(PORT, () => {
-		// testAuth()
-		console.log(`App started at http://localhost:${PORT}`);
-	});
+    await databaseConfig(app)
+    expressConfig(app)
+    routesConfig(app)
+    
+    app.get('/', (req, res)=>{res.send('WORKING')})
+    
+    app.listen(PORT, ()=> {
+        // testAuth() //test login/register/
+        // testAuth()
+        console.log(`App started at http://localhost:${PORT}`)
+    });
+
 }
+
+
+
+
 
 // async function testAuth(){
 //     const reqMock = {}
@@ -31,12 +40,13 @@ async function start() {
 //     try{
 //         const auth = authMiddlewares()
 //         auth(reqMock, resMock, nextMock)
-//         await reqMock.auth.register('Peter', '1234')
+//         await reqMock.auth.register('Peter', '1234') 
 //     }catch(err){
 //         console.log(err.message)
 //     }
 
 // }
+
 
 //test login/register/
 // async function testAuth(){

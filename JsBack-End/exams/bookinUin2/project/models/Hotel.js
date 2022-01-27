@@ -1,12 +1,12 @@
 const { Schema, model } = require("mongoose");
 
 const schema = new Schema({
-  name: { type: String, required: true, unique: true },
-  city: { type: String, required: true },
-  imageUrl: { type: String, required: true },
-  freeRooms: { type: Number, required: true, min: 1, max: 100 },
-  users: { type: Schema.Types.ObjectId, ref: "User" },
-  owner: { type: String },
+	name: { type: String, required: true, unique: true },
+	city: { type: String, required: true },
+	imageUrl: { type: String, required: true },
+	freeRooms: { type: Number, required: true, min: 1, max: 100 },
+	bookedUsers: [{ type: Schema.Types.ObjectId, ref: "User" }],
+	owner: { type: String },
 });
 
 module.exports = model("Hotel", schema);
