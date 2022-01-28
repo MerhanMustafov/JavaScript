@@ -54,9 +54,9 @@ async function login(username, password) {
 		throw new Error("No such user");
 	}
 
-	// const hasMatched = await bcrypt.compare(password, user.hashedPassword);
+	const hasMatched = await bcrypt.compare(password, user.hashedPassword);
 
-	if (!password == user.hashedPassword) {
+	if (!hasMatched) {
 		throw new Error("Incorrect password");
 	}
 
