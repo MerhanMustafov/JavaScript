@@ -70,6 +70,7 @@ function generateToken(userData) {
 			firstName: userData.name,
 			lastName: userData.surname,
 			email: userData.email,
+			userPosts: userData.userPosts,
 		},
 		TOKEN_SECRET
 	);

@@ -5,6 +5,11 @@ async function createUser(userData) {
 	await user.save();
 	return user;
 }
+async function addPostToUser(authorId, postId) {
+	const user = await User.findById(authorId);
+	user.userPosts.push(postId);
+	await user.save();
+}
 async function getUserByFullName(firstName, lastName) {
 	const patternFirstName = new RegExp(`^${firstName}$`, "i");
 	const patternLastName = new RegExp(`^${lastName}$`, "i");
@@ -27,4 +32,5 @@ module.exports = {
 	createUser,
 	getUserByFullName,
 	getUserByEmail,
+	addPostToUser,
 };

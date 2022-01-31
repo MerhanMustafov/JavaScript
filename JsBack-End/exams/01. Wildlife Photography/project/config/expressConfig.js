@@ -3,6 +3,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 
 const userMidleware = require("../midlewares/userMidleware");
+const postMidleware = require("../midlewares/postMidleware");
 
 module.exports = (app) => {
 	app.engine(".hbs", hbs.engine({ extname: ".hbs", defaultLayout: "main" }));
@@ -13,6 +14,7 @@ module.exports = (app) => {
 	app.use(cookieParser());
 
 	app.use(userMidleware());
+	app.use(postMidleware());
 
 	app.use((req, res, next) => {
 		if (!req.url.includes("/favicon")) {

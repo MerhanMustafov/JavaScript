@@ -1,18 +1,20 @@
 const routes = require("express").Router();
 const { body, validationResult } = require("express-validator");
-const { isGuest } = require("../midlewares/guards");
+const { isGuest, isUser } = require("../midlewares/guards");
 
+// GET
 routes.get("/register", isGuest(), async (req, res) => {
 	res.render("user/register.hbs");
 });
 routes.get("/login", isGuest(), async (req, res) => {
 	res.render("user/login.hbs");
 });
-routes.get("/logout", async (req, res) => {
+routes.get("/logout", isUser(), async (req, res) => {
 	req.auth.logout();
 	res.redirect("/");
 });
 
+// POST
 routes.post(
 	"/login",
 	isGuest(),
@@ -90,7 +92,6 @@ routes.post(
 				},
 			};
 			res.render("user/register.hbs", ctx);
-			// console.log(err.message.split("\n"));
 		}
 	}
 );

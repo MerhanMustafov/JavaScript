@@ -1,5 +1,3 @@
-const t = true;
-const f = false;
-if (f || t) {
-	console.log(f);
-}
+const url = `http://localhost:3030/`;
+const pattern = new RegExp(`^https?:\/\/`, "i");
+console.log(pattern.test(url));
