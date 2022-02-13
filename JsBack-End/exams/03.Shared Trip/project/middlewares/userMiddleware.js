@@ -49,7 +49,7 @@ async function login(userData) {
 		existing.heshedPassword
 	);
 	if (!hasMatch) {
-		throw new Error("passwords don't match");
+		throw new Error("incorrect password !");
 	}
 	const userD = {
 		_id: existing._id,

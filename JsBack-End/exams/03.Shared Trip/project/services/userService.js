@@ -11,7 +11,19 @@ async function getUserByEmail(email) {
 	return user;
 }
 
+async function getUserById(id) {
+	const user = await User.findById(id).populate("tripsHistory").lean();
+	return user;
+}
+
+// async function addTripHistory(tripId, userId){
+// 	const user = await User.findById(userId);
+// 	user.tripsHistory.push(tripId);
+
+// }
+
 module.exports = {
 	createUser,
 	getUserByEmail,
+	getUserById,
 };

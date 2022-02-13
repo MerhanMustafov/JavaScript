@@ -2,6 +2,12 @@ const route = require("express").Router();
 const { isGuest, isUser } = require("../middlewares/guard");
 const { body, validationResult } = require("express-validator");
 
+route.get("/profile/:id", isUser(), async (req, res) => {
+	const user = await req.storage.getUserById(req.user._id);
+	user.tripsCount = user.tripsHistory.length;
+	res.render("profile.hbs", user);
+});
+
 route.get("/register", isGuest(), async (req, res) => {
 	res.render("register.hbs");
 });

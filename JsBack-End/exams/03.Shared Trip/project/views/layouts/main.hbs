@@ -11,7 +11,9 @@
 		<!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
 		{{#if errors}}
 			<div class="error">
-				<p>{{#each errors}} {{this}} {{/each}}</p>
+				{{#each errors}}
+					<p> {{this}} </p>
+				{{/each}}
 				{{! <p>Error message - 2</p> }}
 			</div>
 		{{/if}}
@@ -42,17 +44,19 @@
 							<a class="nav-link" href="/">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="">Shared Trips</a>
+							<a class="nav-link" href="/trip/shared-trips">Shared
+								Trips</a>
 						</li>
 						{{#if user}}
 							<!-- Logged users -->
 							<li class="nav-item">
-								<a class="nav-link" href="">Offer Trip</a>
+								<a class="nav-link" href="/trip/create">Offer
+									Trip</a>
 							</li>
 							<li class="nav-item">
 								<a
 									class="nav-link"
-									href="/user/profile"
+									href="/user/profile/{{user._id}}"
 								>Profile</a>
 							</li>
 							<li class="nav-item">
