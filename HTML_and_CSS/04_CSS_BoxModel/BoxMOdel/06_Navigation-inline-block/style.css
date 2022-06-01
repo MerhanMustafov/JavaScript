@@ -1,0 +1,45 @@
+html{
+	font-family: Helvetica, sans-serif;
+}
+
+body{ 
+	margin: 0;
+	padding: 0;
+}
+
+header, main{ 
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+nav{
+	display: inline-block;
+	
+	margin-top: 50px;
+	padding: 0;
+	border-bottom: 2px solid black;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	display: inline-block;
+
+}
+
+.site-title{
+	display: inline-block;
+	margin: 0;
+	margin-right: 30px;
+}
+
+.button{
+	margin-left: 40px;
+}
+
+a{
+	text-decoration: none;
+	color: green;
+}
