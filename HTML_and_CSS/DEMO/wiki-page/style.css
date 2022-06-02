@@ -1,0 +1,50 @@
+@import url('https://use.fontawesome.com/releases/v6.1.1/css/all.css');
+html{
+	box-sizing: border-box;
+}
+
+*,
+:before,
+:after{
+	box-sizing: inherit;
+}
+
+header nav{
+	text-align: right;
+}
+
+li{
+	display: inline-block;
+	padding: 5px;
+
+}
+a{
+	font-size: 14px;
+	text-decoration: none;
+}
+.person{
+	color: gray;
+}
+
+i{
+	margin-right: 7px;
+}
+
+aside{
+	/* background-color: aqua; */
+	margin-left: 25px;
+	width: 100px;
+	height: 100%;
+	border-right: 1px solid gray;
+}
+img{
+	width: 100%;
+}
+
+section nav{
+	text-align: right;
+}
+
+hr{
+	border: 1px solid gray;
+}
