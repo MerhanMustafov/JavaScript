@@ -1,0 +1,70 @@
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+body {
+	margin: 0;
+}
+.viewport {
+	position: relative;
+	height: 100vh;
+}
+.viewport.one {
+	background-image: linear-gradient(
+		to right,
+		rgb(24, 91, 157),
+		rgb(66, 205, 162)
+	);
+	/* background-color: lightgreen; */
+}
+.viewport.two {
+	background-image: linear-gradient(
+		to right,
+		rgb(174, 62, 105),
+		rgb(210, 129, 19)
+	);
+}
+.card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+.card i {
+	position: absolute;
+	right: 20px;
+	color: white;
+	bottom: 30px;
+	font-size: 28px;
+}
+
+/* @import 'https://use.fontawesome.com/releases/v5.10.2/css/all.css';
+
+body{
+	margin: 0;
+	padding: 0;
+}
+div{
+	position: relative;
+}
+.card-1, card-2{
+	display: block;
+}
+.card-1{
+	background-image: linear-gradient(to right,rgb(27, 100, 157) , rgb(58, 183, 161));
+	position: absolute;
+}
+.card-2{
+	background-image: linear-gradient(to right,rgb(169, 52, 118) , rgb(209, 127, 22));
+}
+img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%, -50%)
+
+} */
