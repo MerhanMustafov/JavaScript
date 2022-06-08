@@ -1,0 +1,54 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+}
+.word{
+	display: inline-block;
+	padding: 5px;
+	background-color: aqua;
+	border: 1px solid black;
+	margin: 10px;
+	/* positioning */
+	position: relative;
+	left: 50px;
+}
+
+
+h2{
+	margin: 10px;
+}
+
+
+section{
+	border: 1px solid black;
+	margin: 10px;
+	border-color: brown;
+}
+
+.f-element{
+	color: white;
+	margin: 30px;
+	margin-bottom: 0;
+	background-color:rgb(60, 14, 104);
+	top: 50px;
+}
+.s-element{
+	margin: 30px;
+	margin-top: 0;
+	background-color:aquamarine;
+}
+
+/* Static */
+.ex-static .f-element{
+	margin: 30px;
+	margin-bottom: 0;
+	top: 50px;
+}
+.ex-static .s-element{
+	margin: 30px;
+	margin-top: 0;
+}
+
+/* Relative */
+
