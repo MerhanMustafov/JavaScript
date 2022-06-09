@@ -1,0 +1,47 @@
+body{
+	background-color:rgb(238, 238, 238) ;
+}
+
+.card{
+	background-color: rgb(255, 255, 255);
+	position: relative;
+	height: 57vh;
+	width:500px;
+	margin: 150px auto;
+	
+}
+
+.card a{
+	background-color: rgb(0, 153, 0);
+	text-decoration: none;
+	position: absolute;
+	top: 470px;
+	right: 30px; 
+	padding: 10px;
+	color: white;
+	
+}
+
+h3{
+	font-family: Georgia, serif;
+	font-size: 1em/1.2;
+	position: absolute;
+	top: 330px;
+	padding: 30px;
+}
+
+
+img{
+	position: absolute;
+	width: 100%;
+	/* top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) */
+}
+
+p{
+	position: absolute;
+	top: 360px;
+	padding: 30px;
+	width: 420px;
+}
