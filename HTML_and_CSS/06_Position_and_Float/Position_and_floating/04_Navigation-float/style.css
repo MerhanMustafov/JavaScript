@@ -1,0 +1,123 @@
+body{
+	background-color:rgb(238, 238, 238);
+	margin: 50px;
+}
+
+hr{
+	border-width: 1px;
+	border-color: black;
+}
+
+h1, h2, h3{
+	font-family: Georgia, serif;
+	font-size: 1em/1.2;
+}
+
+header nav ul{
+	list-style: none;
+}
+
+a{
+	color: rgb(0, 102, 0);
+}
+
+/* Header */
+header nav li{
+	display: inline-block;
+	padding: 15px;
+}
+
+header{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"title nav";
+}
+
+.header-p{
+	grid-area: title;
+	align-self: end;
+	margin: 0;
+	font-size: 30px;
+	font-weight: 700;
+}
+.header-nav{
+	grid-area: nav;
+	justify-self: end;
+	align-self: end;
+}
+/* Header */
+
+
+/* Main */
+main{
+	display: grid;
+	grid-template-columns: 55% 5% 40%;
+	grid-template-areas: 
+	"article . aside-bar";
+}
+
+.main-article{
+	grid-area: article;
+}
+
+.main-aside{
+	grid-area: aside-bar;
+}
+
+aside section nav ul li{
+	margin-left: 40px;
+}
+
+
+
+
+.p-quote{
+	display: grid;
+	grid-template-columns: 45% 55%;
+	grid-template-areas: 
+	"paragraph quote";
+}
+.p-quote p{
+	grid-area: paragraph;
+
+}
+
+.p-quote figure{
+	grid-area: quote;
+	position: relative;
+	border-left: 1px solid gray;
+}
+blockquote{
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-weight: 100;
+	line-height: 20px;
+
+
+}
+
+figcaption{
+	position: absolute;
+	right: 10px;
+}
+
+.f-section img{
+	float: right;
+	clear: right;
+	margin-left: 15px;
+	background-color: rgb(255, 255, 255);
+	padding: 7px;
+	box-shadow: rgba(0, 0, 0, 0.25) ;
+	border: 3px solid black;
+}
+.t-section img{
+	float: left;
+	margin-right: 15px;
+	background-color: rgb(255, 255, 255);
+	padding: 7px;
+	box-shadow: rgba(0, 0, 0, 0.25) ;
+	border: 3px solid black;
+}
+/* Main */
+
