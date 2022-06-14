@@ -1,1 +1,28 @@
-/* TODO: style the html */
+section{
+	position: absolute;
+	top: 250px;
+	left: 180px;
+}
+
+div{
+	position: relative;
+	bottom: 50px;
+	left: 8px;
+}
+/* h3, span{
+	position: absolute;
+	left: 8px;
+} */
+h3{
+	margin: 0px;
+	font-size: 16px;
+	/* bottom: 35px; */
+}
+
+span{
+	padding-left: 3px;
+	color: gray;
+	font-size: 14px;
+	/* bottom: 12px; */
+
+}
