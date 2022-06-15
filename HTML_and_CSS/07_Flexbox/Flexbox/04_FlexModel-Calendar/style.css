@@ -1,0 +1,49 @@
+html{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
+	margin: inherit;
+	padding: inherit;
+}
+.container, .week, .notes{
+	display: flex;
+	/* align-items: center; */
+	flex-wrap: wrap;
+
+}
+
+.container{
+	max-width: 65vw;
+}
+
+
+span{
+	border: 1px solid black;
+	text-align: center;
+	
+}
+
+.notes{
+	flex-direction: column;
+}
+
+.workweek, .weekend{
+	flex-grow: 1;
+	width: 90%;
+	height: 7rem;
+}
+
+.days{
+	flex: 1 0 auto;
+	height: 7rem;
+}
+
+.notes span{
+	flex: 1 0 auto;
+}
