@@ -1,0 +1,40 @@
+@import 'https://use.fontawesome.com/releases/v6.1.1/css/all.css';
+
+html{
+	font-family: Helvetica, sans-serif;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	margin: 20px 20px;
+}
+
+header{
+	display: flex;
+	border-bottom: 2px solid rgb(0, 0, 0);
+	flex-direction: row;
+}
+main > h1{
+	font-weight: 100;
+
+}
+
+.title{
+	flex: 1 0 auto;
+	font-size: 50px;
+	/* text-transform: uppercase; */
+}
+ul{
+	display: flex;
+	list-style-type: none;
+}
+li{
+	padding: 10px;
+	margin: 10px;
+}
+
+a{
+	color:rgb(0, 153, 0);
+	text-decoration: none;
+}
