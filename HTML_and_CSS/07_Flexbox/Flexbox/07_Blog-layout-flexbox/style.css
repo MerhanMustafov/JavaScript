@@ -1,0 +1,64 @@
+body{
+	background-color: rgb(238, 238, 238);
+	margin: 90px;
+}
+header{
+	border-bottom: 2px solid black;
+}
+.page{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main{
+	width: 60%;
+}
+aside{
+	/* width: 30%; */
+	margin-left: 50px;
+}
+a{
+	text-decoration:none;
+	color: rgb(0, 153, 0);
+}
+/* First article */
+.first-article img{
+	float: right;
+	clear: both;
+	border: 4px solid black;
+	padding: 5px;
+	margin: 0 0 0 15px;
+	background-color:rgb(255, 255, 255);
+}
+
+/* secont-article */
+.secont-article div{
+	display: flex;
+}
+
+.secont-article div p{
+	width: 200%;
+}
+
+figure{
+	position: relative;
+	border-left: 2px solid gray;
+}
+blockquote{
+	font-family: Georgia, serif;
+	width: 100%;
+
+}
+figcaption{
+	position: absolute;
+	right: 20px;
+}
+/* third-article */
+.third-article img{
+	float: left;
+	clear: both;
+	border: 2px solid black;
+	padding: 5px;
+	margin: 0 15px 0px 0;
+	background-color:rgb(255, 255, 255);
+}
