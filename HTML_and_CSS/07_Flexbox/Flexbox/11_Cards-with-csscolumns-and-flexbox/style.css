@@ -1,0 +1,101 @@
+@import "./card.css";
+@import "./layout.css";
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: rgb(238, 238, 238);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.cards-layout.masonry{
+	display: flex;
+	flex-flow: column;
+	width: 70%;
+	min-width: 450px;
+}
+.card{
+	background-color: white;
+	margin: 10px;
+	width: 28%;
+	border: 2px solid gray;
+	border-radius: 5px;
+}
+
+
+img{
+	width: 100%;
+
+}
+.card section{
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+.cards.masonry{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 250vh;
+}
+
+.card:nth-child(3n+1){
+	order: 1;
+}
+.card:nth-child(3n+2){
+	order: 2;
+}
+.card:nth-child(3n){
+	order: 2;
+}
+
+.f-one{
+	border-top: 2px solid gray;
+	padding: 10px;
+	/* background-color: brown; */
+}
+/* **************************************************************** */
+.cards-layout.flex{
+	display: flex;
+	flex-flow: column;
+	width: 70%;
+	/* height: 250%; */
+	min-width: 450px;
+	/* background-color: aqua; */
+}
+
+.cards.flex{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 200vh;
+}
+.cardflex{
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	margin: 10px;
+	width: 28%;
+	border: 2px solid gray;
+	border-radius: 5px;
+	position: relative;
+
+}
+.sec{
+	/* position: absolute; */
+	margin: 10px;
+	flex: 1 0 auto;
+}
+
+.footerTwo{
+	border-top: 2px solid gray;
+	padding: 20px;
+	/* position: absolute; */
+	height: auto;
+	bottom: 2px;
+}
