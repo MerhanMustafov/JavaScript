@@ -1,0 +1,36 @@
+.card{
+	background-color: rgb(247, 247, 247);
+	width: 30%;
+	/* display: inline-block; */
+	/* margin: 0 auto; */
+}
+.card:nth-child(1n){
+	margin-bottom: 20px;
+}
+
+.card img{
+	width: 100%;
+}
+.card h2{
+	font-weight: 700;
+}
+
+.card section{
+	padding: 5%;
+	height: 150%;
+}
+
+.card p{
+	margin-top: 10px;
+	line-height: 1.8;
+
+}
+
+button{
+	background-color: rgb(164, 198, 57);
+	color: white;
+	border-radius: 50px;
+	margin-top: 5%;
+	border: 1px solid rgb(164, 198, 57);
+	padding: 10px 25px;
+}
