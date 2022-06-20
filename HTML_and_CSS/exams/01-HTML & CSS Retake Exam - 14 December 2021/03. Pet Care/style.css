@@ -6,6 +6,8 @@
 @import "./s-two.css";
 @import "./s-three.css";
 @import "./s-four.css";
+@import "./footer.css";
+@import "./s-one.css";
 
 html{
 	font-family: Poppins sans-serif;
