@@ -4,9 +4,11 @@
 @import "./nav.css";
 @import "./main.css";
 @import "./s-two.css";
+@import "./s-three.css";
+@import "./s-four.css";
 
 html{
-	font-family: Poppins, sans-serif;
+	font-family: Poppins sans-serif;
 }
 *{
 	box-sizing: border-box;

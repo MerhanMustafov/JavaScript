@@ -3,7 +3,6 @@
 	flex-flow: column wrap;
 	align-items: center;
 	margin: 200px 0 20px 0;
-	/* background-color: aqua; */
 }
 
 .heading{
@@ -30,23 +29,22 @@
 	justify-content: space-between; 
 
 	width: 70%;
-	/* background-color: aqua; */
-	/* border: 2px solid black; */
 	margin: 60px;
 }
 
 .card{
 	display: flex;
 	flex-flow: column;
-	/* margin: 0 auto; */
 	border: 2px solid rgb(204, 204, 204);
 	width: 30%;
+	border-radius: 7px;
 }
 .card div{
 	display: inline-block;
 	margin: 0 auto;
 	background-image: url(./images/service-bg.png);
 	background-size: 100%;
+	background-repeat: no-repeat;
 	margin-bottom: 40px;
 	margin-top: 20px;
 }
@@ -54,21 +52,17 @@
 	width: 60%;
 	align-self: end;
 	margin: 20px;
-	/* background-color: bisque; */
 	
 	
 }
 .card h1{
 	font-size: 25px;
 	align-self: center;
-	/* margin: 10px; */
 }
 .card p{
-	/* display: inline-block; */
 	align-self: center;
 	margin: 10px;
 	width: 90%;
-	/* background-color: brown; */
 	padding: 10px;
 	line-height: 1.5;
 }

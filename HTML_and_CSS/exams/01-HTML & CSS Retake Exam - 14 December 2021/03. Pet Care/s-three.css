@@ -1,0 +1,41 @@
+.s-three{
+	display: flex;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+	margin: 100px;
+}
+
+.s-three-card{
+	display: flex;
+	width: 70%;
+} 
+
+.s-three-card img{
+	width: 30%;
+}
+.s-three-card section{
+	margin: 50px;
+	width: 45%;
+}
+
+.s-three-card section h3{
+	font-size: 40px;
+	font-weight: 100;
+}
+.s-three-card section span{
+	font-size: 40px;
+	font-weight: 700;
+}
+.s-three-card section p{
+	margin: 20px 0 20px 0;
+	line-height: 1.5;
+	width: 70%;
+}
+.s-three-card section button{
+	padding: 10px 20px 10px 20px;
+	background-color: rgb(238, 55, 21);
+	border-radius: 10px;
+	border: 1px solid rgb(238, 55, 21);
+	color: white;
+}

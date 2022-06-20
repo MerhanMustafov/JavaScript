@@ -1,0 +1,51 @@
+.s-four{
+	display: flex;
+	justify-content: center;
+	background-image: url(./images/cats-bg.png);
+	
+}
+.s-four .background{
+	width: 50%;
+	margin: 20px;
+	
+}
+
+.background div{
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	padding: 20px
+}
+.background div h1{
+	font-size: 40px;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: white;
+
+}
+.background div p{
+	font-size: 20px;
+	text-align: center;
+	line-height: 1.5;
+	color: white;
+	
+}
+.background div div{
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	align-items: center;
+}
+.background div div button{
+	align-self:stretch;
+	margin-right: 20px;
+	padding: 10px 20px 10px 20px;
+	color: rgb(246, 78, 22);
+	border-radius: 20px;
+	border: 1px solid white;
+}
+.background div div p{
+	align-self: stretch;
+	color: white;
+}
