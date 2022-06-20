@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=M+PLUS+1+Code:wght@300&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:wght@300&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+@import "./reset.css";
+@import "./nav.css";
+@import "./main.css";
+
+html{
+	font-family: Poppins, sans-serif;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	flex-direction: column;
+}
