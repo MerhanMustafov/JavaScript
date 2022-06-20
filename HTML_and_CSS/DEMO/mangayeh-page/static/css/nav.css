@@ -1,0 +1,56 @@
+
+header{
+	display: flex;
+	position: sticky;
+	top:0;
+	height: auto;
+	justify-content: center;
+	background-color: rgb(250, 250, 250);
+	border-bottom: 2px solid rgb(230, 227, 227);
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 80%;
+}
+/* mangayeh-nav */
+.mangayeh-nav{
+	display: flex;
+	flex: 1 0 auto;
+}
+/* LOGO/TITLE */
+.mangayeh-nav .site-title{
+	display: flex;
+}
+.mangayeh-nav .site-title img{
+	margin: 10px -5px 10px 0;
+	width: 30px;
+	height: auto;
+}
+.mangayeh-nav h1{
+	font-size: 30px;
+	margin: 5px;
+	padding: 5px;
+}
+/* LOGO/TITLE */
+
+/* mangayeh-nav/user-nav */
+.mangayeh-nav ul li, .user-nav ul li{
+	display: inline-block;
+	margin: 5px;
+	padding: 10px;
+}
+.mangayeh-nav ul li a, .user-nav ul li a{
+	font-size: 17px;
+	text-decoration: none;
+	color: black;
+}
+/* mangayeh-nav */
+
+
+@media only screen and (max-width: 1026px) {
+    .mangayeh-nav ul {
+        display: none;
+    }
+}

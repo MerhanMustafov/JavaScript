@@ -1,0 +1,74 @@
+.ongoing-section{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2px solid rgb(182, 182, 182);
+	/*DELETE*/
+	/* background-color: coral; */
+	/*DELETE*/
+	/* height: 90%; */
+	/*DELETE*/
+	/* margin: 20px; */
+}
+
+.title{
+	padding: 10px;
+	font-size: 25px;
+	/* background-color: aqua; */
+}
+
+.cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+
+.card{
+	display: flex;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	/* background-color:rgb(240, 219, 219); */
+	width: 45%;
+	/* width: auto; */
+	height: auto;
+	margin: 5px ;
+
+}
+
+
+img{
+	width: 25%;
+	height: 80%;
+	border-radius: 10px;
+}
+.mang-info{
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+}
+.card-title{
+	font-size: 15px;
+	font-weight: 700;
+	/* width: auto; */
+}
+
+.genres{
+	display: flex;
+	flex-wrap: wrap;
+}
+.genres p{
+	background-color: aliceblue;
+	margin: 3px 3px 0 0;
+	padding: 5px ;
+	border: 1px solid gray;
+	font-size: 10px;
+}
+
+.see-more{
+	width: 97%;
+	margin: 0 auto 20px auto;
+	padding: 10px;
+	background-color: rgb(195, 216, 231);
+	border: 1px solid rgb(195, 216, 231);
+	border-radius: 4px;
+	color: rgb(29, 114, 170);
+}
