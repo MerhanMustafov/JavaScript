@@ -3,6 +3,7 @@
 @import "./reset.css";
 @import "./nav.css";
 @import "./main.css";
+@import "./s-two.css";
 
 html{
 	font-family: Poppins, sans-serif;
