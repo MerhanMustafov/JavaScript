@@ -57,9 +57,14 @@ main > section div div p{
 	/* background-color:antiquewhite; */
 	margin-top: 0px;
 }
-img{
+.main-img{
 	width: 100%;
 	margin: 20px;
+}
+.small-img{
+	padding: 10px 10px 0 0;
+	width: 10%;
+	/* height: 50px; */
 }
 i{
 	font-size: 40px;
