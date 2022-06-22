@@ -1,0 +1,55 @@
+.second{
+	display: flex;
+	justify-content: center;
+}
+.two{
+	display: flex;
+	margin-top: 50px;
+	width: 92%;
+}
+
+
+.container.two img{
+	width: 30%;
+}
+
+.container.two section{
+	width: 60%;
+	margin-left: 130px;
+} 
+
+.container.two section div{
+	display: flex;
+}
+.container.two section div .v-line{
+	width: 10%;
+	height: 0;
+	margin-top: 13px;
+	margin-right: 20px;
+	border: 1px solid black;
+}
+.container.two section div h2{
+	font-size: 30px;
+	font-weight: 100;
+}
+.container.two section div h2 span{
+	font-size: 30px;
+	font-weight: 700;
+}
+.container.two section p{
+	margin-top: 18px;
+	line-height: 1.5;
+	font-size: 19px;
+	font-style: italic;
+}
+.container.two section .container.icons{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.fa-brands{
+	font-size: 22px;
+	margin: 10px;
+	background-color:rgb(144, 144, 144);
+	padding: 10px;
+}
