@@ -1,0 +1,51 @@
+#two{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	background-color: rgb(56, 56, 56);
+	max-width: 1366px;
+}
+
+#two i{
+	background-color: rgb(226, 78, 42);
+	padding: 15px 20px 10px 20px;
+	font-size: 50px;
+	color: white;
+}
+
+#cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	width: 100%
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 24%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.card h2{
+	font-size: 20px;
+	color: white;
+	border-bottom: 2px solid rgb(107, 105, 104);
+	width: 100%;
+	padding: 20px 15px;
+	text-align: center;
+}
+.card p{
+	font-size: 18px;
+	text-align: center;
+	/* font-weight:700; */
+	padding: 25px;
+	color: rgb(107, 105, 104);
+	line-height: 1.5;
+	width: 100%;
+}
+
+.card > div{
+	padding: 20px;
+}

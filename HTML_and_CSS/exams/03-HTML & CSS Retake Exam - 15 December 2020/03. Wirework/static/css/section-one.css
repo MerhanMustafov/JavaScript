@@ -1,0 +1,56 @@
+#one{
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: end;
+	background-image: url(../images/banner.jpg);
+	/* background-position: bottom; */
+	background-repeat: no-repeat;
+	height: 900px;
+	max-width: 1366px;
+}
+#one > div{
+	/* display: flex; */
+	width: 100%;
+	height: 50%;
+}
+#one > div img{
+	width: 100%;
+	/* height: 50%; */
+}
+
+#one div {
+	display: flex;
+	flex-direction: column;
+	/* flex-wrap: wrap; */
+	justify-content:end;
+	/* justify-content: center; */
+	align-items: center;
+	background-color:rgb(226, 78, 42);
+	height: auto;
+	/* position: relative;
+	bottom: 50px; */
+
+
+}
+
+#one p{
+	background-color:rgb(226, 78, 42);
+	/* background-color: aqua; */
+	padding: 50px;
+	width: 75%;
+	height: auto;
+	/* height: 190px; */
+	text-align: center;
+	color: white;
+	line-height: 1.5;
+}
+
+#one span{
+	text-decoration: underline;
+	font-weight: 500;
+}
+span#word{
+	text-decoration: none;
+	font-weight: 700;
+}

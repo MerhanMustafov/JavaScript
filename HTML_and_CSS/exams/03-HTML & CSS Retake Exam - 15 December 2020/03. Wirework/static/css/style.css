@@ -1,0 +1,25 @@
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+@import "./reset.css";
+@import "./nav.css";
+@import "./section-one.css";
+@import "./section-two.css";
+
+/* ICONS - wrench, unlock-alt, legal, key */
+*{
+	box-sizing: border-box;
+}
+html{
+	font-family: Helvetica, sans-serif;
+}
+body{
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: start; */
+	align-items: center;
+	border: 10px solid black;
+}
+
+
