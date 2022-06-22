@@ -8,24 +8,25 @@ html{
 	font-family: Helvetica, sans-serif;
 }
 body{
+	display: flex;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	align-items: center;
 	height: 100vh;
-	/* background-color:aqua */
+	margin: 0 auto;
+	max-width: 1400px;
 }
 .main-container{
 	display: flex;
-	position: relative;
-	top: 50%;
-	/* left: 50%; */
-	transform: translate(0%, -50%);
+	width: 100%;
 	background-color:rgb(247, 249, 250);
 	border-radius: 20px;
-	/* background-color: rgb(169, 180, 180); */
+	max-width: 1400px;
 }
 .card{
 	width: 50%;
 	padding-top: 100px;
 	padding-left: 60px;
-	/* background-color:antiquewhite; */
 }
 .card h2{
 	font-size: 12px;
@@ -44,7 +45,6 @@ body{
 	color: rgb(100, 112, 121);
 }
 .buttons-container{
-	/* background-color:aqua; */
 	margin-bottom: 20px;
 }
 .buttons{
@@ -60,14 +60,17 @@ body{
 }
 .right{
 	background-color:rgb(247, 249, 250);
-	border: 2px solid black;
 	color: black;
 	font-weight: bold;
 }
+
+.img-div{
+	display: flex;
+	width: 50%;
+	height: auto;
+}
 img{
-	margin-left: 19%;
-	padding-top: 60px;
-	padding-right: 50px;
-	width: 30%;
-	/* background-color:brown; */
+	margin-top: 50px;
+	width: 100%;
+
 }
