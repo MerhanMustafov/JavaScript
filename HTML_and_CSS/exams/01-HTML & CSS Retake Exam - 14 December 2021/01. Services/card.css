@@ -1,8 +1,10 @@
 .card{
+	display: flex;
+	/* justify-content: space-between; */
+	/* align-items: center; */
 	background-color: rgb(247, 247, 247);
 	width: 30%;
-	/* display: inline-block; */
-	/* margin: 0 auto; */
+	margin: 20px;
 }
 .card:nth-child(1n){
 	margin-bottom: 20px;
@@ -17,7 +19,6 @@
 
 .card section{
 	padding: 5%;
-	height: 150%;
 }
 
 .card p{

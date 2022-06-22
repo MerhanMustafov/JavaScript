@@ -8,13 +8,22 @@ html{
 }
 
 header{
-	/* display: table;
-	margin: 0 auto; */
 	display: flex;
 	flex-flow: column wrap;
+	justify-content: center;
 	align-items: center;
 }
-
+body{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	height: auto;
+	width: 100vw;
+	height: calc(100vh -20px)*0.9;
+	/* border: 10px solid black; */
+}
 
 h1{
 	font-size: 30px;
@@ -30,5 +39,15 @@ main{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
+	max-width: 1300px;
 	padding: 80px 40px 0 20px;
+	/* border: 10px solid black; */
+}
+
+
+main > section{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
