@@ -1,9 +1,11 @@
 .second{
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 .two{
 	display: flex;
+	/* justify-content: center; */
 	margin-top: 50px;
 	width: 92%;
 }

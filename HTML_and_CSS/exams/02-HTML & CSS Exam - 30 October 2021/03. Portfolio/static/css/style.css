@@ -15,14 +15,22 @@ html{
 *{
 	box-sizing: border-box;
 }
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 main{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .background{
 	background-color: rgb(239, 239, 239);
+	max-width:  1360px;
 }
 
 section:nth-last-child(n+2){
