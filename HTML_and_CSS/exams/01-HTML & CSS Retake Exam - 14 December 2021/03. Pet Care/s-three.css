@@ -1,6 +1,5 @@
 .s-three{
 	display: flex;
-	width: 100vw;
 	align-items: center;
 	justify-content: center;
 	margin: 100px;
@@ -11,8 +10,8 @@
 	width: 70%;
 } 
 
-.s-three-card img{
-	width: 30%;
+.s-three-card > div img{
+	width: 100%;
 }
 .s-three-card section{
 	margin: 50px;

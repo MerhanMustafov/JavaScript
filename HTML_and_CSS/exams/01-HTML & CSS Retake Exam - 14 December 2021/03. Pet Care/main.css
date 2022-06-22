@@ -1,4 +1,7 @@
 main{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* border: 10px solid black; */
 }

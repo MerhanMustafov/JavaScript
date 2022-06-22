@@ -1,13 +1,14 @@
 .s-four{
 	display: flex;
+	width: 100%;
 	justify-content: center;
+	/* align-items: center; */
 	background-image: url(./images/cats-bg.png);
-	
+
 }
 .s-four .background{
-	width: 50%;
 	margin: 20px;
-	
+	/* background-color: aqua; */
 }
 
 .background div{
