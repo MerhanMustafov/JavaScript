@@ -6,8 +6,6 @@ body{
 main{
 	width: 100%;
 	max-width: 1250px;
-	/* align-self: center; */
-	/* border: 10px solid black; */
 }
 .tm-gallery-page{
 	margin: 0px;
@@ -44,8 +42,6 @@ main{
 
 
 	.tm-gallery{
-		/* background-color: aqua; */
-		/* border:  10px solid black; */
 		width: 100%;
 		margin-left: 0px;
 		justify-content: center;
@@ -92,8 +88,6 @@ main{
 	.tm-cta-section .row{
 		display: flex;
 		flex-direction: column;
-		/* align-self: center; */
-		/* justify-content: center; */
 	}
 	.tm-description-box{
 		margin: 0px;
@@ -102,29 +96,3 @@ main{
 		align-items: start;
 	}
 }
-
-/* @media screen and (max-width: 400px) {
-	.tm-header{
-		position: relative;
-	}
-
-	.tm-nav-ul{
-		flex-direction: column;
-	}
-	
-	.tm-nav{
-		margin-left: 0px;
-	}
-}
-
-@media screen and (max-width: 200px) {
-	.tm-site-title{
-		font-size: 1rem;
-
-	}
-	
-	.tm-nav-ul{
-		flex-direction: row;
-	}
-}
- */
