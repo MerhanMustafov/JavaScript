@@ -1,0 +1,33 @@
+#three{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 1366px;
+}
+#three div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 85%;
+	margin: 50px;
+}
+#three div h1{
+	font-size: 30px;
+	width: 90%;
+	text-align: center;
+}
+#three div h2{
+	color:rgb(169, 164, 162);
+	text-align: center;
+}
+
+#three div button{
+	width: 30%;
+	align-self: center;
+	margin: 20px;
+	font-size: 20px;
+	padding: 12px 20px;
+	background-color: rgb(27, 151, 114);
+	border: 1px solid rgb(27, 151, 114);
+	color:aliceblue
+}

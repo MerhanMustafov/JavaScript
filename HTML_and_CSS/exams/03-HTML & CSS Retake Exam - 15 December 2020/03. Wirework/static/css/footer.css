@@ -1,0 +1,24 @@
+footer{
+	width: 100%;
+	max-width: 1366px;
+	display: flex;
+	justify-content: center;
+	background-color:rgb(5, 133, 94);
+}
+footer div{
+	display: flex;
+	justify-content: center;
+	margin: 50px;
+
+}
+footer p{
+	padding: 20px;
+	margin: 20px;
+	color: rgb(90, 178, 143);
+	font-weight: 100;
+}
+
+footer div p span{
+	color: rgb(170, 170, 170);
+	font-weight: 600;
+}

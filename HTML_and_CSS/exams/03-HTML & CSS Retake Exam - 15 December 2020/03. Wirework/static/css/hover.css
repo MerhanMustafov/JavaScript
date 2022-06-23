@@ -1,0 +1,30 @@
+#a:hover li{
+	background-color: rgb(226, 78, 42) !important;
+}
+#a:hover a{
+	color: white !important;
+}
+#b:hover li{
+	background-color: rgb(226, 78, 42) !important;
+}
+#b:hover a{
+	color: white !important;
+}
+#c:hover li{
+	background-color: rgb(226, 78, 42) !important;
+}
+#c:hover a{
+	color: white !important;
+}
+#d:hover li{
+	background-color: rgb(226, 78, 42) !important;
+}
+#d:hover a{
+	color: white !important;
+}
+#e:hover li{
+	background-color: rgb(226, 78, 42) !important;
+}
+#e:hover a{
+	color: white !important;
+}
