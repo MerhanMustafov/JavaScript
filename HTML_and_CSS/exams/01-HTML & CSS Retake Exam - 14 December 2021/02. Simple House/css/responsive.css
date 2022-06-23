@@ -1,1 +1,73 @@
-/* TODO: Add the responsive styles here */
+@media screen and (max-width: 600px) {
+	body{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.tm-nav{
+		margin-left: 130px;
+	}
+	.tm-nav-ul{
+		flex-wrap: wrap;
+	}
+	.tm-nav-li{
+		margin-top: 30px
+	}
+	.tm-header-inner{
+		display: flex;
+		justify-content: start;
+		/* flex-wrap: wrap; */
+		/* align-self: center; */
+		width: 100%;
+	}
+
+	.tm-welcome-section{
+		justify-content: center;
+	}
+	.tm-section-title{
+		width: 70%;
+		margin: 0px;
+		/* text-align: center; */
+	}
+
+
+	.tm-gallery{
+		background-color: aqua;
+		border:  10px solid black;
+		width: 100%;
+		margin-left: 0px
+	}
+
+	.tm-gallery-item{
+		width: 100%;
+	}
+	.tm-gallery-page{
+		margin: 0px;
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 400px) {
+	.tm-header{
+		position: relative;
+	}
+
+	.tm-nav-ul{
+		flex-direction: column;
+	}
+	
+	.tm-nav{
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 200px) {
+	.tm-site-title{
+		font-size: 1rem;
+
+	}
+	
+	.tm-nav-ul{
+		/* flex-direction: row; */
+	}
+}
+
