@@ -1,0 +1,26 @@
+.sec.t{
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 30px;
+	width: 95%;
+	/* background-color: aqua; */
+}
+.sec.t h2{
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+.sec.t p{
+	line-height: 1.5;
+}
+.ppp{
+	margin-bottom: 20px;
+}
+.sec.t img{
+	width: 20%;
+}
+.sec.t div{
+	width: 75%;
+	/* background-color: rgb(14, 89, 155); */
+}

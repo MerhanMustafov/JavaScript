@@ -1,0 +1,35 @@
+
+.logo img{
+	width: 100%;
+}
+.logo{
+	width: 10%;
+}
+header{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 1400px;
+}
+nav{
+	display: flex;
+	margin-top: 10px;
+	width: 90%;
+	justify-content: space-between;
+}
+nav ul{
+	display: flex;
+	align-self: center;
+	margin-right: 10px;
+
+}
+nav ul li{
+	padding: 5px;
+	margin-left: 10px;
+}
+nav ul a{
+	font-weight: 500;
+	color: black;
+	font-size: 14px;
+	text-decoration: none;
+}

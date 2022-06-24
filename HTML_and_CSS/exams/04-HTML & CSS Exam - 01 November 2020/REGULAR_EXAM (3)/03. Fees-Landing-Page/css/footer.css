@@ -1,0 +1,13 @@
+footer{
+	background-color: rgb(84, 84, 109);
+	display: flex;
+	margin-top: 50px;
+	width: 100%;
+	max-width: 1400px;
+	justify-content: center
+}
+
+footer p{
+	margin: 20px 0px;
+	color: rgb(140, 143, 165);
+}
