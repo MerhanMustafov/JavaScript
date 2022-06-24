@@ -1,0 +1,114 @@
+@import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css");
+@import "./reset.css";
+
+html{
+	font-family: Helvetica, sans-serif;
+}
+h1, h2{
+	font-family: Georgia, sans-serif;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+#main-section{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	max-width: 1366px;
+	border-bottom: 1px solid black;
+}
+#heading-part h1{
+	font-size: 50px;
+	margin-bottom: 25px;
+	margin-top: 55px;
+
+	font-weight: 600;
+}
+#heading-part p{
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+#info-part{
+	display: flex;
+}
+#left{
+	width: 40%;
+}
+#right{
+	width: 50%;
+	
+}
+#right h2{
+	font-size: 18px;
+	margin: 10px auto 25px auto;
+	font-weight: 600;
+}
+#right p{
+	font-size: 20px;
+	line-height: 1.2;
+	width: 100%;
+}
+p{
+	color: rgb(117, 117, 117);
+}
+#left{
+	align-self: flex-end;
+
+}
+#left button{
+	padding: 8px 50px 11px 50px;
+	font-weight: 600;
+	color: white;
+	background-color: rgb(3, 168, 124);
+	margin-left: 35px;
+	border: 2px solid rgb(3, 168, 124);
+
+}
+span{
+	background-color: rgb(206, 253, 233);
+}
+#line{
+	margin-top: 45px;
+	border-bottom: 1px solid black;
+	width: 35%;
+	margin-left: 23%;
+	margin-bottom: 40px;
+}
+
+@media screen and (max-width: 750px) {
+	#info-part{
+		flex-direction: column;
+		
+	}
+	#right{
+		align-self: center;
+	}
+	#left{
+		margin-top: 20px;
+		order: 2;
+		align-self: center;
+	}
+	#left button{
+		margin-left: unset;
+	}
+}
+@media screen and (max-width: 400px) {
+	#info-part{
+		flex-direction: column;
+		
+	}
+	#right{
+		align-self: start;
+	}
+	#left{
+		margin-top: 20px;
+		order: 2;
+		align-self: start;
+	}
+	#left button{
+		margin-left: unset;
+	}
+}
