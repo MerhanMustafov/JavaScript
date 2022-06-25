@@ -1,0 +1,137 @@
+.upper-main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid gray;
+	background-color: rgb(84, 84, 109);
+	height: 50vh;
+	/* max-height: 400px; */
+}
+.upper-main h1{
+	margin-top: 40px;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 4px;
+	color: white;
+}
+.cards-box{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 90%;
+	position: relative;
+	top: 40px;
+}
+.first-card, .second-card, .third-card{
+	border: 2px solid rgb(255, 255, 255);
+	width: 32%;
+	border-radius: 10px;
+	background: white;
+}
+.first-card{
+	top: 160px;
+	left: 15px;
+	display: flex;
+	flex-direction: column;
+}
+.second-card{
+	display: flex;
+	flex-direction: column;
+	top: 160px;
+	left: 380px;
+}
+.third-card{
+	display: flex;
+	flex-direction: column;
+	top: 160px;
+	left: 750px;
+}
+
+.first-card h2, .second-card h2, .third-card h2{
+	font-size: 23px;
+	text-align: center;
+	margin: 20px 0 5px 0;
+}
+.first-card .under-heading{
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.first-card button{
+	display: block;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 7px 19px;
+	border-radius: 20px;
+	margin: 0px auto 70px auto;
+	background-color: rgb(154, 93, 198);
+	border: 2px solid rgb(154, 93, 198);
+	color: white;
+}
+.first-card footer{
+	flex: 1 0 auto;
+	background: linear-gradient(rgb(3, 155, 61), rgb(74, 214, 127));
+}
+.first-card footer h2{
+	color: white;
+	padding: 0px 0 15px 0;
+}
+.first-card footer p{
+	color: white;
+	text-align: center;
+	padding: 0 0 15px 0;
+}
+.f-par{
+	margin: 20px auto;
+	text-align: center;
+	width: 95%;
+	line-height: 1.3;
+}
+.s-par{
+	margin: 0 auto 25px auto;
+	text-align: center;
+	width: 95%;
+	line-height: 1.3;
+}
+.third-card footer{
+	flex: 1 0 auto;
+
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(rgb(77, 58, 167), rgb(139, 124, 225));
+}
+.second-card footer{
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(rgb(77, 108, 136), rgb(98, 154, 207));
+}
+.offline-info{
+	margin-left: 10px;
+	width: 50%;
+}
+.offline-info h2{
+	color: white;
+}
+.offline-info p{
+	color: white;
+	font-size: 15px;
+}
+.online-info{
+	margin-right: 10px;
+	width: 40%;
+}
+.online-info h2{
+	color: white;
+}
+.online-info p{
+	color: white;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+.line{
+	border-left: 1px solid white;
+	height: 70px;
+	margin: auto auto;
+}
+

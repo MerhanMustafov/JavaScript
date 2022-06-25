@@ -1,0 +1,34 @@
+.middle-main{
+	margin-top: 230px;
+	display: flex;
+	flex-direction: column;
+}
+.middle-main h2{
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+.middle-main p{
+	font-size: 16px;
+	line-height: 1.5;
+	width: 95%;
+	margin-bottom: 25px;
+}
+.table{
+	display: flex;
+	flex-direction: column;
+}
+.row{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2px;
+}
+.row h3{
+	padding: 15px 0 15px 20px;
+	width: 70%;
+}
+.row img{
+	margin-right: 150px;
+}
+.row:nth-child(2n+1){
+	background-color: rgb(230, 230, 230);
+}

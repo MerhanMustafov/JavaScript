@@ -1,0 +1,22 @@
+nav{
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	margin: 10px auto auto auto;
+
+}
+nav ul{
+	margin-right: 25px;
+}
+ul li{
+	display: inline-block;
+	padding: 5px;
+}
+a{
+	text-decoration: none;
+	color: rgb(91, 84, 109);
+	font-size: 15px;
+}
+header img{
+	width: 10%;
+}

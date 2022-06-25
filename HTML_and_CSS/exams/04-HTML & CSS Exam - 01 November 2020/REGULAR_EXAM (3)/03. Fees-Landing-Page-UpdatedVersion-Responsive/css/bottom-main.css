@@ -1,0 +1,20 @@
+.bottom-main{
+	display: flex;
+	justify-content: space-between;
+	margin: 100px 0 100px 0;
+}
+.info{
+	width: 65%
+}
+.bottom-main .info h4{ 
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+.bottom-main .info p{ 
+	font-size: 15px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+.bottom-main img{
+	width: 100%;
+}

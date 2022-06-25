@@ -1,0 +1,43 @@
+@import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css");
+@import "./reset.css";
+@import "./nav.css";
+@import "./upper-main.css";
+@import "./middle-main.css";
+@import "./bottom-main.css";
+@import "./footer.css";
+@import "./responsive.css";
+
+h1, h2, h3, h4, h5, h6{
+	font-family: Montserrat, sans-serif;
+}
+p, a{
+	font-family: Lato, sans-serif;
+}
+*{
+	box-sizing: border-box;
+}
+
+body{
+	border: 2px solid gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header{
+	max-width: 1200px;
+	width: 100%;
+}
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+}
+
+body footer{
+	width: 100%;
+	max-width: 1200px;
+}
