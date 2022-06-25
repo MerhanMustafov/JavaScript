@@ -1,0 +1,101 @@
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+@import "./reset.css";
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Montserrat', sans-serif; 
+}
+p, a{
+	font-family: Lato, sans-serif;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.main-section{
+	width: 100%;
+	max-width:1300px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*LEFT */
+.inner-left{
+	border: 1px solid gray;
+	/* box-shadow: 1px 1px gray; */
+	background-color: rgb(227, 243, 253);
+	width: 48%;
+	border-radius: 10px;
+	background-color: rgb(227, 243, 253);
+}
+.inner-left div{
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 30px;
+}
+.inner-left h2{
+	font-size: 30px;
+	margin: 10px 0 20px 10px;
+	padding-left: 20px;
+}
+.inner-left div p{
+	margin-bottom: 30px;
+}
+.inner-left div i{
+	color: rgb(74, 172, 248);
+	margin-right: 10px;
+	margin: 5px 15px 0 0 ;
+}
+/*LEFT */
+
+/* RIGHT */
+.inner-right{
+	width: 48%;
+	border-radius: 10px;
+	border: 5px solid rgb(68, 169, 248);
+}
+.inner-right h3{
+	text-align: center;
+	color: rgb(68, 169, 248);
+	font-size: 50px;
+	margin: 90px 0px 30px 0;
+}
+.inner-right span{
+	color: black;
+	font-size: 22px;
+}
+.inner-right p{
+	text-align: center;
+	font-size: 17px;
+}
+.inner-right .btn-container{
+	margin: 30px 0 55px 0;
+}
+.inner-right button{
+	display: block;
+	margin: 0 auto;
+	padding: 10px 50px;
+	border-radius: 5px;
+	background:rgb(68, 169, 248);
+	border: 2px solid rgb(68, 169, 248);
+	color: white;
+	font-weight: bold; 
+}
+/* RIGHT */
+
+@media screen and (max-width: 500px){
+	body{
+		height: unset;
+	}
+	.main-section{
+		flex-direction: column;
+		align-items: center;
+	}
+	.inner-left, .inner-right{
+		width: 90%;
+		
+	}
+}
