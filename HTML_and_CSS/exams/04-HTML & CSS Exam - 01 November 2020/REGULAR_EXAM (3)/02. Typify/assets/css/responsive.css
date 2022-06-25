@@ -1,0 +1,63 @@
+@media screen and (max-width: 600px){
+	body{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.banner{
+		width: 100%;
+	}
+	.banner h2{
+		width: 94%;
+		font-size: 1.8em;
+	}
+	.banner p{
+		font-size: 1.3em;
+	}
+	ul.actions li:last-child{
+		width: 100%;
+	}
+	.banner .button.special{
+		width: 90%;
+	}
+	section.special{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.features{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.wrapper.style2{
+		width: auto;
+	}
+	.wrapper > .inner.narrow{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.grid-form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 95%;
+	}
+	.grid-form .form-control{
+		width: 90%;
+	}
+	.grid-form .form-control.narrow{
+		width: 90%;
+	}
+	
+	.wrapper.style2 input[type="submit"]{
+		width: 90%;
+	}
+	.footer{
+		width: 100%;
+	}
+
+	
+
+}
