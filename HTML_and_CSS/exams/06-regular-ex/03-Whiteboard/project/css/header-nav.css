@@ -1,0 +1,15 @@
+.main-nav{
+	width: 80%;
+	margin: 0px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.nav-items{
+	font-size: 30px;
+	margin: 30px 15px 0 15px;
+	padding: 8px;
+}
+.nav__link i, .nav__cart i{
+	margin-right: 15px;;
+}

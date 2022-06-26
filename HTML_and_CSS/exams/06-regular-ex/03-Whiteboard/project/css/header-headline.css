@@ -1,0 +1,43 @@
+.page-headline{
+	width: 99.5%;
+	max-width: 1920px;
+}
+.inner-headline{
+	text-align: center;
+	margin: 80px auto auto auto;
+	width: 80%;
+}
+.headline-title{
+	font-size:70px;
+	margin-bottom: 60px;
+}
+.headline-subtitle{
+	font-size: 27px;
+	width: 40%;
+	margin: 0 auto 100px auto;
+}
+.headline-btn{
+	font-size: 22px;
+	padding: 8px 18px;
+	background-color: var(--green-col);
+	border: 1px solid var(--green-col);
+	border-radius: 10px;
+}
+.headline-arrow{
+	font-size: 27px;
+	margin: 80px auto;;
+}
+.headline-arrow i{
+	background-color: white;
+	padding: 8px 10px;
+	padding: 9px 10px;
+	padding: 10px 12px;
+	border-radius: 100%;
+	font-size: 15px;
+	vertical-align: text-top;
+	color: black;
+	margin-bottom: 30px;
+}
+.h-text-color{
+	color: white;
+}

@@ -1,0 +1,37 @@
+.inner-footer{
+	width: 99.5%;
+}
+.footer-title{
+	font-size: 40px;
+	text-align: center;
+	margin: 40px auto;
+}
+.article-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
+}
+.article{
+	text-align: center;
+	width: 30%;
+	margin-bottom: 20px;
+}
+.article-title{
+	font-size: 35px;
+	margin: 15px auto;
+}
+
+.article-paragraph{
+	width: 90%;
+	font-size: 25px;
+}
+.contact-us p{
+	text-align: center;
+	font-size: 25px;
+	margin: 30px auto 40px auto;
+}
+.email-bold{
+	font-weight: bold;
+}
