@@ -1,0 +1,43 @@
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+@import "./reset.css";
+@import "./nav.css";
+
+
+@import "./nav.css";
+@import "./main-top.css";
+@import "./main-bottom.css";
+@import "";
+
+
+@import "./footer.css";
+
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* width: 100vw; */
+}
+
+header{
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+	/* border: 2px solid gray; */
+	width: 100vw;
+	max-width: 1920px;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(../image/computer-main.jpg);
+	background-blend-mode: darken ;
+	height: 65vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* bac */
+}
+main{
+	width: 100%;
+	max-width: 1920px;
+}
+footer{
+	width: 100%;
+	max-width: 1300px;
+}

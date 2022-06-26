@@ -1,0 +1,52 @@
+header{
+	width: 100%;
+	max-width: 2000px;
+}
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 90%;
+	border: 1px solid rgb(219, 219, 219);
+	margin: 0 auto;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 8px 1px 15px 5px rgb(219, 217, 217);
+	border-radius: 5px;
+	border-top: none;
+}
+.navbar img{
+	width: 8%;
+	margin-left: 20px;
+}
+.navbar ul{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-top: 15px;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.navbar .avatar{
+	border: 1px solid black;
+	border-radius: 100%;
+	border-color: rgb(66, 171, 248);
+	background: rgb(66, 171, 248);
+}
+.navbar .avatar a{
+	display: block;
+	padding: 8px 4px;
+	color: white;
+
+}
+.avatar-background{
+	position: relative;
+	bottom: 12px;
+	right: 13px;
+	padding: 5px;
+	border-radius: 100%;
+	background-color: rgb(215, 235, 254);
+}

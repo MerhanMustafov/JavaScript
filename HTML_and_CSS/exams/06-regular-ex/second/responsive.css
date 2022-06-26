@@ -1,0 +1,64 @@
+@media screen and (max-width: 600px) {
+	
+	main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	.left-to-right:first-child{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 85%;
+	}
+	
+	main .left-to-right article{
+		position: relative;
+		bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 55%;
+		border-radius: 15%;
+	}
+	button{
+		display: none;
+	}
+	header h1{
+		font-size: 2.3rem;
+		margin: 10px 0 20px 0;
+	}
+	header p{
+		font-size: 1rem;
+	}
+	main section:nth-child(2), main section:nth-child(4){
+		flex-direction: column;
+	}
+	form{
+		text-align: center;
+		width: 80%;
+	}
+	section form label input, section form textarea{
+		width: 100%;
+	}
+	main section.left-to-right:nth-child(3){
+		justify-content: center;
+		width: 100%;
+		padding: unset;
+	}
+
+	main section:nth-child(2) article, main section:nth-child(4) article{
+		flex-direction: row;
+	}
+	main section:nth-child(2), main section:nth-child(4){
+		flex-direction: column;
+	}
+	main section:nth-child(2) article, main section:nth-child(4) article{
+		flex-direction: column;
+		width: 85%;
+		align-items: center;
+	}
+
+}
