@@ -67,3 +67,20 @@
 	}
 }
 
+@media screen and (max-width: 430px){
+	.left-to-right:first-child, main section.left-to-right:nth-child(3){
+		height: auto;
+	}
+	main section.left-to-right:nth-child(3) article{
+		padding: 0px 25px;
+		margin: 257px auto 290px auto;
+		height: auto;
+	}
+	main section.left-to-right:nth-child(3) article p{
+		width: 95%;
+		margin: auto;
+	}
+	main section.left-to-right:nth-child(3) article header h1{
+		font-size: 9vw;
+	}
+}
