@@ -2,11 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	/* border: 1px solid blue; */
 	width: 100%;
-	/* gap: 100px; */
-	/* margin: 0 auto; */
-
 }
 
 .card{
@@ -14,28 +10,20 @@
 	flex-direction: row;
 	width: 47%;
 	justify-content: stretch;
-	/* flex-wrap: wrap; */
-	/* height: auto; */
 	margin: 15px 0 0 0px;
-	/* border: 1px solid green; */
-
 }
 
 img{
 	width: 100px;
-	height: auto;
+	height: 170px;
 	/* height: 170px; */
 	border-radius: 10px;
 	object-fit: cover;
-	/* align-self: center; */
-	/* margin-bottom: 5px; */
 }
 .mang-info{
 	display: flex;
 	flex-direction: column;
 	margin-left: 13px;
-	/* align-self: center;  */
-	/* border: 1px solid white; */
 }
 .card-title{
 	font-size: 15px;
@@ -71,10 +59,8 @@ img{
 @media screen and (max-width: 1250px){
 	.cards{
 		flex-direction: column;
-		/* align-items: center; */
 		width: 95%;
 		margin: 0 auto;
-	
 	}
 	.card{
 		width: 90%;
@@ -83,9 +69,6 @@ img{
 		width: 99%;
 
 	}
-	/* aside.righ-section{
-		display: none;
-	} */
 	.left-section{
 		width: 99%;
 	}

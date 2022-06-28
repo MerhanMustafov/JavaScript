@@ -23,12 +23,10 @@ main,footer{
 	max-width: 1170px;
 }
 
-
 main{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	/* border: 2px solid blue; */
 }
 .main-section{
 	display: flex;
@@ -46,7 +44,6 @@ main{
 aside.righ-section{
 	display: flex;
 	flex-direction: column;
-	/* background-color: rgb(192, 178, 178); */
 	width: 35%;
 	height: auto;
 }

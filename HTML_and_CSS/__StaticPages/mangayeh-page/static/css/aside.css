@@ -34,7 +34,6 @@
 .genres__container{
 	display: flex;
 	width: 90%;
-	/* border: 2px solid gray; */
 }
 .genres__left{
 	display: flex;
@@ -51,9 +50,6 @@
 	margin: 5px auto auto 15px;
 	padding: 8px;;
 }
-/* .genre:nth-child(n+2){
-	margin: 30px auto auto 30px;
-} */
 /* GENRES  --------------------------------------------------------------*/
 /* BUY me a COFFEE -------------------------------------------------*/
 .img__container{
@@ -74,11 +70,12 @@
 	display: flex;
 	flex-direction: column;
 	width: 90%;
-	/* border: 2px solid red; */
 }
 
 .popular__manga__section{
 	width: 98%;
+	margin-left: 15px;
+
 }
 /* Aside Cards-animes ---------------------------------------------------------------*/
 
