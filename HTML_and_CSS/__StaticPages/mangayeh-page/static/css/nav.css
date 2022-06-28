@@ -13,6 +13,7 @@ nav{
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 98%;
+	max-width: 1155px;
 }
 /* mangayeh-nav */
 .mangayeh-nav{
@@ -24,27 +25,30 @@ nav{
 	display: flex;
 }
 .mangayeh-nav .site-title img{
-	margin: 10px -5px 10px 0;
+	margin: 12px -5px 10px 0;
 	width: 30px;
 	height: auto;
 }
 .mangayeh-nav h1{
-	font-size: 30px;
-	margin: 5px;
+	font-weight: 600;
+	font-size: 25px;
+	margin: 10px 20px 5px 5px;
 	padding: 5px;
+	color: rgb(74, 74, 74);
 }
 /* LOGO/TITLE */
 
 /* mangayeh-nav/user-nav */
 .mangayeh-nav ul li, .user-nav ul li{
 	display: inline-block;
-	margin: 5px;
-	padding: 10px;
+	margin: 15px 0px 15px 0;
+	padding: 7px;
 }
 .mangayeh-nav ul li a, .user-nav ul li a{
-	font-size: 17px;
+	font-size: 15px;
+	font-weight: 700;
 	text-decoration: none;
-	color: black;
+	color: rgb(74, 74, 74);
 }
 /* mangayeh-nav */
 
@@ -53,4 +57,7 @@ nav{
     .mangayeh-nav ul {
         display: none;
     }
+	aside.righ-section{
+		display: none;
+	}
 }

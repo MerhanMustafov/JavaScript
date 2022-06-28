@@ -1,9 +1,10 @@
 .cards{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: start;
+	justify-content: space-between;
 	/* border: 1px solid blue; */
 	width: 100%;
+	/* gap: 100px; */
 	/* margin: 0 auto; */
 
 }
@@ -11,7 +12,8 @@
 .card{
 	display: flex;
 	flex-direction: row;
-	width: 49%;
+	width: 47%;
+	justify-content: space-between;
 	/* flex-wrap: wrap; */
 	/* height: auto; */
 	margin: 30px 0 0 0px;
@@ -20,8 +22,8 @@
 }
 
 img{
-	width: 140px;
-	height: 210px;
+	width: 90px;
+	height: 150px;
 	border-radius: 10px;
 	object-fit: cover;
 	margin-bottom: 15px;
@@ -33,16 +35,16 @@ img{
 	/* border: 1px solid white; */
 }
 .card-title{
-	font-size: 25px;
+	font-size: 15px;
 	font-weight: 700;
 }
 .ongoing__info{
 	color: rgb(112, 117, 112);
-	font-size: 25px;
+	font-size: 15px;
 	margin: 15px 0;
 }
 .chapter__info{
-	font-size: 25px;
+	font-size: 15px;
 	margin: 0 0 10px 0;
 }
 .chapter__count{
@@ -60,12 +62,15 @@ img{
 	padding: 5px ;
 	border: 1px solid transparent;
 	border-radius: 10px;
-	font-size: 15px;
+	font-size: 12px;
 }
 
-@media screen and (max-width: 1750px){
+@media screen and (max-width: 1250px){
 	.cards{
 		flex-direction: column;
+		/* align-items: center; */
+		width: 95%;
+		margin: 0 auto;
 	
 	}
 	.card{
@@ -75,9 +80,9 @@ img{
 		width: 99%;
 
 	}
-	aside.righ-section{
+	/* aside.righ-section{
 		display: none;
-	}
+	} */
 	.left-section{
 		width: 99%;
 	}
