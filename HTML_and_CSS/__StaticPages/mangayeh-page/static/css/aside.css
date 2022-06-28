@@ -6,6 +6,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 15px;
+	margin: 10px 0 0 10px;
 	
 }
 .anime__name{
@@ -22,6 +23,10 @@
 /* KEYWORDS popular -----------------------------------------------*/
 
 /* GENRES  -------------------------------------------------------------*/
+.gens a{
+	text-decoration: none;
+	color: black;
+}
 .genres__section{
 	display: flex;
 	flex-direction: column;
@@ -29,13 +34,13 @@
 .genres__container{
 	display: flex;
 	width: 90%;
-	border: 2px solid gray;
+	/* border: 2px solid gray; */
 }
 .genres__left{
 	display: flex;
 	flex-direction: column;
 	width: 40%;
-}
+}	
 .genres__right{
 	display: flex;
 	flex-direction: column;
@@ -53,6 +58,7 @@
 /* BUY me a COFFEE -------------------------------------------------*/
 .img__container{
 	width: 90%;
+	margin-top: 30px; 
 }
 .buy_me_coffee_img{
 	width: 100%;
@@ -68,10 +74,10 @@
 	display: flex;
 	flex-direction: column;
 	width: 90%;
-	border: 2px solid red;
+	/* border: 2px solid red; */
 }
 
-.popular_manga_section{
+.popular__manga__section{
 	width: 98%;
 }
 /* Aside Cards-animes ---------------------------------------------------------------*/

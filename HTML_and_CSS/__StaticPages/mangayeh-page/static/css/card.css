@@ -1,0 +1,84 @@
+.cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	/* border: 1px solid blue; */
+	width: 100%;
+	/* margin: 0 auto; */
+
+}
+
+.card{
+	display: flex;
+	flex-direction: row;
+	width: 49%;
+	/* flex-wrap: wrap; */
+	/* height: auto; */
+	margin: 30px 0 0 0px;
+	/* border: 1px solid green; */
+
+}
+
+img{
+	width: 140px;
+	height: 210px;
+	border-radius: 10px;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+.mang-info{
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	/* border: 1px solid white; */
+}
+.card-title{
+	font-size: 25px;
+	font-weight: 700;
+}
+.ongoing__info{
+	color: rgb(112, 117, 112);
+	font-size: 25px;
+	margin: 15px 0;
+}
+.chapter__info{
+	font-size: 25px;
+	margin: 0 0 10px 0;
+}
+.chapter__count{
+	font-weight: 700;
+}
+
+.genres{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 15px 0;
+}
+.genres p{
+	background-color: aliceblue;
+	margin: 3px 3px 0 0;
+	padding: 5px ;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+@media screen and (max-width: 1750px){
+	.cards{
+		flex-direction: column;
+	
+	}
+	.card{
+		width: 90%;
+	}
+	.mang-info{
+		width: 99%;
+
+	}
+	aside.righ-section{
+		display: none;
+	}
+	.left-section{
+		width: 99%;
+	}
+}
