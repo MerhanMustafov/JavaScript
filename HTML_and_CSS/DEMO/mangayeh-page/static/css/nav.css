@@ -1,10 +1,10 @@
 
 header{
-	display: flex;
 	position: sticky;
 	top:0;
-	height: auto;
+	display: flex;
 	justify-content: center;
+	height: auto;
 	background-color: rgb(250, 250, 250);
 	border-bottom: 2px solid rgb(230, 227, 227);
 }
@@ -12,7 +12,7 @@ nav{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 80%;
+	width: 98%;
 }
 /* mangayeh-nav */
 .mangayeh-nav{

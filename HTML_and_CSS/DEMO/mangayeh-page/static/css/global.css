@@ -1,0 +1,49 @@
+*{
+	box-sizing: content-box;
+	line-height: 1.3;
+}
+.title{
+	padding: 10px;
+	font-size: 40px;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header, footer{
+	width: 100%;
+}
+main{
+	width: 100%;
+	max-width: 1700px;
+}
+
+
+main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	border: 2px solid blue;
+}
+.main-section{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+}
+
+.left-section{
+	display: flex;
+	flex-direction: column;
+	width: 65%;
+}
+aside.righ-section{
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(192, 178, 178);
+	width: 35%;
+	height: auto;
+}
