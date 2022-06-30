@@ -1,0 +1,12 @@
+html{
+	font-family: Helvetica, sans-serif;
+}
+#root{
+	background-image: url(../images/templatemo_body_2.jpg);
+}
+header, main, footer{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1100px;
+	/* border: 2px solid black; */
+}
