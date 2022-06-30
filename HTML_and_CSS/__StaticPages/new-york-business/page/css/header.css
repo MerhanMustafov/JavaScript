@@ -9,19 +9,14 @@ ul.l p, ul.r p{
 	margin: 20px 10px 15px 10px;
 	color: white;
 }
-
-
 .fa-phone, .fa-envelope{
 	margin: 0px 7px 0 0;
 }
-
 .bottom{
 	background-color: white;
 	border-bottom: 2px solid gray;
 }
-
 .page-name{
-	/* width: 250px; */
 	margin: 15px 10px;
 	font-weight: 600;
 	font-size: 27px;
@@ -32,7 +27,6 @@ ul.l p, ul.r p{
 	margin: 15px 10px;
 	color: rgb(104, 104, 104);
 }
-
 .main-navigation{
 	margin-right: 50px;
 }
@@ -51,7 +45,6 @@ ul.l p, ul.r p{
 	text-decoration: none;
 	color: black;
 }
-
 .search-btn{
 	font-size: 17px;
 	background-color: transparent;
@@ -59,9 +52,6 @@ ul.l p, ul.r p{
 	opacity: 0.3;
 	margin-left: 15px;
 }
-
-
-
 .nav-container:hover li{
 	background-color: rgb(58, 158, 243); 
 }

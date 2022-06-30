@@ -2,6 +2,7 @@
 @import "./reset.css";
 @import "./header.css";
 @import "./main.css";
+@import "./feature.css";
 
 html{
 	font-family: sans-serif;
@@ -11,5 +12,4 @@ header, main, footer{
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1300px;
-	/* border: 1px solid green; */
 }
