@@ -1,0 +1,40 @@
+
+.hero{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: blue;
+}
+.title{
+	text-transform: capitalize;
+	font-size: 50px;
+	text-align: center;
+	margin: 100px 0 40px 0;
+}
+
+.sub-title{
+	font-size: 17px;
+	text-align: center;
+}
+
+.more-details-btn{
+	background-color: rgb(61, 159, 242);
+	display: block;
+	margin: 50px auto 50px auto;
+	padding: 10px 15px; 
+	font-size: 18px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	color: white;
+}
+
+.left-arrow{
+	position: absolute;
+	left: 5px;
+	top: 50%;
+}
+.right-arrow{
+	position: absolute;
+	right: 5px;
+	top: 50%;
+}

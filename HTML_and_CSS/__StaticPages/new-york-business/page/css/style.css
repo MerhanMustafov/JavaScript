@@ -1,0 +1,15 @@
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+@import "./reset.css";
+@import "./header.css";
+@import "./main.css";
+
+html{
+	font-family: sans-serif;
+}
+
+header, main, footer{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1300px;
+	/* border: 1px solid green; */
+}

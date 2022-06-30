@@ -1,0 +1,70 @@
+nav{
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+}
+
+ul.l p, ul.r p{
+	display: inline-block;
+	margin: 20px 10px 15px 10px;
+	color: white;
+}
+
+
+.fa-phone, .fa-envelope{
+	margin: 0px 7px 0 0;
+}
+
+.bottom{
+	background-color: white;
+	border-bottom: 2px solid gray;
+}
+
+.page-name{
+	/* width: 250px; */
+	margin: 15px 10px;
+	font-weight: 600;
+	font-size: 27px;
+	color: black;
+}
+.slogan{
+	font-size: 19px;
+	margin: 15px 10px;
+	color: rgb(104, 104, 104);
+}
+
+.main-navigation{
+	margin-right: 50px;
+}
+.main-navigation li{
+	padding: 15px 5px 15px 5px;
+}
+
+.nav-container{
+	margin: 20px 0px 0 0;
+	display: inline-block;
+}
+
+.nav-container li a{
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+}
+
+.search-btn{
+	font-size: 17px;
+	background-color: transparent;
+	border: 1px solid transparent;
+	opacity: 0.3;
+	margin-left: 15px;
+}
+
+
+
+.nav-container:hover li{
+	background-color: rgb(58, 158, 243); 
+}
+.nav-container:hover a{
+	color: white;
+}
