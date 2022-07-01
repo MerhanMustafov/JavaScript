@@ -2,9 +2,7 @@
 	width: 85%;
 	margin: 0 auto;
 	background-color: rgb(38, 38, 38, 0.9);
-
 }
-
 .inner-wrapper{
 	display: flex;
 	justify-content: space-between;
@@ -19,7 +17,6 @@
 	padding: 10px;
 	background-color: rgb(26, 25, 28);
 }
-
 .info-title{
 	font-size: 27px;
 	color: white;
@@ -28,7 +25,6 @@
 .text-info{
 	color: rgb(225, 244, 251);
 }
-
 .more-btn{
 	display: block;
 	margin: 30px 40px 50px auto;
@@ -39,5 +35,115 @@
 	border: 1px solid black;
 	border-radius: 5px;
 	background-color: rgb(21, 21, 22);
-	box-shadow: 5px 5px 5px 0px rgb(59, 59, 59);
+	box-shadow: 5px 5px 5px 0px rgb(22, 21, 21);
+}
+.additional-info{
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(26, 25, 28, 0.9);
+	margin: 55px 0 0 0;
+}
+.additional-info h2{
+	font-size: 35px;
+	color: rgb(89, 170, 255);
+	margin: 20px 0 45px 30px;
+}
+.reasons-wrapper{
+	width: 94%;
+	display: flex;
+	justify-content: space-between;
+	margin: 40px auto 70px auto;
+}
+.r{
+	width: 30%;
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-template-areas: 
+	"title title"
+	"number text";
+	gap: 20px;
+}
+.r h3{
+	grid-area: title;
+	font-size: 30px;
+	color: white;
+}
+.r .num{
+	text-align: center;
+	grid-area: number;
+	font-size: 70px;
+	font-weight: 900;
+	color: white;
+	border: 1px solid black;
+}
+.r .text{
+	grid-area: text;
+	color: rgb(97, 96, 96);
+}
+.line{
+	margin-bottom: 50px;
+	width: 94%;
+	margin: 0 auto;
+	border: 1px solid rgb(87, 86, 86) ; 
+}
+.wrapper{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 90px 0; 
+}
+.wrapper .left{
+	width: 60%;
+	display: flex;
+	gap: 20px;
+}
+.wrapper img{
+	object-fit: cover;
+	margin-left: 30px;
+	padding: 15px;
+	background-color: rgb(52, 50, 57);
+	border: 1px solid black;
+}
+.ii{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.btn{
+	display: inline-block;
+	align-self: flex-end;
+	font-size: 16px;
+	padding: 5px 10px;
+	background-color: rgb(45, 42, 50, 0.9);
+	color: rgb(172, 172, 172);
+	font-weight: 700;
+}
+.italic{
+	line-height: 1.5;
+	color: white;
+	font-style: italic;
+	margin-bottom: 30px;
+}
+.i{
+	line-height: 1.5;
+	margin-bottom: 30px;
+
+	color: rgb(126, 125, 125);
+}
+.right{
+	width: 30%;
+}
+.right h2{
+	margin-bottom: 20px;
+}
+.par{
+	font-style: italic;
+	margin-bottom: 20px;
+	line-height: 1.5;
+	color: rgb(163, 163, 163);
+}
+.author{
+	color: white;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 18px;
 }
