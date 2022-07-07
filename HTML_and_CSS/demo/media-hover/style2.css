@@ -1,0 +1,46 @@
+header{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1800px;
+	border: 2px solid gray;
+}
+
+nav{
+	width: 70%;
+	border: 2px solid gray;
+}
+
+ul{
+	list-style: none;
+	width: 50%;
+	right: 2px;
+	border: 2px solid gray;
+}
+div{ 
+	display: inline-block;
+}
+
+li{
+	border: 2px solid gray;
+	padding: 8px 20px;
+	margin-left: 10px;
+	box-shadow: -1px  -5px 10px 1px gray; 
+	background-color: rgb(53, 6, 221);
+}
+
+a{
+	text-decoration: none;
+	font-size: 30px;
+	color: white;
+	
+}
+
+@media screen and (hover: hover) {
+	div:hover a{
+		color: black;
+	}
+	div:hover li{
+		background-color: aqua;
+	}
+	
+}
