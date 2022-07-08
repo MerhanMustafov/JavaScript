@@ -1,0 +1,19 @@
+.main-h nav{
+	display: flex;
+	background-color: var(--darkblue);
+}
+
+.left-side-nav{
+	display: flex;
+}
+
+.fa-caret-right{
+	font-size: 23px;
+	align-self: center;
+	color: white;
+	margin: 0 7px 0 25px;
+	
+}
+.logo{
+	width: 30%;
+}

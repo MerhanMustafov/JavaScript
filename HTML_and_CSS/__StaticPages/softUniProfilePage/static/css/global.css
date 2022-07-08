@@ -1,0 +1,14 @@
+:root{
+	--darkblue: rgba(35, 68, 101);
+}
+/* #root{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1320px;
+} */
+.main-h, .main-m, .main-f{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1320px;
+	border: 2px solid black;
+}
