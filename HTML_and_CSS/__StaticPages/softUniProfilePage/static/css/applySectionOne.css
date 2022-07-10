@@ -1,0 +1,83 @@
+.fa-star{
+	font-size: 20px;
+	color: var(--orange);
+	margin: 0 5px;
+}
+.stars{
+	text-align: left;
+	margin: 0 0 0 15px
+}
+
+.apply-one{
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center; */
+	margin: 70px 0;
+	text-align: center;
+	background-color: var(--darkblue);
+}
+.apply-one .text{
+	margin: 0 auto;
+	width: 90%;
+}
+.apply-one .text h2{
+	color: white;
+	font-size: 25px;
+	/* margin: 55px 0; */
+	padding: 25px 0 ;
+}
+.apply-one .text p{
+	color: white;
+	font-size: 20px;
+	padding: 0 0 50px 0;
+}
+.rating > div{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+
+.rate p{
+	color: white;
+	padding: 15px;
+}
+.images{
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	width: 20%;
+}
+
+.images img{
+	border-radius: 100%;
+	width: 35%;
+	border: 2px solid var(--orange);
+	position: absolute;
+	
+}
+.images img.one{
+	position: absolute;
+	
+
+}
+.images img.two{
+	position: absolute;
+	right: 40px;
+}
+.images img.three{
+	position: absolute;
+	right: 2px;
+
+}
+
+button.apply{
+	color: white;
+	margin: 40px 0 25px 0;
+	padding: 10px 0;
+	width: 90%;
+	font-size: 20px;
+	border-radius: 30px;
+	background-color: var(--orange);
+	border: none;
+}
