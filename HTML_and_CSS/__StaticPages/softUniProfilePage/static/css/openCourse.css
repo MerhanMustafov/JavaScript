@@ -1,0 +1,96 @@
+.open-courses{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"title title title"
+	"cards cards cards"
+	"button button button"
+	;
+	row-gap: 30px;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.open-courses .title{
+	grid-area: title;
+	font-size: 30px;
+	font-weight: 700;
+	padding-left: 20px;
+	color: var(--darkblue);
+}
+
+.open-courses .outer-wrapper{
+	grid-area: cards;
+	display: flex;
+	width: 98%;
+	margin: 0 auto;
+	overflow-x: scroll;
+}
+
+.outer-wrapper::-webkit-scrollbar{
+	height: 11px;
+	background-color: transparent;
+	border-radius: 20px;
+	border: 1px solid rgba(0,0,0, 0.3);
+	padding: 5px;
+	margin: 5px;
+}
+.outer-wrapper::-webkit-scrollbar-thumb{
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.open-courses .inner-wrapper{
+	display: flex;
+	width: auto;
+}
+.card{
+	width: 300px;
+	background-color: white;
+	border-radius: 20px;
+	border: 1px solid rgba(87, 87, 87, 0.3);
+	margin: 0 50px 15px 0;
+	
+}
+.c-image{
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.c-title{
+	width: 95%;
+	margin: 10px auto 20px auto;
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--darkblue);
+}
+.card div{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 25px auto;
+	width: 95%;
+}
+.fff{
+	padding: 0px 3px;
+	display: inline-block;
+	font-size: 16px;
+	margin: 0;
+	vertical-align: baseline;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 100%;
+}
+.open-courses .see-all{
+	grid-area: button;
+	padding: 8px 15px;
+	width: 30%;
+	border-radius: 20px;
+	background-color: transparent;
+	border: 1.5px solid var(--orange);
+	color: var(--orange);
+	font-weight: bold;
+	font-size: 18px;
+	margin: 0 0 20px 20px;
+}

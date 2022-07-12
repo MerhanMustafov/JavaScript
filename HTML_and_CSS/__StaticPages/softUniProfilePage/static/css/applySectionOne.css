@@ -9,10 +9,8 @@
 }
 
 .apply-one{
-	/* display: flex;
-	flex-direction: column;
-	justify-content: center; */
-	margin: 70px 0;
+	width: 99%;
+	margin: 70px auto;
 	text-align: center;
 	background-color: var(--darkblue);
 }
