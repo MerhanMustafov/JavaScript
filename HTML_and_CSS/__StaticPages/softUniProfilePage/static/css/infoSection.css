@@ -1,0 +1,36 @@
+.l-info{
+	margin: 50px auto 10px auto;
+	width: 98%;
+}
+.l-info h2:nth-child(1){
+	color: var(--darkblue);
+	font-size: 30px;
+}
+.l-info p:nth-child(2){
+	margin: 15px auto;
+	font-size: 18px;
+	line-height: 1.2;
+	background: -webkit-linear-gradient(rgb(0, 0, 0),rgb(192, 191, 191));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.l-info h2:nth-child(3){
+	display: none;
+}
+.l-info p:nth-child(4){
+	display: none;
+}
+.l-b{
+	margin: 0 0 0 20px;
+	align-self: start;
+	padding: 5px;
+	border: transparent;
+	background-color: transparent;
+	color: var(--orange);
+	font-weight: 600;
+}
+
+.fa-chevron-down{
+	margin: 0 0 0 5px;
+	font-size: 18px;
+}
