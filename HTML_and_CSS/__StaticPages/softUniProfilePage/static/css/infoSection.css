@@ -34,3 +34,49 @@
 	margin: 0 0 0 5px;
 	font-size: 18px;
 }
+
+.prices{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: auto;
+	background-color: rgba(231, 228, 228, 0.5);
+}
+
+.price{
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	margin: 30px auto;
+	text-align: center;
+}
+.price .line{
+	height: 4px;
+	width: 80%;
+	margin: 10px auto;
+	background-color:var(--orange);
+}
+.price h2{
+	width: 70%;
+	height: auto;
+	color: var(--orange);
+	font-size: 20px;
+	font-weight: 700;
+	margin: 10px auto;
+	text-align: center;
+	word-wrap: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.price p{
+	font-size: 20px;
+	margin: 15px auto;
+
+}
+.price img{
+	width: 130px;
+
+}
+
