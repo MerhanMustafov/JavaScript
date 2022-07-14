@@ -1,0 +1,48 @@
+.banner{
+	background-color: var(--darkblue);
+	width: 100%;
+	margin: 50px auto 0 auto;
+	text-align: center;
+}
+
+.banner .img-c{
+	display: flex;
+	justify-content: space-around;
+	height: 100px;
+	position: relative;
+}
+.banner .img-c div{
+	display: flex;
+	width: 25%;
+	height: 130px;
+	background-color: green;
+	position: absolute;
+}
+.banner .img-c div:nth-child(1){
+	left: 30px;
+	top: -40px;
+}
+.banner .img-c div:nth-child(2){
+	left: auto;
+	top: -40px;
+}
+.banner .img-c div:nth-child(3){
+	right: 30px;
+	top: -40px;
+}
+.banner .img-c img{
+	width: 100%;
+	object-fit: cover;
+}
+.banner h2{
+	font-weight: 600;
+	font-size: 60px;
+	color: white;
+	margin: 20px auto;
+}
+.banner p{
+	/* font-weight: 600; */
+	font-size: 20px;
+	color: white;
+	margin: 0 auto 20px auto;
+}
