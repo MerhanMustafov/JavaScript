@@ -1,0 +1,100 @@
+.common{
+	display: grid;
+	/* grid-template-columns: auto; */
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+	"seminars"
+	"blogs"
+	"initiate"
+	;
+	width: 99%;
+	margin: 100px auto 50px auto;
+
+}
+
+.seminars{
+	grid-area: seminars;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	/* border: 2px solid gray; */
+}
+.t{
+	font-size: 35px;
+	color: var(--darkblue);
+	margin: 50px 0 25px 15px;
+}
+.seminars-card{
+	text-align: center;
+	width: 95%;
+	margin: 10px auto 20px auto;
+	background-color: var(--darkblue);
+	border-radius: 20px;
+}
+.seminars-card h2{
+	color: white;
+	font-size: 25px;
+	margin: 10px 0 20px 0 ;
+}
+.date-time-info{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.date, .time{
+	color: var(--orange);
+	margin:0 15px 10px 0; 
+}
+.more{
+	font-weight: 500;
+	color: var(--orange);
+	font-size: 19px;
+	width:  150px;
+	margin: 0 0 0 20px;
+	border: 1px solid var(--orange);
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.blogs{
+	grid-area: blogs;
+	/* text-align: center; */
+}
+.blog-card{
+	width: 100%;
+	background-color: var(--darkblue);
+	height: 250px;
+	border-radius: 20px;
+	margin: 30px auto 30px auto;
+}
+.blog-card img{
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.blog-card p{
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 25px;
+	color: white;
+	margin: 20px auto;
+}
+.initiate{
+	grid-area: initiate;
+	width: 99%;
+	margin: 0 auto;
+}
+.initiate-card{
+	width: 100%;
+}
+.initiate-card img{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 20px;
+}
