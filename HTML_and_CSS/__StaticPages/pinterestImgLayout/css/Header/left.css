@@ -1,0 +1,42 @@
+.left {
+  grid-area: left;
+  height: 100%;
+  /* border: 2px solid red; */
+}
+.left ul {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 2px solid purple; */
+}
+.left ul .create-c {
+  display: flex;
+}
+
+.left ul .home,
+.left ul .create-c {
+  font-size: 20px;
+}
+.left ul .home {
+  background-color: black;
+  border-radius: 30px;
+  height: 55%;
+}
+.left ul .home a {
+  color: white;
+}
+.left ul li {
+  padding: 15px 15px 5px 15px;
+}
+.left ul li a {
+  text-decoration: none;
+  color: black;
+}
+.fa-pinterest {
+  color: red;
+  font-size: 32px;
+}
+

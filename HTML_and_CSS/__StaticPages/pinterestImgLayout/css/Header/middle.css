@@ -1,0 +1,35 @@
+.middle{
+    grid-area: middle;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* border: 2px solid blue; */
+}
+/* form{
+    border: 2px solid darkturquoise;
+} */
+form div{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 97%;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid rgb(41, 43, 43);
+}
+form div input{ 
+    width: 90%;
+    border-radius: inherit;
+    border: none;
+    outline: none;
+}
+form div input::placeholder{
+    font-size: 20px;
+}
+form div i{
+    margin: auto 0;
+    font-size: 20px;
+    padding: 10px;
+    color: rgb(90, 90, 90);
+}
+
