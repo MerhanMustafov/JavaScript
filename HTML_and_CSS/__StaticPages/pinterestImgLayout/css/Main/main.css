@@ -1,0 +1,41 @@
+/* Main */
+/* .images-wrapper{
+    width: 99%;
+    margin: 0 auto;
+    column-count: 5;
+    column-gap: 11px;
+}
+.image-container{
+    display: inline-block;
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 20px;
+}
+.image-container img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1255px){
+    .images-wrapper{
+        column-count: 4;
+    }
+}
+@media screen and (max-width: 1111px){
+    .images-wrapper{
+        column-count: 3;
+    }
+}
+@media screen and (max-width: 620px){
+    .images-wrapper{
+        column-count: 2;
+    }
+}
+@media screen and (max-width: 300px){
+    .images-wrapper{
+        column-count: 1;
+    }
+} */

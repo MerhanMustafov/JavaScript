@@ -1,52 +1,53 @@
 @import url('https://use.fontawesome.com/releases/v6.1.1/css/all.css');
 @import url(./reset.css);
-@import url(./global.css);
-@import url(./icons.css);
 @import url(./Header/header.css);
 @import url(./Main/main.css);
 
-
 header,
 main {
-  width: 100%;
+  width: 99%;
   max-width: 1366px;
   margin: 0 auto;
-  /* border: 1px solid black; */
 }
 
-main{
-    border: 2px solid black;
-}
+/* Main */
 .images-wrapper{
-    /* text-align: center; */
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    /* align-items: flex-start; */
-    width: 100%;
-    border: 2px solid red;
-    column-count: 3;
-    /* -webkit-column-break-inside: avoid;
-    -webkit-column-break-after: avoid; */
+    width: 99%;
+    margin: 0 auto;
+    column-count: 5;
+    column-gap: 11px;
 }
-/* .row{
-    width: 100%;
-} */
 .image-container{
-    /* display: inline-block; */
-    width: 100%;
+    display: inline-block;
     margin: 10px auto;
-    /* margin: 105px; */
-
-    /* height: min-content; */
-    /* height: max-content; */
-    /* height: fit-content; */
-    /* height: auto; */
-
-    border: 2px solid blue;
+    width: 100%;
+    border-radius: 20px;
 }
 .image-container img{
+    display: block;
+    margin: 0 auto;
     width: 100%;
+    border-radius: inherit;
     /* object-fit: cover; */
-    border: 2px solid rgb(0, 255, 21);
+}
+
+@media screen and (max-width: 1255px){
+    .images-wrapper{
+        column-count: 4;
+    }
+}
+@media screen and (max-width: 1111px){
+    .images-wrapper{
+        column-count: 3;
+    }
+}
+@media screen and (max-width: 620px){
+    .images-wrapper{
+        column-count: 2;
+    }
+}
+@media screen and (max-width: 300px){
+    .images-wrapper{
+        column-count: 1;
+    }
 }

@@ -1,0 +1,126 @@
+@import url('https://use.fontawesome.com/releases/v6.1.1/css/all.css');
+@import url(./reset.css);
+@import url(./global.css);
+@import url(./Header/header.css);
+@import url(./Main/main.css);
+
+/* clean */
+/* 
+header,
+main {
+  width: 99%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+
+.images-wrapper{
+    width: 99%;
+    column-count: 3;
+    margin: 0 auto;
+}
+
+.image-container{
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 20px;
+    width: 100%;
+}
+.image-container img{
+    width: 100%;
+    border-radius: inherit;
+    display: block;
+    margin: 0 auto;
+}
+ */
+
+
+
+
+
+
+/* messed up unfinished */
+header,
+main {
+  width: 99%;
+  max-width: 1366px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+
+main{
+    border: 2px solid black;
+}
+.images-wrapper{
+    width: 99%;
+    column-count: 3;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+    /* width: 100%; */
+    /* background-color: black; */
+    /* column-gap: 50px; */
+
+    /* column-rule-style: dotted; */
+    /* column-rule-color: rgb(104, 11, 4); */
+    /* column-rule-width: 20px; */
+    /* -webkit-column-break-inside: avoid;
+    -webkit-column-break-after: avoid; */
+}
+
+.image-container{
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 20px;
+    /* padding: 5px; */
+
+    /* border: 2px solid black; */
+
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin: 0 auto; */
+
+    /* display: inline-block; */
+    /* width: 100%; */
+
+    /* float:inline-start; */
+    /* float:inline-end; */
+    /* float:left; */
+    /* float:right; */
+    /* float:none; */
+    /* margin: 105px; */
+
+    /* height: min-content; */
+    /* height: max-content; */
+    /* height: fit-content; */
+    /* height: auto; */
+}
+.image-container img{
+    width: 100%;
+    border-radius: inherit;
+    display: block;
+    margin: 0 auto;
+    
+    /* position: absolute; */
+    /* object-fit: contain; */
+    /* object-fit: cover; */
+    /* object-fit: fill; */
+    /* object-fit: scale-down; */
+    /* object-fit: none; */
+
+    /* display: block; */
+    /* margin: 10px; */
+    
+    /* width: 50%; */
+    /* display: block; */
+    /* margin: 50px auto; */
+    
+    /* margin: 0 auto; */
+    /* object-fit: cover; */
+    /* border: 2px solid rgb(0, 255, 21); */
+}
+
