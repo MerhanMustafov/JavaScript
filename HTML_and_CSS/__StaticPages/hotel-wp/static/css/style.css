@@ -2,34 +2,23 @@
 @import url(./reset.css);
 
 header{
-    width: 100%;
-    max-width: 1300px;
     min-width: max-content;
     margin: 0 auto;
 }
 
 /* First upper links navigation */
 .links-nav{
-    width: 100%;
     margin: 0 auto;
-     min-width:max-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    /* align-items: center; */
     grid-template-areas: "left right";
     border: 5px solid rgb(10, 30, 212);
 }
 .links-nav .left{
     grid-area: left;
-    /* min-width:max-content; */
     display: flex;
-    /* justify-content: space-around; */
-    /* flex-wrap: nowrap; */
-    
     border: 5px solid black;
-
-    /* justify-content: space-evenly; */
 }
 .phone-number{
     display: inline-block;
@@ -58,8 +47,6 @@ header{
     width: 15%;
      min-width:max-content;
     margin: 0 0 0 auto;
-
-    
 }
 .fa-brands{
     margin: 5px 6px;
@@ -70,8 +57,6 @@ header{
     width: 90%;
     border: 1px solid orange;
 }
-
-
 /* @media screen and (max-width: 910px) {
     header, main{
         width: 910px;
@@ -145,13 +130,19 @@ header{
     color: rgb(255, 255, 255);
 }
 /* Second main navigation */
+body{
+    height: 100vh;
+    position: relative;
+}
 #root{
     min-width: max-content;
     border: 5px solid purple;
+    margin: 0 auto;
+}
+#root:active{
+    cursor: grab;
 }
 main{
-    width: 100%;
-    max-width: 1300px;
     min-width:max-content;
     margin: 0 auto;
     border: 5px solid green;
@@ -159,7 +150,6 @@ main{
 
 .m-wapper{
     width: 100%;
-    /* min-width: max-content; */
     height: 80vh;
     border: 5px solid red;
     background-image: url(../images/bg_img_1.jpg);
@@ -167,3 +157,4 @@ main{
     background-size: 100% 100%;
     background-position: center;
 }
+
