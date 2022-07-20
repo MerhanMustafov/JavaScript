@@ -143,6 +143,14 @@ body {
   min-width: max-content;
   /* border: 5px solid purple; */
   margin: 0 auto;
+  animation-name: root;
+  animation-duration: 5s;
+  overflow: hidden;
+}
+@keyframes root {
+    0%{width: 0vw; height: 0vh;}
+    100%{width: 100vw; height: 100vh;}
+    
 }
 #root:active {
   cursor: grab;
@@ -163,6 +171,12 @@ main {
   background-size: 100% 100%;
   background-position: center;
   object-fit: cover;
+  animation-name: bImg;
+  animation-duration: 5s;
+}
+@keyframes bImg {
+    0% {background-size: 0% 0%;}
+    100% {background-size: 100% 100%;}
 }
 
 .box {
@@ -172,6 +186,16 @@ main {
   /* height: 330px; */
   margin: auto auto;
   background: rgba(218, 56, 54, 0.6);
+  animation-name: flyer;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+@keyframes flyer {
+    0%{width: 0px; height: 0;}
+    100%{width: 600px; height: 400px}
+    
 }
 .heading {
   display: flex;
@@ -281,9 +305,11 @@ footer {
 }
 
 .fa-facebook-f {
+    
     padding: 2px;
   color: blue;
 }
+
 .fa-twitter{
     padding: 2px;
     color: rgb(81, 200, 240);
@@ -319,4 +345,12 @@ footer {
 }
 .fa-envelope{
     color:rgb(100, 100, 100);
+}
+
+.fa-brands{
+    /* transition: transform 1.3s; */
+    transition: font-size 10s;
+}
+.fa-brands:hover{
+    transform: scale(3);
 }
