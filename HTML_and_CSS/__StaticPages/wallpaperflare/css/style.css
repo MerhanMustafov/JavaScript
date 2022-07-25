@@ -1,0 +1,104 @@
+@import url('https://use.fontawesome.com/releases/v6.1.1/css/all.css');
+@import url(./reset.css);
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  min-width: max-content;
+}
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(45, 64, 97);
+  padding: 10px 0;
+}
+.nav-wrapper {
+    width: auto;
+  display: grid;
+  grid-template-columns: max-content auto max-content;
+  grid-template-areas: 'left middle right';
+}
+.logo-area {
+  padding: 0 10px;
+  grid-area: left;
+  display: flex;
+  justify-content: center;
+}
+.search-area {
+  grid-area: middle;
+  display: flex;
+}
+.submit-area {
+  grid-area: right;
+  display: flex;
+  align-items: stretch;
+  margin: 0 10px 0 0 ;
+}
+/* LOGO */
+.logo {
+  font-size: 35px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
+/*  SEARCH */
+.search-area form.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 2px solid gray;
+  background-color: rgb(255, 255, 255);
+}
+#search-input {
+  border: none;
+  outline: none;
+  flex: 1 0 auto;
+}
+.mobile-only-box {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  border: 2px solid white;
+  padding: 0 7px 0 3px;
+}
+.search-details {
+  border-left: 2px solid rgb(211, 210, 210);
+  padding-left: 10px;
+}
+#mobile-only-checkbox {
+  transform: scale(1.2);
+  border: 2px solid rgb(255, 0, 0);
+  align-self: center;
+}
+.mobile-only-box p {
+  font-size: 15px;
+  padding: 0 0 0 5px;
+  color: rgb(161, 159, 159);
+}
+.min {
+  width: 70px;
+  outline: none;
+  border: none;
+}
+.search-btn {
+  background: rgba(71, 140, 198);
+  align-self: stretch;
+  border: none;
+  padding: 0 8px;
+}
+.search-btn i {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+.sibmit-btn {
+  font-size: 17px;
+  background: rgba(71, 140, 198);
+  padding: 7px 20px;
+  color: white;
+  border: none;
+  margin: auto auto auto 15px;
+}
+.sibmit-btn i {
+  margin: 0 5px 0 0;
+}
