@@ -1,10 +1,14 @@
 @import url('https://use.fontawesome.com/releases/v6.1.1/css/all.css');
 @import url(./reset.css);
 
+body{
+    min-width: max-content;
+}
+/* HEADER */
 header {
   width: 100%;
   margin: 0 auto;
-  min-width: max-content;
+  /* min-width: max-content; */
 }
 nav {
   width: 100%;
@@ -13,7 +17,7 @@ nav {
   padding: 10px 0;
 }
 .nav-wrapper {
-    width: auto;
+    /* width: auto; */
   display: grid;
   grid-template-columns: max-content auto max-content;
   grid-template-areas: 'left middle right';
@@ -23,6 +27,7 @@ nav {
   grid-area: left;
   display: flex;
   justify-content: center;
+
 }
 .search-area {
   grid-area: middle;
@@ -40,6 +45,7 @@ nav {
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: italic;
+
 }
 /*  SEARCH */
 .search-area form.search {
@@ -101,4 +107,29 @@ nav {
 }
 .sibmit-btn i {
   margin: 0 5px 0 0;
+}
+
+
+
+
+
+
+
+
+/* MAIN */
+
+main{
+    min-width: max-content;
+}
+
+.wallpaper-info{
+    /* border: 2px solid green; */
+    border-bottom: 2px solid gray;
+}
+.info{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 20px 0; 
 }
