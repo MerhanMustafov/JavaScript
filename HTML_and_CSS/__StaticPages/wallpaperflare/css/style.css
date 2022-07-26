@@ -19,9 +19,10 @@ nav {
 .nav-wrapper {
     /* width: auto; */
   display: grid;
-  grid-template-columns: max-content auto max-content;
+  grid-template-columns: 260px auto 220px;
   grid-template-areas: 'left middle right';
 }
+
 .logo-area {
   padding: 0 10px;
   grid-area: left;
@@ -104,6 +105,7 @@ nav {
   color: white;
   border: none;
   margin: auto auto auto 15px;
+  /* min-width: max-content; */
 }
 .sibmit-btn i {
   margin: 0 5px 0 0;
@@ -121,7 +123,12 @@ nav {
 main{
     min-width: max-content;
 }
+.main-wrapper{
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
 
+}
 .wallpaper-info{
     /* border: 2px solid green; */
     border-bottom: 2px solid gray;
@@ -132,4 +139,130 @@ main{
     font-size: 25px;
     font-weight: 500;
     margin: 20px 0; 
+}
+
+.selected-img-wrapper{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 220px auto 360px;
+    grid-template-areas: 'l m r';
+    gap: 10px;
+    margin: 15px auto auto auto;
+}
+.selected-img-wrapper .l{
+    grid-area: l;
+    border: 2px solid green ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.selected-img-wrapper .l img{
+    width: 100%;
+}
+
+.selected-img-wrapper .m {
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid red ;
+}
+.selected-img-wrapper .m img{
+    width: 100%;
+}
+
+.geres-wrapper{
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    
+}
+.geres-wrapper button{
+    margin: 5px 15px 5px 15px;
+    border: none;
+    background: rgb(202, 202, 202);
+    padding: 3px 7px;
+    font-size: 15px;
+    color: black;
+    
+}
+
+.selected-img-wrapper .r{
+    grid-area: r;
+    border: 2px solid blue;
+}
+
+.download{
+    background: rgba(67, 148, 216);
+    width: 100%;
+    min-width: max-content;
+    font-size: 16px;
+    padding: 15px 0px;
+    border: none;
+    color: white;
+}
+.download-original{
+    background: rgba(67, 148, 216);
+    margin-top: 15px;
+     width: 100%;
+    min-width: max-content;
+    font-size: 16px;
+    padding: 15px 0px;
+    border: none;
+    color: white;
+}
+
+.online{
+    margin-top: 15px;
+    font-size: 18px;
+     width: 100%;
+    min-width: max-content;
+    background: rgba(0, 160, 168);
+    border: none;
+    padding: 15px 0px;
+    color: white;
+}
+
+.resize-section{
+    display: flex;
+    justify-content: space-evenly;
+    width: 99%;
+    margin-top: 15px;
+
+}
+.resize-section input{
+    width: 33%;
+    height: 50px;
+    background: rgba(211, 210, 210, 0.5);
+    border: none;
+    outline: none;
+    font-size: 25px;
+}
+.resize-section input::placeholder{
+    font-size: 20px;
+    text-align: center;
+    
+}
+.resize-section button{
+    width: auto;
+    padding: 15px;
+    font-size: 18px;
+    background: rgba(67, 148, 216);
+    color: white;
+    border: none;
+}
+.resize-section span{
+    align-self: center;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-wrapper{
+        grid-template-columns: 260px 1020px 0px;
+        grid-template-areas: 'left middle middle';
+
+    }
+    .submit-area {
+        display: none;
+    }
 }
