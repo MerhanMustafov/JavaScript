@@ -1,0 +1,44 @@
+@import url(./inputs.css);
+.formWrapper{
+    border: 2px solid black;
+    width: 50%;
+    min-height: 50%;
+    position: relative;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    background-image: url(../images//form-background.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow-x: hidden;
+    border: none;
+}
+
+.registerForm{
+    border-radius: inherit;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.formInnerWrapper{
+    padding: 70px 0px 20px 0px;
+    width: 70%;
+    border-radius: inherit;
+}
+
+.formTitle{
+    border-radius: inherit;
+    text-align: center;
+    width: 70%;
+    font-size: 20px;
+    font-weight: 600;
+}

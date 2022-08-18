@@ -1,0 +1,51 @@
+.namesWrapper{
+    display: flex;
+}
+.fnameW, .lnameW{
+    margin: 20px 0 5px 0;
+    width: 75%;
+
+}
+.fname, .lname{
+    font-size:17px;
+    display: block;
+    margin: 0 0 5px 0;
+}
+#fname, #lname{
+    width: 70%;
+    border: 1px solid black;
+    height: 25px;
+    
+    border-radius: 20px;
+}
+
+
+.emailWrapper, .passwordWrapper, .cpasswordWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 0;
+    font-size:17px;
+}
+.checkboxWrapper{
+    margin: 20px 0 0 0;
+}
+
+#email, #password, #cpassword{
+    width: 87%;
+    height: 25px;
+    font-size:17px;
+    border: 1px solid black;
+    border-radius: 20px;
+} 
+
+.registerBtn{
+    display: block;
+    font-size: 18px;
+    color: white;
+    margin: 25px auto 0 auto;
+    padding: 10px 25px;
+    background: rgba(174, 60, 51);
+    border: none;
+    border-radius: 20px;
+}
