@@ -1,0 +1,62 @@
+header .top.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width:90vw;
+    margin: 0 auto;
+    /* border: 2px solid green; */
+    padding-top: 10px;
+}
+header .top.wrapper .right{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+header .liveBtn{
+    font-size: 20px;
+    background: rgba(205, 5, 6);
+    padding: 7px 11px;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+header .weather{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    gap: 10px;
+}
+
+header .cloud{
+    text-align: center;
+    vertical-align: center;
+}
+
+
+header .bottom.wrapper{
+    max-width:90vw;
+    margin: 0 auto;
+}
+header .bottom.wrapper .left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid rgb(119, 128, 0); */
+    /* gap: 17px; */
+}
+
+header .bottom.wrapper .left ul{
+    display: flex;
+    /* border: 5px solid red; */
+}
+header .bottom.wrapper .left ul li{
+    padding: 5px;
+    margin: 15px;
+}
+
+header .bottom.wrapper .left a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    
+}

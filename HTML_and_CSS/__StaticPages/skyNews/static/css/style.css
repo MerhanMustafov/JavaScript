@@ -1,5 +1,6 @@
 @import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
 @import url(./reset.css);
+@import url(./nav.css);
 
 body{
     /* background: blue; */
@@ -7,40 +8,17 @@ body{
 }
 
 header{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     max-width: 99.5vw;
     margin:0 auto ;
 }
-.top.wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width:90vw;
-    margin: 0 auto;
-    border: 2px solid green;
-    padding-top: 10px;
+main{
+    border: 2px solid rgb(0, 195, 255);
+    max-width: 99.5vw;
+    margin:0 auto ;
 }
-.right{
-    display: flex;
-    align-items: center;
-    gap: 17px;
-}
-.liveBtn{
-    font-size: 24px;
-    background: red;
-    padding: 10px;
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-.weather{
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    gap: 10px;
-}
-
-.cloud{
-    text-align: center;
-    vertical-align: center;
+footer{
+    border: 2px solid rgb(0, 47, 255);
+    max-width: 99.5vw;
+    margin:0 auto ;
 }
