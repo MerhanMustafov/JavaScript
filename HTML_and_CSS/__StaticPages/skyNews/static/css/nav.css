@@ -37,6 +37,9 @@ header .bottom.wrapper{
     max-width:90vw;
     margin: 0 auto;
 }
+header .bottom.wrapper .more{
+    font-size:20px;
+}
 header .bottom.wrapper .left{
     display: flex;
     justify-content: space-between;
@@ -59,4 +62,47 @@ header .bottom.wrapper .left a{
     font-size: 18px;
     color: black;
     
+}
+header .bottom.wrapper .right{
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+header .bottom.wrapper .right .moree{
+    display: none;
+    position: absolute;
+    border: 2px solid red;
+    right: 5px;
+
+}
+
+header .bottom.wrapper .right .moree.show{
+    display: block;
+}
+#more{
+    display: none;
+}
+
+header .bottom.wrapper .right .moree ul{
+    /* text-decoration: none; */
+
+    
+}
+header .bottom.wrapper .right .moree ul li{
+    padding: 5px 10px;
+}
+
+header .bottom.wrapper .right .moree li a{
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+
+}
+header .bottom.wrapper .right .moree ul .line{
+    /* order: 1; */
+    height: 2px;
+    width: 100%;
+    background: gray;
+    margin: 5px auto;
+    /* color: gray; */
 }
