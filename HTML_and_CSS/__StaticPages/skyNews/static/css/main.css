@@ -1,0 +1,14 @@
+.section{
+    max-width: 90vw;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+}
+
+.w.leadingNews{
+    display: flex;
+}
+
+.w.text{
+    align-self: center;
+    padding: 0px 50px;
+}
