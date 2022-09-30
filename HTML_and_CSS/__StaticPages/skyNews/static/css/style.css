@@ -5,7 +5,7 @@
 
 body{
     background: rgba(221, 220, 226);
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 header{
@@ -14,12 +14,12 @@ header{
     margin:0 auto ;
 }
 main{
-    border: 2px solid rgb(0, 195, 255);
+    /* border: 2px solid rgb(0, 195, 255); */
     max-width: 99.5vw;
     margin:0 auto ;
 }
 footer{
-    border: 2px solid rgb(0, 47, 255);
+    /* border: 2px solid rgb(0, 47, 255); */
     max-width: 99.5vw;
     margin:0 auto ;
 }
