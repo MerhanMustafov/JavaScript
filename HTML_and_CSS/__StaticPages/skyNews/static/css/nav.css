@@ -6,6 +6,7 @@ header .top.wrapper{
     margin: 0 auto;
     /* border: 2px solid green; */
     padding-top: 10px;
+    min-width: 650px;
 }
 header .top.wrapper .right{
     display: flex;
@@ -36,6 +37,7 @@ header .cloud{
 header .bottom.wrapper{
     max-width:90vw;
     margin: 0 auto;
+    min-width: 650px;
 }
 header .bottom.wrapper .more{
     font-size:20px;
@@ -71,7 +73,8 @@ header .bottom.wrapper .right{
 header .bottom.wrapper .right .moree{
     display: none;
     position: absolute;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    background: rgba(255,255,255);
     right: 5px;
 
 }
@@ -88,21 +91,66 @@ header .bottom.wrapper .right .moree ul{
 
     
 }
-header .bottom.wrapper .right .moree ul li{
+/* header .bottom.wrapper .right .moree ul li{
     padding: 5px 10px;
-}
+} */
 
 header .bottom.wrapper .right .moree li a{
     color: black;
     text-decoration: none;
-    font-size: 22px;
+    /* font-size: 22px; */
 
 }
 header .bottom.wrapper .right .moree ul .line{
-    /* order: 1; */
     height: 2px;
     width: 100%;
     background: gray;
     margin: 5px auto;
-    /* color: gray; */
+}
+
+
+.main.climate{display: block;}
+.main.sience{display: block;}
+.main.business{display: block;}
+.main.ents{display: block;}
+.main.travel{display: block;}
+.main.offbeat{display: block;}
+
+.m{
+    border-bottom: 0.5px solid gray; 
+    padding: 20px;
+    /* background: red; */
+    font-size: 25px;
+    /* margin: 10px; */
+}
+.m.climate{display: none;}
+.m.sience{display: none;}
+.m.business{display: none;}
+.m.ents{display: none;}
+.m.travel{display: none;}
+.m.offbeat{display: none;}
+
+@media screen and (max-width: 1150px){
+    .main.offbeat{display: none;}
+    .m.offbeat{display: block;}
+}
+@media screen and (max-width: 1050px){
+    .main.travel{display: none;}
+    .m.travel{display: block;}
+}
+@media screen and (max-width: 950px){
+    .main.ents{display: none;}
+    .m.ents{display: block;}
+}
+@media screen and (max-width: 810px){
+    .main.business{display: none;}
+    .m.business{display: block;}
+}
+@media screen and (max-width: 710px){
+    .main.sience{display: none;}
+    .m.sience{display: block;}
+}
+@media screen and (max-width: 550px){
+    .main.climate{display: none;}
+    .m.climate{display: block;}
 }

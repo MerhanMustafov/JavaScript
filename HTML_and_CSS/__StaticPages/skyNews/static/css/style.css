@@ -5,21 +5,26 @@
 
 body{
     background: rgba(221, 220, 226);
-    /* border: 2px solid black; */
+    border: 2px solid black;
+    min-width: 650px;
+    min-width: 650px;
 }
 
 header{
     /* border: 2px solid red; */
+    min-width: 650px;
     max-width: 99.5vw;
     margin:0 auto ;
 }
 main{
     /* border: 2px solid rgb(0, 195, 255); */
+    min-width: 650px;
     max-width: 99.5vw;
     margin:0 auto ;
 }
 footer{
     /* border: 2px solid rgb(0, 47, 255); */
     max-width: 99.5vw;
+    min-width: 650px;
     margin:0 auto ;
 }
