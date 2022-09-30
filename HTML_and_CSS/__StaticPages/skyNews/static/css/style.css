@@ -4,7 +4,7 @@
 @import url(./main.css);
 
 body{
-    /* background: blue; */
+    background: rgba(221, 220, 226);
     border: 2px solid black;
 }
 

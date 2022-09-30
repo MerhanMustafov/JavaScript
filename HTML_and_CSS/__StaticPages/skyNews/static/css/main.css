@@ -6,9 +6,50 @@
 
 .w.leadingNews{
     display: flex;
+    border: 2px solid black;
+}
+.w.image{
+    border: 2px solid blue;
+    width: 70%;
+
 }
 
 .w.text{
     align-self: center;
     padding: 0px 50px;
+    width: 30%;
+}
+
+
+.w.newsWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(221, 220, 226);
+    border: 2px solid red;
+}
+
+.newsBoxWrapper{
+    width: 30%;
+    padding: 3px;
+    background: rgba(255,255,255);
+    /* margin: 0 auto; */
+    border: 2px solid green;
+
+}
+
+img{
+    width: 100%;
+    /* height: 100%; */
+}
+
+.about{
+    padding: 10px 0;
+}
+
+.f.title{
+    font-size: 20px;
+    font-weight: 600;
 }
