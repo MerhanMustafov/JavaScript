@@ -1,0 +1,69 @@
+.f.nav{
+    max-width: 90vw;
+    margin: 50px auto 5px auto;
+    padding: 20px 0px 50px 0px;
+    border-bottom: 2px solid rgb(83, 83, 83);
+}
+
+.f.nav li{
+    display: inline-block;
+}
+
+.f.nav li a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.fa-facebook{
+    font-size: 25px;
+}
+
+.fa-twitter{
+    font-size: 25px;
+}
+.fa-youtube{
+    font-size: 25px;
+}
+.fa-instagram{
+    font-size: 25px;
+}
+
+.f.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90vw;
+    margin: 10px auto 20px auto;
+    padding: 50px 0px ;
+    border-bottom: 2px solid rgba(83,83,83);
+
+}
+
+.ftitle{
+    font-size: 33px;
+    padding: 10px 0px 20px 0px;
+}
+
+.f.content .f.about p{
+    padding: 0px 0px 10px 0px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.ff{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+.skyflogo{
+    width: 100px;
+}
+
+.ff p{
+    font-size: 22px
+}

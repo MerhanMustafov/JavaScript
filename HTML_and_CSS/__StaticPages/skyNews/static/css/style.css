@@ -2,10 +2,11 @@
 @import url(./reset.css);
 @import url(./nav.css);
 @import url(./main.css);
+@import url(./footer.css);
 
 body{
     background: rgba(221, 220, 226);
-    border: 2px solid black;
+    /* border: 2px solid black; */
     min-width: 650px;
     min-width: 650px;
 }
